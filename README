@@ -6,4 +6,4 @@
 2 BUILDING MSVC
 
 2.1 - Open the Project(VC/MathEngine.vcxproj) on msvc and build
-2.2 This code was built under msvc 2012 under windows 7 64 bit
+2.2 This code was built under msvc 2015 under windows 7 64 bit
