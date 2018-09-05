@@ -1,0 +1,43 @@
+[127:SGF::CSIMD::initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 & SSE4.1  & SSE4.2 for SIMD processing
+[127:SGF::CSIMD::initProcessor] enabled Flush-To-Zero mode
+[127:SGF::CSIMD::initProcessor] enabled Denormals-Are-Zero mode
+
+[127:SGF::CSIMD::Test4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3 & SSE4.1  & SSE4.2
+[127:SGF::TestVector4DSum] Testing Vector4D Sum()...
+[127:SGF::PrintClocks] generic->Vector4D_Sum 
+[127:SGF::PrintClocks] count =  1, clocks = 9370
+[127:SGF::PrintClocks]    simd->Vector4D_Sum  ok
+[127:SGF::PrintClocks] count = 1 , clocks =  8188, 12% melhor
+[127:SGF::TestVector4DSumOf] Testing Vector4D SumOf()...
+[127:SGF::PrintClocks] generic->Vector4D_SumOf 
+[127:SGF::PrintClocks] count =  1, clocks = 398
+[127:SGF::PrintClocks]    simd->Vector4D_SumOf  ok
+[127:SGF::PrintClocks] count = 1 , clocks =  423, -6% melhor
+[127:SGF::TestVector4DDiff] Testing Vector4D Diff()...
+[127:SGF::PrintClocks] generic->Vector4D_Diff 
+[127:SGF::PrintClocks] count =  1, clocks = 375
+[127:SGF::PrintClocks]    simd->Vector4D_Diff  ok
+[127:SGF::PrintClocks] count = 1 , clocks =  451, -20% melhor
+[127:SGF::TestVector4DDiffOf] Testing Vector4D DiffOf()...
+[127:SGF::PrintClocks] generic->Vector4D_DiffOf 
+[127:SGF::PrintClocks] count =  1, clocks = 299
+[127:SGF::PrintClocks]    simd->Vector4D_DiffOf  ok
+[127:SGF::PrintClocks] count = 1 , clocks =  306, -2% melhor
+[127:SGF::TestVector4DScale] Testing Vector4D Scale()...
+[127:SGF::PrintClocks] generic->Vector4D_Scale 
+[127:SGF::PrintClocks] count =  1, clocks = 612
+[127:SGF::PrintClocks]    simd->Vector4D_Scale  ok
+[127:SGF::PrintClocks] count = 1 , clocks =  437, 28% melhor
+[127:SGF::TestVector4DScaleOf] Testing Vector4D ScaleOf()...
+[127:SGF::PrintClocks] generic->Vector4D_ScaleOf 
+[127:SGF::PrintClocks] count =  1, clocks = 214
+[127:SGF::PrintClocks]    simd->Vector4D_ScaleOf  ok
+[127:SGF::PrintClocks] count = 1 , clocks =  451, -110% melhor
+[127:SGF::TestVector4DDot] Testing Vector4D Sum()...
+[127:SGF::PrintClocks] generic->Vector4D_Dot 
+[127:SGF::PrintClocks] count =  1, clocks = 805
+[127:SGF::PrintClocks]    simd->Vector4D_Dot  ok
+[127:SGF::PrintClocks] count = 1 , clocks =  667, 17% melhor
+[127:SGF::TestCVector4DLengthSq] Testing Vector4D LengthSq()...
+[127:SGF::PrintClocks] generic->Vector4D_LengthSq 
+[127:SGF::PrintClocks] count =  1, clocks = 1854805320

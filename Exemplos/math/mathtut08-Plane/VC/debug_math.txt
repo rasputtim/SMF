@@ -1,0 +1,38 @@
+[127:SMF::MATH::CSIMD::initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:SMF::MATH::CSIMD::initProcessor] enabled Flush-To-Zero mode
+[127:SMF::MATH::CSIMD::initProcessor] enabled Denormals-Are-Zero mode
+
+[127:SMF::MATH::CSIMD::TestPlane4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:SMF::MATH::TestPlane_FromPoints] Testing Plane_FromPoints...
+[127:SMF::MATH::CProcClock::printClocks] generic->Plane_FromPoints 
+[127:SMF::MATH::CProcClock::printClocks] count =  2048, clocks = 31
+[127:SMF::MATH::CProcClock::printClocks]    simd->Plane_FromPoints  ok
+[127:SMF::MATH::CProcClock::printClocks] count = 2048 , clocks =  -49, 258% melhor
+[127:SMF::MATH::TestPlane_DistToPoint] Testing Plane_DistToPoint...
+[127:SMF::MATH::CProcClock::printClocks] generic->Plane_DistToPoint 
+[127:SMF::MATH::CProcClock::printClocks] count =  2048, clocks = -22
+[127:SMF::MATH::CProcClock::printClocks]    simd->Plane_DistToPoint  ok
+[127:SMF::MATH::CProcClock::printClocks] count = 2048 , clocks =  236, 1172% melhor
+[127:SMF::MATH::TestPlane_Dot] Testing TestPlane_Dot...
+[127:SMF::MATH::CProcClock::printClocks] generic->TestPlane_Dot 
+[127:SMF::MATH::CProcClock::printClocks] count =  2048, clocks = -61
+[127:SMF::MATH::CProcClock::printClocks]    simd->TestPlane_Dot  ok
+[127:SMF::MATH::CProcClock::printClocks] count = 2048 , clocks =  212, 447% melhor
+[127:SMF::MATH::TestPlane_Dot4] Testing TestPlane_Dot4...
+[127:SMF::MATH::CProcClock::printClocks] generic->TestPlane_Dot4 
+[127:SMF::MATH::CProcClock::printClocks] count =  2048, clocks = -40
+[127:SMF::MATH::CProcClock::printClocks]    simd->TestPlane_Dot4  ok
+[127:SMF::MATH::CProcClock::printClocks] count = 2048 , clocks =  203, 607% melhor
+[127:SMF::MATH::TestPlane_DotNormal] Testing Plane_DotNormal...
+[127:SMF::MATH::CProcClock::printClocks] generic->Plane_DotNormal 
+[127:SMF::MATH::CProcClock::printClocks] count =  2048, clocks = -76
+[127:SMF::MATH::CProcClock::printClocks]    simd->Plane_DotNormal  ok
+[127:SMF::MATH::CProcClock::printClocks] count = 2048 , clocks =  209, 375% melhor
+[127:SMF::MATH::TestPlane_DotPlane] Testing Plane_DotPlane...
+[127:SMF::MATH::CProcClock::printClocks] generic->Plane_DotPlane 
+[127:SMF::MATH::CProcClock::printClocks] count =  2048, clocks = -73
+[127:SMF::MATH::CProcClock::printClocks]    simd->Plane_DotPlane  ok
+[127:SMF::MATH::CProcClock::printClocks] count = 2048 , clocks =  206, 382% melhor
+[127:SMF::MATH::TestPlane_Normalize] Testing Plane_Normalize...
+[127:SMF::MATH::CProcClock::printClocks] generic->Plane_Normalize 
+[127:SMF::MATH::CProcClock::printClocks] count =  2048, clocks = -4

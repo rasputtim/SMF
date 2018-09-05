@@ -1,0 +1,53 @@
+[127:SMF::MATH::CSIMD::initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:SMF::MATH::CSIMD::initProcessor] enabled Flush-To-Zero mode
+[127:SMF::MATH::CSIMD::initProcessor] enabled Denormals-Are-Zero mode
+
+[127:SMF::MATH::CSIMD::TestMat4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:SMF::MATH::TestMatriz4DSum] Testing Matriz4D Sum()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_Sum 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 4741
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_Sum  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  3988, 15% melhor
+[127:SMF::MATH::TestMatriz4DSumOf] Testing Matriz4D SumOf()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_SumOf 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 572
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_SumOf  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  272, 52% melhor
+[127:SMF::MATH::TestMatriz4DDiff] Testing Matriz4D Diff()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_Diff 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 3700
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_Diff  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  308, 91% melhor
+[127:SMF::MATH::TestMatriz4DDiffOf] Testing Matriz4D DiffOf()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_DiffOf 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 750
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_DiffOf  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  228, 69% melhor
+[127:SMF::MATH::TestMatriz4DMultiply] Testing Matriz4D Multiply()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_Multiply 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 4652
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_Multiply  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  382, 91% melhor
+[127:SMF::MATH::TestMatriz4DMultiplyOf] Testing Matriz4D MultiplyOf()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_MultiplyOf 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 816
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_MultiplyOf  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  361, 55% melhor
+[127:SMF::MATH::TestMatriz4DTranspose] Testing Matriz4D Transpose()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_Transpose 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 4926
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_Transpose  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  3172, 35% melhor
+[127:SMF::MATH::TestMatriz4DTransposeOf] Testing Matriz4D TransposeOf()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_TransposeOf 
+[127:SMF::MATH::PrintClocks] count =  1, clocks = 5531
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_TransposeOf  ok
+[127:SMF::MATH::PrintClocks] count = 1 , clocks =  237, 95% melhor
+[127:SMF::MATH::TestMatriz4DScale] Testing Matriz4D Scale()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_Scale 
+[127:SMF::MATH::PrintClocks] count =  2048, clocks = 53
+[127:SMF::MATH::PrintClocks]    simd->Matriz4D_Scale  ok
+[127:SMF::MATH::PrintClocks] count = 2048 , clocks =  26, 50% melhor
+[127:SMF::MATH::TestMatriz4DScaleOf] Testing Matriz4D ScaleOf()...
+[127:SMF::MATH::PrintClocks] generic->Matriz4D_ScaleOf 
+[127:SMF::MATH::PrintClocks] count =  2048, clocks = 53

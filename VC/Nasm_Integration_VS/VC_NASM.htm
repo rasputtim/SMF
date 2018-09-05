@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"><meta content="Orion Sky Lawlor, olawlor@acm.org" name="author"><title>Visual C++ 2010 &amp; NASM</title></head><body>
+<h1>Using Assembly from Microsoft Visual C++ 2010</h1>
+
+<p>Dr. Orion Lawlor, 2011-10-12<br>
+</p>
+<h2>Step 1: Write C++ Code<br>
+</h2>
+<p>First, hit File - New Project to make a standard C++ console application:
+</p>
+<p><img src="VC_NASM_arquivos/visual2010nasm_step1.png" alt="Where to click in Visual C++ GUI">
+
+</p><p>Next, remove the Microsoft junk, like the procompiled header.
+</p><p><img src="VC_NASM_arquivos/visual2010nasm_step2.png" alt="Where to click in Visual C++ GUI">
+
+</p><p>Next, write some test C++ code.  It helps to run at this point, to make sure everything works.
+</p><p><img src="VC_NASM_arquivos/visual2010nasm_step3.png" alt="Where to click in Visual C++ GUI">
+
+</p>
+<h2>Step 2: Write assembly code<br>
+</h2>
+<p>Now write an assembly language source file with these critical pieces:
+</p>
+<ul>
+   <li>Give the file the .S extension, the standard extension for assembly code.
+   </li><li>Start the file with "section .text", so the code is executable.
+   </li><li>Make the function "global", so the linker can see it.
+   </li><li>Make
+the function name begin with an underscore--for some reason Windows
+compilers stick an underscore on the front of every function name.
+</li></ul>
+Finally, right click on your new file, and hit properties.
+<p><img src="VC_NASM_arquivos/visual2010nasm_step4.png" alt="Where to click in Visual C++ GUI">Visual
+doesn't know how to compile the .S file by default, so it ignores it:
+"Does not participate in build." Change this to "Custom Build Tool":
+<img src="VC_NASM_arquivos/visual2010nasm_step5.png" alt="Where to click in Visual C++ GUI">
+
+Now you need to download and install <a href="http://www.nasm.us/pub/nasm/releasebuilds/2.09.10/win32/">NASM</a> (or <a href="http://yasm.tortall.net/Download.html">YASM</a>, etc.)  You then give Visual Studio the Command Line needed to run your assembler, just like at the DOS prompt: 
+</p><pre>	"\Program Files\nasm\nasm" -f win32  asmstuff.S<br></pre>
+The assembler will output a .obj file, which you list under "Outputs".
+<p><img src="VC_NASM_arquivos/visual2010nasm_step6.png" alt="Where to click in Visual C++ GUI">
+
+</p><p>Build the project, and you should be able to call assembly
+functions from your C++, and vice versa!&nbsp; Don't forget extern "C"
+from C++!
+</p><p><img src="VC_NASM_arquivos/visual2010nasm_step7.png" alt="Where to click in Visual C++ GUI">
+
+</p><p>Simple C++ code:
+</p><pre>#include &lt;iostream&gt;
+extern "C" int foo(void); // written in assembly!
+
+int main() {
+	std::cout&lt;&lt;"Foo returns "&lt;&lt;foo()&lt;&lt;"\n";<br>	system("pause");<br>	return 0;<br>}<br></pre>
+
+Assembly code:
+<pre>section .text ; makes this executable<br>global _foo ; makes this visible to linker<br>_foo:<br>	mov eax,7 ; just return a constant<br>	ret<br></pre>
+
+<hr>
+Info for <a href="http://www.cs.uaf.edu/2011/fall/cs301/">CS 301: Assembly Language</a>, by <a href="mailto:lawlor@alaska.edu">Dr. Lawlor</a>
+
+
+</body></html>

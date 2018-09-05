@@ -1,0 +1,55 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:Test3D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestVector3DSum] Testing Vector3D Sum()...
+[127:PrintClocks] generic->Vector3D_Sum 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_Sum  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DSumOf] Testing Vector3D SumOf()...
+[127:PrintClocks] generic->Vector3D_SumOf 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_SumOf  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DDiff] Testing Vector3D Diff()...
+[127:PrintClocks] generic->Vector3D_Diff 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_Diff  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DDiffOf] Testing Vector3D DiffOf()...
+[127:PrintClocks] generic->Vector3D_DiffOf 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3DD_DiffOf  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DScale] Testing Vector3D Scale()...
+[127:PrintClocks] generic->Vector3D_Scale 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_Scale  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DScaleOf] Testing Vector3D ScaleOf()...
+[127:PrintClocks] generic->Vector3D_ScaleOf 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_ScaleOf  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DDot] Testing Vector3D Dot()...
+[127:PrintClocks] generic->Vector3D_Dot 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_Dot  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestCVector3DLengthSq] Testing Vector3D LengthSq()...
+[127:PrintClocks] generic->Vector3D_LengthSq 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_LengthSq  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestCVector3DLength] Testing Vector3D Length()...
+[127:PrintClocks] generic->Vector3D_Length 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_Length  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DCross] Testing Vector3D Cross()...
+[127:PrintClocks] generic->Vector3D_Cross 
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:PrintClocks]    simd->Vector3D_Cross  ok
+[127:PrintClocks] count =  1, clocks = -29918185
+[127:TestVector3DCrossOf] Testing Vector3D CrossOf()...
+[127:PrintClocks] generic->Vector3D_CrossOf 
+[127:PrintClocks] count =  1, clocks = -29918185

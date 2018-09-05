@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{17883FD9-A414-4970-B159-27B8340D7B2A}</ProjectGuid>
+    <RootNamespace>OpenMugen</RootNamespace>
+    <ProjectName>SMF</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>
+    </CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="Nasm_Integration_VS\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Debug\bin\chars;$(ReferencePath)</ReferencePath>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\build\win\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\objs\$(Configuration)\VC_Objs</IntDir>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Debug\bin\chars;$(ReferencePath)</ReferencePath>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(VCGAMEAMBIENTE)\estatico\libs\$(Configuration)\;$(VCGAMEAMBIENTE)\vc\libs\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\Gamecore;$(ProjectDir)\..\Headers\win_external_libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ShowIncludes>false</ShowIncludes>
+      <ErrorReporting>None</ErrorReporting>
+      <PreprocessorDefinitions>_LIB;_DEBUG;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>tbb_debug.lib;opengl32.lib;glu32.lib;intl.lib;regex.lib;Msimg32.lib;winmm.lib;sprig.lib;version.lib;imm32.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\projetos\VC10\OpenMugenStatic1.3\Debug\lib\;$(TBB30_INSTALL_DIR)\lib\ia32\vc10;$(TBB30_INSTALL_DIR)\lib\ia32\vc_mt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Xdcmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <OutputFile>$(SolutionDir)$(Configuration)\bin\$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+    </Bscmake>
+    <Lib>
+      <AdditionalOptions>/IGNORE:4006 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <ResourceCompile>
+      <Culture>0x0416</Culture>
+    </ResourceCompile>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>
+      </Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(TBB30_INSTALL_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(TBB30_INSTALL_DIR)\lib\ia32\vc10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tbb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\exceptions\SMF_error.cpp" />
+    <ClCompile Include="..\Source\exceptions\SMF_exception.cpp" />
+    <ClCompile Include="..\Source\exceptions\SMF_LoadException.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DAABBox.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DCircle.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DCircleSector.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DCircleSegment.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DConics.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DEllipse.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DLine.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DLineSegment.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DParabola.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DPoint.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DPolygon.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DRay.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DTests.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_2DTriangle.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Circle.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Geodefs.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_LineSegment.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Polygon.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Polyhedron.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Ray.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_AABBox.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_DrawVert.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Line.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_OBBox.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Plane.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Sphere.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_Triangle.cpp" />
+    <ClCompile Include="..\Source\geometry\SMF_TriangleMesh.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Complex.cpp" />
+    <ClCompile Include="..\Source\math\SMF_EulerAngles.cpp" />
+    <ClCompile Include="..\Source\math\SMF_JointTransform.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Lcp.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Math.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Matriz.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Ode.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Pluecker.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Polynomial.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Quat.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Regression.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Rotation.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd.cpp" />
+    <ClCompile Include="..\Source\math\SMF_SimdTestMatriz.cpp" />
+    <ClCompile Include="..\Source\math\SMF_SimdTestPlane.cpp" />
+    <ClCompile Include="..\Source\math\SMF_SimdTestQuat.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_3DNow.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_Generic.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_MMX.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE2.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE3.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE41.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE42.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_SSEAVX.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Simd_SSEComon.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Vector.cpp" />
+    <ClCompile Include="..\Source\math\SMF_Transform.cpp" />
+    <ClCompile Include="..\Source\structures\SMF_HashTableFast.cpp" />
+    <ClCompile Include="..\Source\sys\SMF_System.cpp" />
+    <ClCompile Include="..\Source\sys\win32\SMF_Fpu.cpp" />
+    <ClCompile Include="..\Source\sys\win32\SMF_WinCpu.cpp" />
+    <ClCompile Include="..\Source\sys\win32\SMF_WinShared.cpp" />
+    <ClCompile Include="..\Source\util\SMF_RandomLCG.cpp" />
+    <ClCompile Include="..\Source\util\SMF_HashUtils.cpp" />
+    <ClCompile Include="..\Source\util\SMF_ArgsCmdLine.cpp" />
+    <ClCompile Include="..\Source\util\SMF_Heap.cpp" />
+    <ClCompile Include="..\Source\util\SMF_Debug.cpp" />
+    <ClCompile Include="..\Source\util\SMF_StringUtils.cpp" />
+    <ClCompile Include="..\Source\util\SMF_Testlib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Gamecore\exceptions\all.h" />
+    <ClInclude Include="..\Gamecore\exceptions\SMF_Error.h" />
+    <ClInclude Include="..\Gamecore\exceptions\SMF_Exception.h" />
+    <ClInclude Include="..\Gamecore\exceptions\SMF_LoadException.h" />
+    <ClInclude Include="..\Gamecore\geometry\all.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DCircleSector.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DCircle.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DCircleSegment.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DConics.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DDrawVert.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DEllipse.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DLine.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DLineSegment.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DParabola.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DPoint.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DAABBox.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DPolygon.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DRay.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DTriangle.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Circle.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_LineSegment.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Polygon.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Polyhedron.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Ray.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_AABBox.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_DrawVert.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_GeoDefs.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Line.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_OBBox.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Plane.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Sphere.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_Triangle.h" />
+    <ClInclude Include="..\Gamecore\geometry\SMF_TriangleMesh.h" />
+    <ClInclude Include="..\Gamecore\math\all.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_JointTransform.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Mat3D.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_MathDefs.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Regression.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Simd3DNow.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdAVX.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdGeneric.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdMMX.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE2.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE3.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Complex.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Curve.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_EulerAngles.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Extrapolate.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Interpolation.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Lincp.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Math.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Matriz.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Odife.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Pluecker.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Polynomial.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Quaternion.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Rotation.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Simd.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE41.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE42.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Vector.h" />
+    <ClInclude Include="..\Gamecore\math\SMF_Transforms.h" />
+    <ClInclude Include="..\Gamecore\SMF_Config.h" />
+    <ClInclude Include="..\Gamecore\SMF_Types.h" />
+    <ClInclude Include="..\Gamecore\SMF.h" />
+    <ClInclude Include="..\Gamecore\structures\all.h" />
+    <ClInclude Include="..\Gamecore\structures\SMF_BTree.h" />
+    <ClInclude Include="..\Gamecore\structures\SMF_HashTableFast.h" />
+    <ClInclude Include="..\Gamecore\structures\SMF_List.h" />
+    <ClInclude Include="..\Gamecore\sys\SMF_System.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_HashUtils.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_ArgsCmdLine.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_Heap.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_Debug.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_HeapBlockAloc.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_PlaneList.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_Random.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_RandomLCG.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_StringUtils.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_TestLib.h" />
+    <ClInclude Include="..\Gamecore\util\SMF_UtilStructs.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="Nasm_Integration_VS\nasm.targets" />
+  </ImportGroup>
+</Project>

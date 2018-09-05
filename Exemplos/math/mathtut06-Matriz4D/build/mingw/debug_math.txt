@@ -1,0 +1,162 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:TestMat4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestMatriz4DSum] Testing Matriz4D Sum()...
+[127:printClocks] generic->Matriz4D_Sum 
+[127:printClocks] count =  1, clocks = 62183
+[127:printClocks]    simd->Matriz4D_Sum  ok
+[127:printClocks] count = 1 , clocks =  22251, 64% melhor
+[127:TestMatriz4DSumOf] Testing Matriz4D SumOf()...
+[127:printClocks] generic->Matriz4D_SumOf 
+[127:printClocks] count =  1, clocks = 26641
+[127:printClocks]    simd->Matriz4D_SumOf  ok
+[127:printClocks] count = 1 , clocks =  12066, 54% melhor
+[127:TestMatriz4DDiff] Testing Matriz4D Diff()...
+[127:printClocks] generic->Matriz4D_Diff 
+[127:printClocks] count =  1, clocks = 768
+[127:printClocks]    simd->Matriz4D_Diff  ok
+[127:printClocks] count = 1 , clocks =  245, 68% melhor
+[127:TestMatriz4DDiffOf] Testing Matriz4D DiffOf()...
+[127:printClocks] generic->Matriz4D_DiffOf 
+[127:printClocks] count =  1, clocks = 1527
+[127:printClocks]    simd->Matriz4D_DiffOf  ok
+[127:printClocks] count = 1 , clocks =  275, 81% melhor
+[127:TestMatriz4DMultiply] Testing Matriz4D multiply()...
+[127:printClocks] generic->Matriz4D_Multiply 
+[127:printClocks] count =  1, clocks = 30923
+[127:printClocks]    simd->Matriz4D_Multiply  ok
+[127:printClocks] count = 1 , clocks =  806, 97% melhor
+[127:TestMatriz4DMultiplyOf] Testing Matriz4D MultiplyOf()...
+[127:printClocks] generic->Matriz4D_MultiplyOf 
+[127:printClocks] count =  1, clocks = 1454
+[127:printClocks]    simd->Matriz4D_MultiplyOf  ok
+[127:printClocks] count = 1 , clocks =  3299, -126% melhor
+[127:TestMatriz4DTranspose] Testing Matriz4D transpose()...
+[127:printClocks] generic->Matriz4D_Transpose 
+[127:printClocks] count =  1, clocks = 4783
+[127:printClocks]    simd->Matriz4D_Transpose  ok
+[127:printClocks] count = 1 , clocks =  109, 97% melhor
+[127:TestMatriz4DTransposeOf] Testing Matriz4D TransposeOf()...
+[127:printClocks] generic->Matriz4D_TransposeOf 
+[127:printClocks] count =  1, clocks = 12939
+[127:printClocks]    simd->Matriz4D_TransposeOf  ok
+[127:printClocks] count = 1 , clocks =  121, 99% melhor
+[127:TestMatriz4DScale] Testing Matriz4D scale()...
+[127:printClocks] generic->Matriz4D_Scale 
+[127:printClocks] count =  2048, clocks = 47
+[127:printClocks]    simd->Matriz4D_Scale  ok
+[127:printClocks] count = 2048 , clocks =  15, 68% melhor
+[127:TestMatriz4DScaleOf] Testing Matriz4D ScaleOf()...
+[127:printClocks] generic->Matriz4D_ScaleOf 
+[127:printClocks] count =  2048, clocks = 56
+[127:printClocks]    simd->Matriz4D_ScaleOf  ok
+[127:printClocks] count = 2048 , clocks =  15, 73% melhor
+[127:TestMatriz4DVectorMultiply] Testing Matriz4D VectorMultiply()...
+[127:printClocks] generic->Matriz4D_VectorMultiply 
+[127:printClocks] count =  1, clocks = 955
+[127:printClocks]    simd->Matriz4D_VectorMultiply  ok
+[127:printClocks] count = 1 , clocks =  765, 19% melhor
+[127:TestMatriz4DVectorMultiplyOf] Testing Matriz4D VectorMultiplyOf()...
+[127:printClocks] generic->Matriz4D_VectorMultiplyOf 
+[127:printClocks] count =  1, clocks = 1412
+[127:printClocks]    simd->Matriz4D_VectorMultiplyOf  ok
+[127:printClocks] count = 1 , clocks =  661, 53% melhor
+[127:TestMatriz4DVector4Multiply] Testing Matriz4D VectorMultiply() CVec4D...
+[127:printClocks] generic->Matriz4D_VectorMultiply (CVec4D) 
+[127:printClocks] count =  1, clocks = 349
+[127:printClocks]    simd->Matriz4D_VectorMultiply (CVec4D)  ok
+[127:printClocks] count = 1 , clocks =  2620, -650% melhor
+[127:TestMatriz4DVector4MultiplyOf] Testing Matriz4D VectorMultiplyOf() (CVec4D)...
+[127:printClocks] generic->Matriz4D_VectorMultiplyOf (CVec4D)
+[127:printClocks] count =  1, clocks = 9852
+[127:printClocks]    simd->Matriz4D_VectorMultiplyOf  (CVec4D) ok
+[127:printClocks] count = 1 , clocks =  284, 97% melhor
+[127:TestMatriz4DVectorToRotate] Testing Matriz4D ToRotate()...
+[127:printClocks] generic->Matriz4D_ToRotate 
+[127:printClocks] count =  2048, clocks = 252
+[127:printClocks]    simd->Matriz4D_ToRotate  ok
+[127:printClocks] count = 2048 , clocks =  362, -43% melhor
+[127:TestMatriz4DVectorToRotateOf] Testing Matriz4D ToRotateOf()...
+[127:printClocks] generic->Matriz4D_ToRotateOf 
+[127:printClocks] count =  2048, clocks = 255
+[127:printClocks]    simd->Matriz4D_ToRotateOf  ok
+[127:printClocks] count = 2048 , clocks =  368, -44% melhor
+[127:TestMatriz4DAlignedSum] Testing Matriz4D AlignedSum()...
+[127:printClocks] generic->Matriz4D_AlignedSum 
+[127:printClocks] count =  1, clocks = 564
+[127:printClocks]    simd->Matriz4D_Sum  ok
+[127:printClocks] count = 1 , clocks =  106, 81% melhor
+[127:TestMatriz4DAlignedSumOf] Testing Matriz4D AlignedSumOf()...
+[127:printClocks] generic->Matriz4D_AlignedSumOf 
+[127:printClocks] count =  1, clocks = 554
+[127:printClocks]    simd->Matriz4D_AlignedSumOf  ok
+[127:printClocks] count = 1 , clocks =  254, 54% melhor
+[127:TestMatriz4DAlignedDiff] Testing Matriz4D AlignedDiff()...
+[127:printClocks] generic->Matriz4D_AlignedDiff 
+[127:printClocks] count =  1, clocks = 278
+[127:printClocks]    simd->Matriz4D_AlignedDiff  ok
+[127:printClocks] count = 1 , clocks =  513, -84% melhor
+[127:TestMatriz4DAlignedDiffOf] Testing Matriz4D AlignedDiffOf()...
+[127:printClocks] generic->Matriz4D_AlignedDiffOf 
+[127:printClocks] count =  1, clocks = 210
+[127:printClocks]    simd->Matriz4D_AlignedDiffOf  ok
+[127:printClocks] count = 1 , clocks =  275, -30% melhor
+[127:TestMatriz4DAlignedScale] Testing Matriz4D AlignedScale()...
+[127:printClocks] generic->Matriz4D_AlignedScale 
+[127:printClocks] count =  2048, clocks = 50
+[127:printClocks]    simd->Matriz4D_AlignedScale  ok
+[127:printClocks] count = 2048 , clocks =  15, 70% melhor
+[127:TestMatriz4DAlignedScaleOf] Testing Matriz4D AlignedScaleOf()...
+[127:printClocks] generic->Matriz4D_AlignedScaleOf 
+[127:printClocks] count =  2048, clocks = 50
+[127:printClocks]    simd->Matriz4D_AlignedScaleOf  ok
+[127:printClocks] count = 2048 , clocks =  15, 70% melhor
+[127:TestMatriz4DAlignedMultiply] Testing Matriz4D AlignedMultiply()...
+[127:printClocks] generic->Matriz4D_AlignedMultiply 
+[127:printClocks] count =  1, clocks = 2590
+[127:printClocks]    simd->Matriz4D_AlignedMultiply  ok
+[127:printClocks] count = 1 , clocks =  222, 91% melhor
+[127:TestMatriz4DAlignedMultiplyOf] Testing Matriz4D AlignedMultiplyOf()...
+[127:printClocks] generic->Matriz4D_AlignedMultiplyOf 
+[127:printClocks] count =  1, clocks = 822
+[127:printClocks]    simd->Matriz4D_AlignedMultiplyOf  ok
+[127:printClocks] count = 1 , clocks =  432, 47% melhor
+[127:TestMatriz4DAlignedTranspose] Testing Matriz4D AlignedTranspose()...
+[127:printClocks] generic->Matriz4D_AlignedTranspose 
+[127:printClocks] count =  1, clocks = 1415
+[127:printClocks]    simd->Matriz4D_AlignedTranspose  ok
+[127:printClocks] count = 1 , clocks =  112, 92% melhor
+[127:TestMatriz4DAlignedTransposeOf] Testing Matriz4D AlignedTransposeOf()...
+[127:printClocks] generic->Matriz4D_AlignedTransposeOf 
+[127:printClocks] count =  1, clocks = 2219
+[127:printClocks]    simd->Matriz4D_AlignedTransposeOf  ok
+[127:printClocks] count = 1 , clocks =  118, 94% melhor
+[127:TestMatriz4DAlignedVectorMultiply] Testing Matriz4D AlignedVectorMultiply()...
+[127:printClocks] generic->Matriz4D_AlignedVectorMultiply 
+[127:printClocks] count =  1, clocks = 174
+[127:printClocks]    simd->Matriz4D_AlignedVectorMultiply  ok
+[127:printClocks] count = 1 , clocks =  98, 43% melhor
+[127:TestMatriz4DAlignedVectorMultiplyOf] Testing Matriz4D AlignedVectorMultiplyOf()...
+[127:printClocks] generic->Matriz4D_AlignedVectorMultiplyOf 
+[127:printClocks] count =  1, clocks = 12823
+[127:printClocks]    simd->Matriz4D_AlignedVectorMultiplyOf  ok
+[127:printClocks] count = 1 , clocks =  112, 99% melhor
+[127:TestMatriz4DAlignedVector4Multiply] Testing Matriz4D AlignedVectorMultiply() CVec4D...
+[127:printClocks] generic->Matriz4D_AlignedVectorMultiply (CVec4D) 
+[127:printClocks] count =  1, clocks = 192
+[127:printClocks]    simd->Matriz4D_AlignedVectorMultiply (CVec4D)  ok
+[127:printClocks] count = 1 , clocks =  536, -179% melhor
+[127:TestMatriz4DAlignedVector4MultiplyOf] Testing Matriz4D AlignedVectorMultiplyOf() (CVec4D)...
+[127:printClocks] generic->Matriz4D_AlignedVectorMultiplyOf (CVec4D)
+[127:printClocks] count =  1, clocks = 275
+[127:printClocks]    simd->Matriz4D_AlignedVectorMultiplyOf  (CVec4D) ok
+[127:printClocks] count = 1 , clocks =  299, -8% melhor
+[127:TestMatriz4DAlignedVectorToRotate] Testing Matriz4D AlignedToRotate()...
+[127:printClocks] generic->Matriz4D_AlignedToRotate 
+[127:printClocks] count =  2048, clocks = 258
+[127:printClocks]    simd->Matriz4D_AlignedToRotate  ok
+[127:printClocks] count = 2048 , clocks =  362, -40% melhor
+[127:TestMatriz4DAlignedVectorToRotateOf] Testing Matriz4D AlignedToRotateOf()...
+[127:printClocks] generic->Matriz4D_AlignedToRotateOf 
+[127:printClocks] count =  2048, clocks = 261
+[127:printClocks]    simd->Matriz4D_AlignedToRotateOf  ok
+[127:printClocks] count = 2048 , clocks =  365, -39% melhor

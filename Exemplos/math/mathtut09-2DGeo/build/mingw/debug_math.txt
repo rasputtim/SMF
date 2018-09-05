@@ -1,0 +1,609 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:test_point_2d] <CPoint2D -1,-8> 
+[127:testlib_test_begin]  Test 1: constructor --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 2: inequality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 3: set --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 4: equality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 5: sum; difference --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 6: += --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 7: += --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 8: collinear --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 9: midpoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 10: centre --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 11: centre --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 12: centre --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 13: cross_ratio --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_point_2d] <CPoint2D 4.4,-5> 
+[127:testlib_test_begin]  Test 14: istream CPoint2D (blank-separated) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_point_2d] <CPoint2D 70,11> 
+[127:testlib_test_begin]  Test 15: istream CPoint2D (comma-separated) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_point_2d] <CPoint2D 12,13> 
+[127:testlib_test_begin]  Test 16: istream CPoint2D (parenthesized) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:TESTING] ==================   CLINE TESTS ================
+[127:test_line_2d] <CLine2D  - y -8 = 0 >
+[127:testlib_test_begin]  Test 17: inequality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 18: equality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 19: concurrent --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_line_2d] <CLine2D - x - y +1 = 0 >
+[127:testlib_test_begin]  Test 20: join --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 21: distance(line,point) --> 
+[127:testlib_test_perform] **FAILED**
+
+[127:testlib_test_begin]  Test 22: distance(line,point) --> 
+[127:testlib_test_assert_near]  should be 2.4, is 2.4, 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 23: distance(point,line) --> 
+[127:testlib_test_assert_near]  should be 2.4, is 2.4, 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 24: line segment first end point --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 25: line segment second end point --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 26: line segment first end point --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 27: line segment second end point --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 28: end point is coincident --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 29: mid point is coincident --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 30: point on support line is not coincident --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 31: arbitrary point is not coincident --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 32: very nearby point is not coincident --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 33: identical line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 34: identical line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 35: disjoint horizontal collinear line segments: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 36: touching horizontal collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 37: touching horizontal collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 38: overlapping horizontal collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 39: internally touching horizontal collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 40: internally overlapping horizontal collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 41: parallel horizontal line segments: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 42: disjoint vertical collinear line segments: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 43: touching vertical collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 44: touching vertical collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 45: overlapping vertical collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 46: internally touching vertical collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 47: internally overlapping vertical collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 48: parallel vertical line segments: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 49: disjoint oblique collinear line segments: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 50: touching oblique collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 51: touching oblique collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 52: overlapping oblique collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 53: internally touching oblique collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 54: internally overlapping oblique collinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 55: parallel oblique line segments: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 56: disjoint noncollinear line segments: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 57: touching noncollinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 58: intersecting noncollinear line segments: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 59: point on horizontal line segment: intersects --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 60: point collinear with horizontal line segment: does not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 61: point not collinear with horizontal line segment: does not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 62: point on vertical line segment: intersects --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 63: point collinear with vertical line segment: does not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 64: point not collinear with vertical line segment: does not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 65: point on oblique line segment: intersects --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 66: point collinear with oblique line segment: does not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 67: point not collinear with oblique line segment: does not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 68: two identical points: intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 69: two different points: does not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 70: four almost collinear points: do not intersect --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_line_2d] <CLineSegment2D <CPoint2D 0,1>  to <CPoint2D 1,0>  >
+[127:testlib_test_begin]  Test 71: line segment equality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 72: line segment equality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 73: normalize --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 74: normalize: a() --> 
+[127:testlib_test_assert_near]  should be 0.6, is 0.6, 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 75: normalize: b() --> 
+[127:testlib_test_assert_near]  should be 0.8, is 0.8, 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 76: perpendicular --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 77: parallel --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 78: concurrents --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 79: perpendicular --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 80: parallel --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 81: concurrents --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 82: istream CLine2D --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 83: istream CLine2D formatted --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 84: istream line_segment_2d --> 
+[127:testlib_test_perform]   PASSED
+
+[127:TESTING] ==================   CAABBox2D TESTS ================
+[127:test_box_2d] <CAABBox2D (empty)>
+[127:testlib_test_begin]  Test 85: AABBox2D is empty --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 86: AABBox2D has no volume --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 87: !contains(p0) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 88: !contains(p1) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 89: !contains(p2) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 90: !contains(p12) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 0,0>
+[127:testlib_test_begin]  Test 91: contains(p0) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 92: !contains(p1) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 93: !contains(p2) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 94: !contains(p12) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 95: AABBox2D is not empty --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 96: AABBox2D has no volume --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 97: centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 98: minPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 99: maxPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 1,0>
+[127:testlib_test_begin]  Test 100: contains(p0) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 101: contains(p1) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 102: !contains(p2) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 103: !contains(p12) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 104: AABBox2D is not empty --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 105: AABBox2D has no volume --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 106: centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 107: minPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 108: maxPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 1,1>
+[127:testlib_test_begin]  Test 109: contains(p0) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 110: contains(p1) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 111: contains(p2) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 112: contains(p12) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 113: AABBox2D is not empty --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 114: AABBox2D has volume 1 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 115: centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 116: minPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 117: maxPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 118: AABBox2D has volume 2.25 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 119: !contains(b2) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 120: boxes are equal --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 2,2>
+[127:testlib_test_begin]  Test 121: union AABBox2D has volume 4 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 122: contains(b2) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 123: centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 124: minPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 125: maxPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D -1,-1 to 1,1>
+[127:testlib_test_begin]  Test 126: setCentroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 127: volume did not change --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 128: minPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 129: maxPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D -0.5,-1 to 0.5,1>
+[127:testlib_test_begin]  Test 130: setWidth --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 131: volume is now 2 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D -0.5,-0.5 to 0.5,0.5>
+[127:testlib_test_begin]  Test 132: setHeight --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 133: volume is now 1 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 134: scaleAboutCentroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 135: volume is now 4 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 136: scaleAboutCentroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 137: volume is now 1 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 138: expandAboutCentroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 139: volume is now 4 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 140: expandAboutCentroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 141: volume is now 1 --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 142: setMinPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 143: setMaxPoint --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 2,2>
+[127:testlib_test_begin]  Test 144: construct from two points --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 2,2>
+[127:testlib_test_begin]  Test 145: construct from centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 2,2>
+[127:testlib_test_begin]  Test 146: construct from centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 2,2>
+[127:testlib_test_begin]  Test 147: construct from min_pos --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 0,0 to 2,2>
+[127:testlib_test_begin]  Test 148: construct from max_pos --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D (empty)>
+[127:testlib_test_begin]  Test 149: empty --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 150: !contains(p0) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 151: !contains(p1) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 152: !contains(p2) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 153: AABBox2D is empty --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 154: AABBox2D has no volume --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 10,10 to 11,11>
+[127:testlib_test_begin]  Test 155: Integer AABBox2D centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 10,10 to 11,11>
+[127:testlib_test_begin]  Test 156: Integer AABBox2D centroid drift --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 8.5,8.5 to 12.5,12.5><CPoint2D 10.5,10.5> 
+[127:testlib_test_begin]  Test 157: Integer AABBox2D centroid drift --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D 9,9 to 11,11><CPoint2D 10,10> 
+[127:test_box_2d] <CAABBox2D 8.5,8.5 to 11.5,11.5><CPoint2D 10,10> 
+[127:testlib_test_begin]  Test 158: Integer AABBox2D centroid --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D -11,-11 to -10,-10><CPoint2D -10.5,-10.5> 
+[127:test_box_2d] <CAABBox2D -12,-12 to -9,-9><CPoint2D -10.5,-10.5> 
+[127:testlib_test_begin]  Test 159: Integer AABBox2D negative centroid drift --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_box_2d] <CAABBox2D -11,-11 to -9,-9><CPoint2D -10,-10> 
+[127:test_box_2d] <CAABBox2D -12,-12 to -8,-8><CPoint2D -10,-10> 
+[127:testlib_test_begin]  Test 160: Integer AABBox2D negative centroid drift --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 161: box1.intersection( box2) = false --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 162: box2.intersection( box3) = true --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 163: box2.intersection( box3) volume --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 164: istream CAABBox2D --> 
+[127:testlib_test_perform]   PASSED
+
+[127:TESTING] ==================   CVec2D TESTS ================
+[127:test_vector_2d] <CVec2D 1.5,0.625> 
+[127:testlib_test_begin]  Test 165: inequality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 166: length --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 167: equality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 168: equality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 169: length --> 
+[127:testlib_test_perform] **FAILED**
+
+[127:testlib_test_begin]  Test 170: inequality --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 171: sum --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 172: difference --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 173: scale --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 174: scale --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 175: dot_product --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 176: cross_product --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 177: angle --> 
+[127:testlib_test_assert_near]  should be 0.189396, is 0.189396, 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 178: parallel --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 179: parallel --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 180: parallel --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 181: normalized --> 
+[127:testlib_test_assert_near]  should be 0, is 0, 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 182: normalize --> 
+[127:testlib_test_assert_near]  should be 0, is 0, 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 183: orthogonal --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 184: !orthogonal --> 
+[127:testlib_test_perform]   PASSED
+
+[127:testlib_test_begin]  Test 185: orthogonal --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_vector_2d] <CVec2D 4.4,-5> 
+[127:testlib_test_begin]  Test 186: istream CVec2D (blank-separated) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_vector_2d] <CVec2D 70,11> 
+[127:testlib_test_begin]  Test 187: istream CVec2D (comma-separated) --> 
+[127:testlib_test_perform]   PASSED
+
+[127:test_vector_2d] <CVec2D 12,13> 
+[127:testlib_test_begin]  Test 188: istream CVec2D (parenthesized) --> 
+[127:testlib_test_perform]   PASSED
+

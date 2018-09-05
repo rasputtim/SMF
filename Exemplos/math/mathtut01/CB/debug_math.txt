@@ -1,0 +1,1 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing

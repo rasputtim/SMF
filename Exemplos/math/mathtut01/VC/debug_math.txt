@@ -1,0 +1,21 @@
+[127:report] Duration for rdtsc base:	279
+[127:report] Duration for 3x3 * 3x1 (PII):	-6
+[127:report] Duration for Transpose(3x3) * 3x1 (PIII):	-6
+[127:report] Duration for 3x3 * 3x1 (PIII):	6
+[127:report] Duration for 4x4 * 4x1 (PII):	6
+[127:report] Duration for Transpose(4x4) * 4x1 (PIII):	-3
+[127:report] Duration for 4x4 * 4x1 (PIII):	3
+[127:report] Duration for 3x3 * 3x3 (PII):	21
+[127:report] Duration for 3x3 * 3x3 (PIII):	6
+[127:report] Duration for 4x4 * 4x4 (PII):	69
+[127:report] Duration for 4x4 * 4x4 (PIII):	9
+[127:report] Duration for 6x6 * 6x1 (PII):	33
+[127:report] Duration for 6x6 * 6x1 (PIII):	12
+[127:report] Duration for 6x6 * 6x6 (PII):	321
+[127:report] Duration for 6x6 * 6x6 (PIII):	128
+[127:report] Duration for 4x4 * 4x4 (general case, PIII):	208
+[127:report] Duration for Inverse 4x4 special (PII):	288
+[127:report] Duration for Inverse 4x4 (PIII):	368
+[127:report] Duration for Inverse 6x6 special (PII):	882
+[127:report] Duration for Inverse 6x6 generic (PIII):	1395
+[127:report] Duration for Inverse 6x6 special (PIII):	992

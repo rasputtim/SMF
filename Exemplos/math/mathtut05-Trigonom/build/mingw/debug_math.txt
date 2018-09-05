@@ -1,0 +1,35 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:TestSin] ====================================
+[127:printClocks] generic->sin( float )
+[127:printClocks] count =  360, clocks = 232
+[127:printClocks]    simd->sin( float ) ok
+[127:printClocks] count = 360 , clocks =  262, -12% melhor
+[127:printClocks] generic->sinZeroHalfPI( float )
+[127:printClocks] count =  90, clocks = 232
+[127:printClocks]    simd->sinZeroHalfPI( float ) ok
+[127:printClocks] count = 90 , clocks =  229, 1% melhor
+[127:printClocks] generic->sin4( float[]  )
+[127:printClocks] count =  90, clocks = 342
+[127:printClocks]    simd->sin4( float[] ) ok
+[127:printClocks] count = 90 , clocks =  279, 18% melhor
+[127:printClocks] generic->sin4ZeroHalfPI( float[]  )
+[127:printClocks] count =  22, clocks = 348
+[127:printClocks]    simd->sin4ZeroHalfPI( float[] ) ok
+[127:printClocks] count = 22 , clocks =  247, 29% melhor
+[127:TestCos] ====================================
+[127:printClocks] generic->cos( float )
+[127:printClocks] count =  360, clocks = 235
+[127:printClocks]    simd->cos( float ) ok
+[127:printClocks] count = 360 , clocks =  259, -10% melhor
+[127:printClocks] generic->cosZeroHalfPI( float )
+[127:printClocks] count =  90, clocks = 235
+[127:printClocks]    simd->cosZeroHalfPI( float ) ok
+[127:printClocks] count = 90 , clocks =  226, 3% melhor
+[127:printClocks] generic->cos4( float[]  )
+[127:printClocks] count =  90, clocks = 342
+[127:printClocks]    simd->cos4( float[] ) ok
+[127:printClocks] count = 90 , clocks =  273, 20% melhor
+[127:printClocks] generic->cos4ZeroHalfPI( float[]  )
+[127:printClocks] count =  22, clocks = 404
+[127:printClocks]    simd->cos4ZeroHalfPI( float[] ) ^1X
+[127:printClocks] count = 22 , clocks =  259, 35% melhor

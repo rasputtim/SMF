@@ -1,0 +1,527 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:Test_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestMath] ====================================
+
+[127:PrintClocks]             fabs( tst )
+[127:PrintClocks] count =  1, clocks = 0
+[127:PrintClocks]     CMath::Fabs( tst )
+[127:PrintClocks] count =  1, clocks = 3
+[127:PrintClocks]             sqrt( tst )
+[127:PrintClocks] count =  1, clocks = 29
+[127:PrintClocks]     CMath::Sqrt( tst )
+[127:PrintClocks] count =  1, clocks = 95
+[127:PrintClocks]   CMath::Sqrt16( tst )
+[127:PrintClocks] count =  1, clocks = 74
+[127:PrintClocks]   CMath::Sqrt64( tst )
+[127:PrintClocks] count =  1, clocks = 112
+[127:PrintClocks]    CMath::RSqrt( tst )
+[127:PrintClocks] count =  1, clocks = 53
+[127:PrintClocks]      CMath::Sin( tst )
+[127:PrintClocks] count =  1, clocks = 106
+[127:PrintClocks]    CMath::Sin16( tst )
+[127:PrintClocks] count =  1, clocks = 71
+[127:PrintClocks]      CMath::Cos( tst )
+[127:PrintClocks] count =  1, clocks = 136
+[127:PrintClocks]    CMath::Cos16( tst )
+[127:PrintClocks] count =  1, clocks = 68
+[127:PrintClocks]   CMath::SinCos( tst )
+[127:PrintClocks] count =  1, clocks = 228
+[127:PrintClocks] CMath::SinCos16( tst )
+[127:PrintClocks] count =  1, clocks = 68
+[127:PrintClocks]      CMath::Tan( tst )
+[127:PrintClocks] count =  1, clocks = 219
+[127:PrintClocks]    CMath::Tan16( tst )
+[127:PrintClocks] count =  1, clocks = 80
+[127:PrintClocks]     CMath::ASin( tst )
+[127:PrintClocks] count =  1, clocks = 53
+[127:PrintClocks]   CMath::ASin16( tst )
+[127:PrintClocks] count =  1, clocks = 62
+[127:PrintClocks]     CMath::ACos( tst )
+[127:PrintClocks] count =  1, clocks = 175
+[127:PrintClocks]   CMath::ACos16( tst )
+[127:PrintClocks] count =  1, clocks = 71
+[127:PrintClocks]     CMath::ATan( tst )
+[127:PrintClocks] count =  1, clocks = 142
+[127:PrintClocks]   CMath::ATan16( tst )
+[127:PrintClocks] count =  1, clocks = 86
+[127:PrintClocks]     CMath::Pow( tst )
+[127:PrintClocks] count =  1, clocks = 270
+[127:PrintClocks]   CMath::Pow16( tst )
+[127:PrintClocks] count =  1, clocks = 255
+[127:PrintClocks]     CMath::Exp( tst )
+[127:PrintClocks] count =  1, clocks = 157
+[127:PrintClocks]   CMath::Exp16( tst )
+[127:PrintClocks] count =  1, clocks = 124
+[127:PrintClocks]     CMath::Log( tst )
+[127:PrintClocks] count =  1, clocks = 109
+[127:PrintClocks]   CMath::Log16( tst )
+[127:PrintClocks] count =  1, clocks = 139
+[127:TestMath] testvar = 0.018742
+[127:PrintClocks]        CQuaternion::ToMat3()
+[127:PrintClocks] count =  1, clocks = 264
+[127:PrintClocks]         CQuaternion::Slerp()
+[127:PrintClocks] count =  1, clocks = 442
+[127:PrintClocks]       CCompQuaternion::ToQuat()
+[127:PrintClocks] count =  1, clocks = 74
+[127:PrintClocks]      CEulerAngles::ToQuat()
+[127:PrintClocks] count =  1, clocks = 771
+[127:PrintClocks]      CEulerAngles::ToMat3()
+[127:PrintClocks] count =  1, clocks = 926
+[127:TestAdd] ====================================
+[127:PrintClocks] generic->Add( float + float[] )
+[127:PrintClocks] count =  1024, clocks = 4943
+[127:PrintClocks]    simd->Add( float + float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  415, 91% melhor
+[127:PrintClocks] generic->Add( float[] + float[] )
+[127:PrintClocks] count =  1024, clocks = 5095
+[127:PrintClocks]    simd->Add( float[] + float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  489, 90% melhor
+[127:TestSub] ====================================
+
+[127:PrintClocks] generic->Sub( float + float[] )
+[127:PrintClocks] count =  1024, clocks = 5356
+[127:PrintClocks]    simd->Sub( float + float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  454, 91% melhor
+[127:PrintClocks] generic->Sub( float[] + float[] )
+[127:PrintClocks] count =  1024, clocks = 5365
+[127:PrintClocks]    simd->Sub( float[] + float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  489, 90% melhor
+[127:TestMul] ====================================
+[127:PrintClocks] generic->Mul( float * float[] )
+[127:PrintClocks] count =  1024, clocks = 5362
+[127:PrintClocks]    simd->Mul( float * float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  451, 91% melhor
+[127:PrintClocks] generic->Mul( float[] * float[] )
+[127:PrintClocks] count =  1024, clocks = 5397
+[127:PrintClocks]    simd->Mul( float[] * float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  489, 90% melhor
+[127:TestDiv] ====================================
+[127:PrintClocks] generic->Div( float * float[] )
+[127:PrintClocks] count =  1024, clocks = 21020
+[127:PrintClocks]    simd->Div( float * float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  940, 95% melhor
+[127:PrintClocks] generic->Div( float[] * float[] )
+[127:PrintClocks] count =  1024, clocks = 20958
+[127:PrintClocks]    simd->Div( float[] * float[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  946, 95% melhor
+[127:TestMulAdd] ====================================
+[127:PrintClocks] generic->MulAdd( float * float[ 0] )
+[127:PrintClocks] count =  1, clocks = 23
+[127:PrintClocks]    simd->MulAdd( float * float[ 0] ) ok
+[127:PrintClocks] count = 1 , clocks =  20, 13% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 1] )
+[127:PrintClocks] count =  1, clocks = 38
+[127:PrintClocks]    simd->MulAdd( float * float[ 1] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 23% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 2] )
+[127:PrintClocks] count =  1, clocks = 47
+[127:PrintClocks]    simd->MulAdd( float * float[ 2] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 31% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 3] )
+[127:PrintClocks] count =  1, clocks = 53
+[127:PrintClocks]    simd->MulAdd( float * float[ 3] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 33% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 4] )
+[127:PrintClocks] count =  1, clocks = 53
+[127:PrintClocks]    simd->MulAdd( float * float[ 4] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 28% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 5] )
+[127:PrintClocks] count =  1, clocks = 62
+[127:PrintClocks]    simd->MulAdd( float * float[ 5] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 33% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 6] )
+[127:PrintClocks] count =  1, clocks = 68
+[127:PrintClocks]    simd->MulAdd( float * float[ 6] ) ok
+[127:PrintClocks] count = 1 , clocks =  47, 30% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 7] )
+[127:PrintClocks] count =  1, clocks = 74
+[127:PrintClocks]    simd->MulAdd( float * float[ 7] ) ok
+[127:PrintClocks] count = 1 , clocks =  47, 36% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 8] )
+[127:PrintClocks] count =  1, clocks = 77
+[127:PrintClocks]    simd->MulAdd( float * float[ 8] ) ok
+[127:PrintClocks] count = 1 , clocks =  50, 35% melhor
+[127:PrintClocks] generic->MulAdd( float * float[ 9] )
+[127:PrintClocks] count =  1, clocks = 74
+[127:PrintClocks]    simd->MulAdd( float * float[ 9] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 48% melhor
+[127:PrintClocks] generic->MulAdd( float * float[10] )
+[127:PrintClocks] count =  1, clocks = 80
+[127:PrintClocks]    simd->MulAdd( float * float[10] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 48% melhor
+[127:PrintClocks] generic->MulAdd( float * float[11] )
+[127:PrintClocks] count =  1, clocks = 89
+[127:PrintClocks]    simd->MulAdd( float * float[11] ) ok
+[127:PrintClocks] count = 1 , clocks =  47, 47% melhor
+[127:PrintClocks] generic->MulAdd( float * float[12] )
+[127:PrintClocks] count =  1, clocks = 89
+[127:PrintClocks]    simd->MulAdd( float * float[12] ) ok
+[127:PrintClocks] count = 1 , clocks =  26, 70% melhor
+[127:PrintClocks] generic->MulAdd( float * float[13] )
+[127:PrintClocks] count =  1, clocks = 98
+[127:PrintClocks]    simd->MulAdd( float * float[13] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 70% melhor
+[127:PrintClocks] generic->MulAdd( float * float[14] )
+[127:PrintClocks] count =  1, clocks = 104
+[127:PrintClocks]    simd->MulAdd( float * float[14] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 69% melhor
+[127:PrintClocks] generic->MulAdd( float * float[15] )
+[127:PrintClocks] count =  1, clocks = 115
+[127:PrintClocks]    simd->MulAdd( float * float[15] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 72% melhor
+[127:PrintClocks] generic->MulAdd( float * float[16] )
+[127:PrintClocks] count =  1, clocks = 118
+[127:PrintClocks]    simd->MulAdd( float * float[16] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 75% melhor
+[127:PrintClocks] generic->MulAdd( float * float[17] )
+[127:PrintClocks] count =  1, clocks = 145
+[127:PrintClocks]    simd->MulAdd( float * float[17] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 77% melhor
+[127:PrintClocks] generic->MulAdd( float * float[18] )
+[127:PrintClocks] count =  1, clocks = 133
+[127:PrintClocks]    simd->MulAdd( float * float[18] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 75% melhor
+[127:PrintClocks] generic->MulAdd( float * float[19] )
+[127:PrintClocks] count =  1, clocks = 142
+[127:PrintClocks]    simd->MulAdd( float * float[19] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 77% melhor
+[127:PrintClocks] generic->MulAdd( float * float[20] )
+[127:PrintClocks] count =  1, clocks = 142
+[127:PrintClocks]    simd->MulAdd( float * float[20] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 79% melhor
+[127:PrintClocks] generic->MulAdd( float * float[21] )
+[127:PrintClocks] count =  1, clocks = 148
+[127:PrintClocks]    simd->MulAdd( float * float[21] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 78% melhor
+[127:PrintClocks] generic->MulAdd( float * float[22] )
+[127:PrintClocks] count =  1, clocks = 157
+[127:PrintClocks]    simd->MulAdd( float * float[22] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 79% melhor
+[127:PrintClocks] generic->MulAdd( float * float[23] )
+[127:PrintClocks] count =  1, clocks = 166
+[127:PrintClocks]    simd->MulAdd( float * float[23] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 78% melhor
+[127:PrintClocks] generic->MulAdd( float * float[24] )
+[127:PrintClocks] count =  1, clocks = 166
+[127:PrintClocks]    simd->MulAdd( float * float[24] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 80% melhor
+[127:PrintClocks] generic->MulAdd( float * float[25] )
+[127:PrintClocks] count =  1, clocks = 172
+[127:PrintClocks]    simd->MulAdd( float * float[25] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 81% melhor
+[127:PrintClocks] generic->MulAdd( float * float[26] )
+[127:PrintClocks] count =  1, clocks = 181
+[127:PrintClocks]    simd->MulAdd( float * float[26] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 80% melhor
+[127:PrintClocks] generic->MulAdd( float * float[27] )
+[127:PrintClocks] count =  1, clocks = 187
+[127:PrintClocks]    simd->MulAdd( float * float[27] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 81% melhor
+[127:PrintClocks] generic->MulAdd( float * float[28] )
+[127:PrintClocks] count =  1, clocks = 187
+[127:PrintClocks]    simd->MulAdd( float * float[28] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 82% melhor
+[127:PrintClocks] generic->MulAdd( float * float[29] )
+[127:PrintClocks] count =  1, clocks = 201
+[127:PrintClocks]    simd->MulAdd( float * float[29] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 84% melhor
+[127:PrintClocks] generic->MulAdd( float * float[30] )
+[127:PrintClocks] count =  1, clocks = 207
+[127:PrintClocks]    simd->MulAdd( float * float[30] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 83% melhor
+[127:PrintClocks] generic->MulAdd( float * float[31] )
+[127:PrintClocks] count =  1, clocks = 216
+[127:PrintClocks]    simd->MulAdd( float * float[31] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 82% melhor
+[127:PrintClocks] generic->MulAdd( float * float[32] )
+[127:PrintClocks] count =  1, clocks = 216
+[127:PrintClocks]    simd->MulAdd( float * float[32] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 85% melhor
+[127:PrintClocks] generic->MulAdd( float * float[33] )
+[127:PrintClocks] count =  1, clocks = 228
+[127:PrintClocks]    simd->MulAdd( float * float[33] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 84% melhor
+[127:PrintClocks] generic->MulAdd( float * float[34] )
+[127:PrintClocks] count =  1, clocks = 231
+[127:PrintClocks]    simd->MulAdd( float * float[34] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 83% melhor
+[127:PrintClocks] generic->MulAdd( float * float[35] )
+[127:PrintClocks] count =  1, clocks = 240
+[127:PrintClocks]    simd->MulAdd( float * float[35] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 84% melhor
+[127:PrintClocks] generic->MulAdd( float * float[36] )
+[127:PrintClocks] count =  1, clocks = 243
+[127:PrintClocks]    simd->MulAdd( float * float[36] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 85% melhor
+[127:PrintClocks] generic->MulAdd( float * float[37] )
+[127:PrintClocks] count =  1, clocks = 249
+[127:PrintClocks]    simd->MulAdd( float * float[37] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 84% melhor
+[127:PrintClocks] generic->MulAdd( float * float[38] )
+[127:PrintClocks] count =  1, clocks = 255
+[127:PrintClocks]    simd->MulAdd( float * float[38] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 85% melhor
+[127:PrintClocks] generic->MulAdd( float * float[39] )
+[127:PrintClocks] count =  1, clocks = 261
+[127:PrintClocks]    simd->MulAdd( float * float[39] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 84% melhor
+[127:PrintClocks] generic->MulAdd( float * float[40] )
+[127:PrintClocks] count =  1, clocks = 264
+[127:PrintClocks]    simd->MulAdd( float * float[40] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 86% melhor
+[127:PrintClocks] generic->MulAdd( float * float[41] )
+[127:PrintClocks] count =  1, clocks = 276
+[127:PrintClocks]    simd->MulAdd( float * float[41] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 86% melhor
+[127:PrintClocks] generic->MulAdd( float * float[42] )
+[127:PrintClocks] count =  1, clocks = 282
+[127:PrintClocks]    simd->MulAdd( float * float[42] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 86% melhor
+[127:PrintClocks] generic->MulAdd( float * float[43] )
+[127:PrintClocks] count =  1, clocks = 288
+[127:PrintClocks]    simd->MulAdd( float * float[43] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 85% melhor
+[127:PrintClocks] generic->MulAdd( float * float[44] )
+[127:PrintClocks] count =  1, clocks = 288
+[127:PrintClocks]    simd->MulAdd( float * float[44] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 86% melhor
+[127:PrintClocks] generic->MulAdd( float * float[45] )
+[127:PrintClocks] count =  1, clocks = 305
+[127:PrintClocks]    simd->MulAdd( float * float[45] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 86% melhor
+[127:PrintClocks] generic->MulAdd( float * float[46] )
+[127:PrintClocks] count =  1, clocks = 305
+[127:PrintClocks]    simd->MulAdd( float * float[46] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 86% melhor
+[127:PrintClocks] generic->MulAdd( float * float[47] )
+[127:PrintClocks] count =  1, clocks = 314
+[127:PrintClocks]    simd->MulAdd( float * float[47] ) ok
+[127:PrintClocks] count = 1 , clocks =  44, 85% melhor
+[127:PrintClocks] generic->MulAdd( float * float[48] )
+[127:PrintClocks] count =  1, clocks = 317
+[127:PrintClocks]    simd->MulAdd( float * float[48] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 88% melhor
+[127:PrintClocks] generic->MulAdd( float * float[49] )
+[127:PrintClocks] count =  1, clocks = 353
+[127:PrintClocks]    simd->MulAdd( float * float[49] ) ok
+[127:PrintClocks] count = 1 , clocks =  53, 84% melhor
+[127:TestMulSub] ====================================
+[127:PrintClocks] generic->MulSub( float * float[ 0] )
+[127:PrintClocks] count =  1, clocks = 20
+[127:PrintClocks]    simd->MulSub( float * float[ 0] ) ok
+[127:PrintClocks] count = 1 , clocks =  23, -15% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 1] )
+[127:PrintClocks] count =  1, clocks = 38
+[127:PrintClocks]    simd->MulSub( float * float[ 1] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 23% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 2] )
+[127:PrintClocks] count =  1, clocks = 41
+[127:PrintClocks]    simd->MulSub( float * float[ 2] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 29% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 3] )
+[127:PrintClocks] count =  1, clocks = 50
+[127:PrintClocks]    simd->MulSub( float * float[ 3] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 30% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 4] )
+[127:PrintClocks] count =  1, clocks = 53
+[127:PrintClocks]    simd->MulSub( float * float[ 4] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 28% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 5] )
+[127:PrintClocks] count =  1, clocks = 47
+[127:PrintClocks]    simd->MulSub( float * float[ 5] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 38% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 6] )
+[127:PrintClocks] count =  1, clocks = 56
+[127:PrintClocks]    simd->MulSub( float * float[ 6] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 42% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 7] )
+[127:PrintClocks] count =  1, clocks = 59
+[127:PrintClocks]    simd->MulSub( float * float[ 7] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 40% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 8] )
+[127:PrintClocks] count =  1, clocks = 62
+[127:PrintClocks]    simd->MulSub( float * float[ 8] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 38% melhor
+[127:PrintClocks] generic->MulSub( float * float[ 9] )
+[127:PrintClocks] count =  1, clocks = 68
+[127:PrintClocks]    simd->MulSub( float * float[ 9] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 44% melhor
+[127:PrintClocks] generic->MulSub( float * float[10] )
+[127:PrintClocks] count =  1, clocks = 80
+[127:PrintClocks]    simd->MulSub( float * float[10] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 48% melhor
+[127:PrintClocks] generic->MulSub( float * float[11] )
+[127:PrintClocks] count =  1, clocks = 86
+[127:PrintClocks]    simd->MulSub( float * float[11] ) ok
+[127:PrintClocks] count = 1 , clocks =  44, 48% melhor
+[127:PrintClocks] generic->MulSub( float * float[12] )
+[127:PrintClocks] count =  1, clocks = 86
+[127:PrintClocks]    simd->MulSub( float * float[12] ) ok
+[127:PrintClocks] count = 1 , clocks =  26, 69% melhor
+[127:PrintClocks] generic->MulSub( float * float[13] )
+[127:PrintClocks] count =  1, clocks = 95
+[127:PrintClocks]    simd->MulSub( float * float[13] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 69% melhor
+[127:PrintClocks] generic->MulSub( float * float[14] )
+[127:PrintClocks] count =  1, clocks = 104
+[127:PrintClocks]    simd->MulSub( float * float[14] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 69% melhor
+[127:PrintClocks] generic->MulSub( float * float[15] )
+[127:PrintClocks] count =  1, clocks = 115
+[127:PrintClocks]    simd->MulSub( float * float[15] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 72% melhor
+[127:PrintClocks] generic->MulSub( float * float[16] )
+[127:PrintClocks] count =  1, clocks = 190
+[127:PrintClocks]    simd->MulSub( float * float[16] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 78% melhor
+[127:PrintClocks] generic->MulSub( float * float[17] )
+[127:PrintClocks] count =  1, clocks = 142
+[127:PrintClocks]    simd->MulSub( float * float[17] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 79% melhor
+[127:PrintClocks] generic->MulSub( float * float[18] )
+[127:PrintClocks] count =  1, clocks = 130
+[127:PrintClocks]    simd->MulSub( float * float[18] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 75% melhor
+[127:PrintClocks] generic->MulSub( float * float[19] )
+[127:PrintClocks] count =  1, clocks = 136
+[127:PrintClocks]    simd->MulSub( float * float[19] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 76% melhor
+[127:PrintClocks] generic->MulSub( float * float[20] )
+[127:PrintClocks] count =  1, clocks = 136
+[127:PrintClocks]    simd->MulSub( float * float[20] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 78% melhor
+[127:PrintClocks] generic->MulSub( float * float[21] )
+[127:PrintClocks] count =  1, clocks = 145
+[127:PrintClocks]    simd->MulSub( float * float[21] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 77% melhor
+[127:PrintClocks] generic->MulSub( float * float[22] )
+[127:PrintClocks] count =  1, clocks = 157
+[127:PrintClocks]    simd->MulSub( float * float[22] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 79% melhor
+[127:PrintClocks] generic->MulSub( float * float[23] )
+[127:PrintClocks] count =  1, clocks = 160
+[127:PrintClocks]    simd->MulSub( float * float[23] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 78% melhor
+[127:PrintClocks] generic->MulSub( float * float[24] )
+[127:PrintClocks] count =  1, clocks = 166
+[127:PrintClocks]    simd->MulSub( float * float[24] ) ok
+[127:PrintClocks] count = 1 , clocks =  29, 82% melhor
+[127:PrintClocks] generic->MulSub( float * float[25] )
+[127:PrintClocks] count =  1, clocks = 172
+[127:PrintClocks]    simd->MulSub( float * float[25] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 81% melhor
+[127:PrintClocks] generic->MulSub( float * float[26] )
+[127:PrintClocks] count =  1, clocks = 178
+[127:PrintClocks]    simd->MulSub( float * float[26] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 82% melhor
+[127:PrintClocks] generic->MulSub( float * float[27] )
+[127:PrintClocks] count =  1, clocks = 187
+[127:PrintClocks]    simd->MulSub( float * float[27] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 81% melhor
+[127:PrintClocks] generic->MulSub( float * float[28] )
+[127:PrintClocks] count =  1, clocks = 187
+[127:PrintClocks]    simd->MulSub( float * float[28] ) ok
+[127:PrintClocks] count = 1 , clocks =  32, 82% melhor
+[127:PrintClocks] generic->MulSub( float * float[29] )
+[127:PrintClocks] count =  1, clocks = 196
+[127:PrintClocks]    simd->MulSub( float * float[29] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 82% melhor
+[127:PrintClocks] generic->MulSub( float * float[30] )
+[127:PrintClocks] count =  1, clocks = 207
+[127:PrintClocks]    simd->MulSub( float * float[30] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 83% melhor
+[127:PrintClocks] generic->MulSub( float * float[31] )
+[127:PrintClocks] count =  1, clocks = 213
+[127:PrintClocks]    simd->MulSub( float * float[31] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 82% melhor
+[127:PrintClocks] generic->MulSub( float * float[32] )
+[127:PrintClocks] count =  1, clocks = 216
+[127:PrintClocks]    simd->MulSub( float * float[32] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 83% melhor
+[127:PrintClocks] generic->MulSub( float * float[33] )
+[127:PrintClocks] count =  1, clocks = 222
+[127:PrintClocks]    simd->MulSub( float * float[33] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 84% melhor
+[127:PrintClocks] generic->MulSub( float * float[34] )
+[127:PrintClocks] count =  1, clocks = 231
+[127:PrintClocks]    simd->MulSub( float * float[34] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 83% melhor
+[127:PrintClocks] generic->MulSub( float * float[35] )
+[127:PrintClocks] count =  1, clocks = 240
+[127:PrintClocks]    simd->MulSub( float * float[35] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 84% melhor
+[127:PrintClocks] generic->MulSub( float * float[36] )
+[127:PrintClocks] count =  1, clocks = 237
+[127:PrintClocks]    simd->MulSub( float * float[36] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 85% melhor
+[127:PrintClocks] generic->MulSub( float * float[37] )
+[127:PrintClocks] count =  1, clocks = 249
+[127:PrintClocks]    simd->MulSub( float * float[37] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 84% melhor
+[127:PrintClocks] generic->MulSub( float * float[38] )
+[127:PrintClocks] count =  1, clocks = 258
+[127:PrintClocks]    simd->MulSub( float * float[38] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 85% melhor
+[127:PrintClocks] generic->MulSub( float * float[39] )
+[127:PrintClocks] count =  1, clocks = 264
+[127:PrintClocks]    simd->MulSub( float * float[39] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 85% melhor
+[127:PrintClocks] generic->MulSub( float * float[40] )
+[127:PrintClocks] count =  1, clocks = 264
+[127:PrintClocks]    simd->MulSub( float * float[40] ) ok
+[127:PrintClocks] count = 1 , clocks =  35, 86% melhor
+[127:PrintClocks] generic->MulSub( float * float[41] )
+[127:PrintClocks] count =  1, clocks = 273
+[127:PrintClocks]    simd->MulSub( float * float[41] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 86% melhor
+[127:PrintClocks] generic->MulSub( float * float[42] )
+[127:PrintClocks] count =  1, clocks = 282
+[127:PrintClocks]    simd->MulSub( float * float[42] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 85% melhor
+[127:PrintClocks] generic->MulSub( float * float[43] )
+[127:PrintClocks] count =  1, clocks = 290
+[127:PrintClocks]    simd->MulSub( float * float[43] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 85% melhor
+[127:PrintClocks] generic->MulSub( float * float[44] )
+[127:PrintClocks] count =  1, clocks = 288
+[127:PrintClocks]    simd->MulSub( float * float[44] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 86% melhor
+[127:PrintClocks] generic->MulSub( float * float[45] )
+[127:PrintClocks] count =  1, clocks = 302
+[127:PrintClocks]    simd->MulSub( float * float[45] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 87% melhor
+[127:PrintClocks] generic->MulSub( float * float[46] )
+[127:PrintClocks] count =  1, clocks = 308
+[127:PrintClocks]    simd->MulSub( float * float[46] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 86% melhor
+[127:PrintClocks] generic->MulSub( float * float[47] )
+[127:PrintClocks] count =  1, clocks = 314
+[127:PrintClocks]    simd->MulSub( float * float[47] ) ok
+[127:PrintClocks] count = 1 , clocks =  44, 85% melhor
+[127:PrintClocks] generic->MulSub( float * float[48] )
+[127:PrintClocks] count =  1, clocks = 317
+[127:PrintClocks]    simd->MulSub( float * float[48] ) ok
+[127:PrintClocks] count = 1 , clocks =  38, 88% melhor
+[127:PrintClocks] generic->MulSub( float * float[49] )
+[127:PrintClocks] count =  1, clocks = 323
+[127:PrintClocks]    simd->MulSub( float * float[49] ) ok
+[127:PrintClocks] count = 1 , clocks =  41, 87% melhor
+[127:TestDot] ====================================
+[127:PrintClocks] generic->Dot( CVector3D * CVector3D[] )
+[127:PrintClocks] count =  1024, clocks = 18111
+[127:PrintClocks]    simd->Dot( CVector3D * CVector3D[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  2463, 86% melhor
+[127:PrintClocks] generic->Dot( CVector3D * CPlane[] )
+[127:PrintClocks] count =  1024, clocks = 31202
+[127:PrintClocks]    simd->Dot( CVector3D * CPlane[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  3089, 90% melhor
+[127:PrintClocks] generic->Dot( CVector3D * CDrawVertice[] )
+[127:PrintClocks] count =  1024, clocks = 18052
+[127:PrintClocks]    simd->Dot( CVector3D * CDrawVertice[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  2736, 84% melhor
+[127:PrintClocks] generic->Dot( CPlane * CVector3D[] )
+[127:PrintClocks] count =  1024, clocks = 30517
+[127:PrintClocks]    simd->Dot( CPlane * CVector3D[] ) ok
+[127:PrintClocks] count = 1024 , clocks =  2475, 91% melhor
+[127:PrintClocks] generic->Dot( CPlane * CPlane[] )
+[127:PrintClocks] count =  1024, clocks = 43462

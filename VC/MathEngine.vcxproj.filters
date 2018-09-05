@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{055b04b1-8917-4881-bb53-64990bed28d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\exceptions">
+      <UniqueIdentifier>{50375b39-10ab-4b82-86c0-c071f0e9cfa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{038c85ae-9c7f-4e1d-81c6-714a5184fe31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Util">
+      <UniqueIdentifier>{77b911a2-e3bb-44ff-a537-bfeac565fa08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Exceptions">
+      <UniqueIdentifier>{a683304e-9e86-43e8-b8b4-2efa48ac7d02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NASM">
+      <UniqueIdentifier>{88e7dc03-a76e-4881-888d-894e0555fd86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{041795f6-92cc-4370-930e-a9cd20bc3a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Math">
+      <UniqueIdentifier>{99945106-3d38-4df9-b249-98ffe6a30349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util\String">
+      <UniqueIdentifier>{d6e5029f-5f2a-4980-b149-c0e076623341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Util\String">
+      <UniqueIdentifier>{c02dc89a-2ce3-4cc3-8ed7-dc04e983ace6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Util\Memory">
+      <UniqueIdentifier>{5b9ccdd1-abd8-4331-86f3-167e1fecba1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util\Memory">
+      <UniqueIdentifier>{f6de0ff3-7e02-486a-a2e2-285f6b322f21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\geometry">
+      <UniqueIdentifier>{fbb42ee3-865b-43fd-bfb2-5bb2b1c7318e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\geometry">
+      <UniqueIdentifier>{be1c70ea-a513-4fc9-a8af-ea8d15e2588f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\System">
+      <UniqueIdentifier>{0b8cd2d6-65cf-4b6b-a7f5-14b720abe5c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\System\Windows">
+      <UniqueIdentifier>{1740276b-8b22-4922-8efd-688e20cb5e4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{bc08d424-a0c2-46df-8be4-bb6447aa497d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Physics">
+      <UniqueIdentifier>{ab1abd13-8ffe-4fb0-9af8-36785efb1430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\structures">
+      <UniqueIdentifier>{42438899-d1e5-415d-bae2-7a9b6538ef52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\structures">
+      <UniqueIdentifier>{616ec15a-3ced-4144-a03d-47d3ec9f8816}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\exceptions\SMF_error.cpp">
+      <Filter>Source\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\exceptions\SMF_exception.cpp">
+      <Filter>Source\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\exceptions\SMF_LoadException.cpp">
+      <Filter>Source\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_DrawVert.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Complex.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_EulerAngles.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Lcp.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Math.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Matriz.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Ode.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Pluecker.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Polynomial.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Quat.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Rotation.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_3DNow.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_Generic.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_MMX.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE2.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE3.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Vector.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\structures\SMF_HashTableFast.cpp">
+      <Filter>Source\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\sys\win32\SMF_Fpu.cpp">
+      <Filter>Source\System\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\sys\win32\SMF_WinCpu.cpp">
+      <Filter>Source\System\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\sys\win32\SMF_WinShared.cpp">
+      <Filter>Source\System\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\sys\SMF_System.cpp">
+      <Filter>Source\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\util\SMF_Heap.cpp">
+      <Filter>Source\Util\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\util\SMF_StringUtils.cpp">
+      <Filter>Source\Util\String</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\util\SMF_ArgsCmdLine.cpp">
+      <Filter>Source\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\util\SMF_Debug.cpp">
+      <Filter>Source\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\util\SMF_HashUtils.cpp">
+      <Filter>Source\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE41.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_SSE42.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_SimdTestMatriz.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_SimdTestQuat.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_SimdTestPlane.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_AABBox.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Plane.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_OBBox.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Sphere.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Line.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_JointTransform.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Circle.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_LineSegment.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Polygon.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Polyhedron.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Ray.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Triangle.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_TriangleMesh.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\util\SMF_RandomLCG.cpp">
+      <Filter>Source\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Transform.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DPoint.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DAABBox.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DLine.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\util\SMF_Testlib.cpp">
+      <Filter>Source\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DTests.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DLineSegment.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DCircle.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DConics.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DEllipse.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DRay.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DTriangle.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DPolygon.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Regression.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DParabola.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DCircleSegment.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_Geodefs.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\geometry\SMF_2DCircleSector.cpp">
+      <Filter>Source\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_SSEComon.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\math\SMF_Simd_SSEAVX.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Gamecore\exceptions\all.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\all.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\all.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\SMF.h" />
+    <ClInclude Include="..\Gamecore\SMF_Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\exceptions\SMF_Error.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\exceptions\SMF_Exception.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\exceptions\SMF_LoadException.h">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_DrawVert.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Complex.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Curve.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_EulerAngles.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Extrapolate.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Interpolation.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Lincp.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Math.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Matriz.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Odife.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Pluecker.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Polynomial.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Quaternion.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Rotation.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Simd.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Vector.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Simd3DNow.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdGeneric.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdMMX.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE2.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE3.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\sys\SMF_System.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_Heap.h">
+      <Filter>Header Files\util\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_StringUtils.h">
+      <Filter>Header Files\util\String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_ArgsCmdLine.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_Debug.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_UtilStructs.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\SMF_Types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\structures\all.h">
+      <Filter>Header Files\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\structures\SMF_HashTableFast.h">
+      <Filter>Header Files\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\structures\SMF_List.h">
+      <Filter>Header Files\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\structures\SMF_BTree.h">
+      <Filter>Header Files\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_HashUtils.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE41.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdSSE42.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_AABBox.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Plane.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_OBBox.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Sphere.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_GeoDefs.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_MathDefs.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_HeapBlockAloc.h">
+      <Filter>Header Files\util\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_PlaneList.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_Random.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Line.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_JointTransform.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Ray.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Polyhedron.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Polygon.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_LineSegment.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Circle.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_Triangle.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_TriangleMesh.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_RandomLCG.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Transforms.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Mat3D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DAABBox.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DPoint.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DLine.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\util\SMF_TestLib.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DLineSegment.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DDrawVert.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DCircle.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DConics.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DEllipse.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DRay.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DTriangle.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DPolygon.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_Regression.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DParabola.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DCircleSector.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\geometry\SMF_2DCircleSegment.h">
+      <Filter>Header Files\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gamecore\math\SMF_SimdAVX.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+1 BUILDING MINGW
+
+1.1 - open the project (CB/MathEngine.cbp) on codeblocks and build
+2.2 - this code was built with mingw64 under windows 7 64bits
+
+2 BUILDING MSVC
+
+2.1 - Open the Project(VC/MathEngine.vcxproj) on msvc and build
+2.2 This code was built under msvc 2012 under windows 7 64 bit

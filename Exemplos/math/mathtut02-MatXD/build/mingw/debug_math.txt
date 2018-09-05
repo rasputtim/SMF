@@ -1,0 +1,2405 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:Test_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestMath] ====================================
+
+[127:printClocks]             fabs( tst )
+[127:printClocks] count =  1, clocks = 9
+[127:printClocks]     CMath::fabs( tst )
+[127:printClocks] count =  1, clocks = 3
+[127:printClocks]             sqrt( tst )
+[127:printClocks] count =  1, clocks = 32
+[127:printClocks]     CMath::sqrt( tst )
+[127:printClocks] count =  1, clocks = 92
+[127:printClocks]   CMath::sqrt16( tst )
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]   CMath::sqrt64( tst )
+[127:printClocks] count =  1, clocks = 837
+[127:printClocks]    CMath::rSqrt( tst )
+[127:printClocks] count =  1, clocks = 59
+[127:printClocks]      CMath::sin( tst )
+[127:printClocks] count =  1, clocks = 110
+[127:printClocks]    CMath::sin16( tst )
+[127:printClocks] count =  1, clocks = 62
+[127:printClocks]      CMath::cos( tst )
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    CMath::cos16( tst )
+[127:printClocks] count =  1, clocks = 62
+[127:printClocks]   CMath::sincos( tst )
+[127:printClocks] count =  1, clocks = 202
+[127:printClocks] CMath::sincos16( tst )
+[127:printClocks] count =  1, clocks = 59
+[127:printClocks]      CMath::tan( tst )
+[127:printClocks] count =  1, clocks = 196
+[127:printClocks]    CMath::tan16( tst )
+[127:printClocks] count =  1, clocks = 86
+[127:printClocks]     CMath::asin( tst )
+[127:printClocks] count =  1, clocks = 118
+[127:printClocks]   CMath::asin16( tst )
+[127:printClocks] count =  1, clocks = 115
+[127:printClocks]     CMath::acos( tst )
+[127:printClocks] count =  1, clocks = 163
+[127:printClocks]   CMath::acos16( tst )
+[127:printClocks] count =  1, clocks = 107
+[127:printClocks]     CMath::atan( tst )
+[127:printClocks] count =  1, clocks = 124
+[127:printClocks]   CMath::atan16( tst )
+[127:printClocks] count =  1, clocks = 83
+[127:printClocks]     CMath::pow( tst )
+[127:printClocks] count =  1, clocks = 252
+[127:printClocks]   CMath::pow16( tst )
+[127:printClocks] count =  1, clocks = 246
+[127:printClocks]     CMath::exp( tst )
+[127:printClocks] count =  1, clocks = 145
+[127:printClocks]   CMath::exp16( tst )
+[127:printClocks] count =  1, clocks = 110
+[127:printClocks]     CMath::log( tst )
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]   CMath::log16( tst )
+[127:printClocks] count =  1, clocks = 130
+[127:TestMath] testvar = nan
+[127:printClocks]        CQuaternion::toMat3()
+[127:printClocks] count =  1, clocks = 285
+[127:printClocks]         CQuaternion::slerp()
+[127:printClocks] count =  1, clocks = 424
+[127:printClocks]       CCompQuaternion::toQuat()
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]      CEulerAngles::toQuat()
+[127:printClocks] count =  1, clocks = 774
+[127:printClocks]      CEulerAngles::toMat3()
+[127:printClocks] count =  1, clocks = 866
+[127:TestAdd] ====================================
+[127:printClocks] generic->add( float + float[] )
+[127:printClocks] count =  1024, clocks = 4401
+[127:printClocks]    simd->add( float + float[] ) ok
+[127:printClocks] count = 1024 , clocks =  427, 90% melhor
+[127:printClocks] generic->add( float[] + float[] )
+[127:printClocks] count =  1024, clocks = 5060
+[127:printClocks]    simd->add( float[] + float[] ) ok
+[127:printClocks] count = 1024 , clocks =  448, 91% melhor
+[127:TestSub] ====================================
+
+[127:printClocks] generic->sub( float + float[] )
+[127:printClocks] count =  1024, clocks = 5101
+[127:printClocks]    simd->sub( float + float[] ) ok
+[127:printClocks] count = 1024 , clocks =  424, 91% melhor
+[127:printClocks] generic->sub( float[] + float[] )
+[127:printClocks] count =  1024, clocks = 5063
+[127:printClocks]    simd->sub( float[] + float[] ) ok
+[127:printClocks] count = 1024 , clocks =  448, 91% melhor
+[127:TestMul] ====================================
+[127:printClocks] generic->mul( float * float[] )
+[127:printClocks] count =  1024, clocks = 5063
+[127:printClocks]    simd->mul( float * float[] ) ok
+[127:printClocks] count = 1024 , clocks =  427, 91% melhor
+[127:printClocks] generic->mul( float[] * float[] )
+[127:printClocks] count =  1024, clocks = 4976
+[127:printClocks]    simd->mul( float[] * float[] ) ok
+[127:printClocks] count = 1024 , clocks =  451, 90% melhor
+[127:TestDiv] ====================================
+[127:printClocks] generic->div( float * float[] )
+[127:printClocks] count =  1024, clocks = 19513
+[127:printClocks]    simd->div( float * float[] ) ok
+[127:printClocks] count = 1024 , clocks =  869, 95% melhor
+[127:printClocks] generic->div( float[] * float[] )
+[127:printClocks] count =  1024, clocks = 19510
+[127:printClocks]    simd->div( float[] * float[] ) ok
+[127:printClocks] count = 1024 , clocks =  878, 95% melhor
+[127:TestMulAdd] ====================================
+[127:printClocks] generic->mulAdd( float * float[ 0] )
+[127:printClocks] count =  1, clocks = 12
+[127:printClocks]    simd->mulAdd( float * float[ 0] ) ok
+[127:printClocks] count = 1 , clocks =  14, -16% melhor
+[127:printClocks] generic->mulAdd( float * float[ 1] )
+[127:printClocks] count =  1, clocks = 32
+[127:printClocks]    simd->mulAdd( float * float[ 1] ) ok
+[127:printClocks] count = 1 , clocks =  18, 43% melhor
+[127:printClocks] generic->mulAdd( float * float[ 2] )
+[127:printClocks] count =  1, clocks = 38
+[127:printClocks]    simd->mulAdd( float * float[ 2] ) ok
+[127:printClocks] count = 1 , clocks =  26, 31% melhor
+[127:printClocks] generic->mulAdd( float * float[ 3] )
+[127:printClocks] count =  1, clocks = 47
+[127:printClocks]    simd->mulAdd( float * float[ 3] ) ok
+[127:printClocks] count = 1 , clocks =  29, 38% melhor
+[127:printClocks] generic->mulAdd( float * float[ 4] )
+[127:printClocks] count =  1, clocks = 47
+[127:printClocks]    simd->mulAdd( float * float[ 4] ) ok
+[127:printClocks] count = 1 , clocks =  32, 31% melhor
+[127:printClocks] generic->mulAdd( float * float[ 5] )
+[127:printClocks] count =  1, clocks = 56
+[127:printClocks]    simd->mulAdd( float * float[ 5] ) ok
+[127:printClocks] count = 1 , clocks =  35, 37% melhor
+[127:printClocks] generic->mulAdd( float * float[ 6] )
+[127:printClocks] count =  1, clocks = 62
+[127:printClocks]    simd->mulAdd( float * float[ 6] ) ok
+[127:printClocks] count = 1 , clocks =  35, 43% melhor
+[127:printClocks] generic->mulAdd( float * float[ 7] )
+[127:printClocks] count =  1, clocks = 71
+[127:printClocks]    simd->mulAdd( float * float[ 7] ) ok
+[127:printClocks] count = 1 , clocks =  41, 42% melhor
+[127:printClocks] generic->mulAdd( float * float[ 8] )
+[127:printClocks] count =  1, clocks = 71
+[127:printClocks]    simd->mulAdd( float * float[ 8] ) ok
+[127:printClocks] count = 1 , clocks =  41, 42% melhor
+[127:printClocks] generic->mulAdd( float * float[ 9] )
+[127:printClocks] count =  1, clocks = 80
+[127:printClocks]    simd->mulAdd( float * float[ 9] ) ok
+[127:printClocks] count = 1 , clocks =  44, 45% melhor
+[127:printClocks] generic->mulAdd( float * float[10] )
+[127:printClocks] count =  1, clocks = 86
+[127:printClocks]    simd->mulAdd( float * float[10] ) ok
+[127:printClocks] count = 1 , clocks =  47, 45% melhor
+[127:printClocks] generic->mulAdd( float * float[11] )
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->mulAdd( float * float[11] ) ok
+[127:printClocks] count = 1 , clocks =  50, 47% melhor
+[127:printClocks] generic->mulAdd( float * float[12] )
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->mulAdd( float * float[12] ) ok
+[127:printClocks] count = 1 , clocks =  32, 66% melhor
+[127:printClocks] generic->mulAdd( float * float[13] )
+[127:printClocks] count =  1, clocks = 104
+[127:printClocks]    simd->mulAdd( float * float[13] ) ok
+[127:printClocks] count = 1 , clocks =  35, 66% melhor
+[127:printClocks] generic->mulAdd( float * float[14] )
+[127:printClocks] count =  1, clocks = 110
+[127:printClocks]    simd->mulAdd( float * float[14] ) ok
+[127:printClocks] count = 1 , clocks =  35, 68% melhor
+[127:printClocks] generic->mulAdd( float * float[15] )
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->mulAdd( float * float[15] ) ok
+[127:printClocks] count = 1 , clocks =  38, 68% melhor
+[127:printClocks] generic->mulAdd( float * float[16] )
+[127:printClocks] count =  1, clocks = 124
+[127:printClocks]    simd->mulAdd( float * float[16] ) ok
+[127:printClocks] count = 1 , clocks =  32, 74% melhor
+[127:printClocks] generic->mulAdd( float * float[17] )
+[127:printClocks] count =  1, clocks = 133
+[127:printClocks]    simd->mulAdd( float * float[17] ) ok
+[127:printClocks] count = 1 , clocks =  35, 73% melhor
+[127:printClocks] generic->mulAdd( float * float[18] )
+[127:printClocks] count =  1, clocks = 139
+[127:printClocks]    simd->mulAdd( float * float[18] ) ok
+[127:printClocks] count = 1 , clocks =  35, 74% melhor
+[127:printClocks] generic->mulAdd( float * float[19] )
+[127:printClocks] count =  1, clocks = 148
+[127:printClocks]    simd->mulAdd( float * float[19] ) ok
+[127:printClocks] count = 1 , clocks =  38, 74% melhor
+[127:printClocks] generic->mulAdd( float * float[20] )
+[127:printClocks] count =  1, clocks = 148
+[127:printClocks]    simd->mulAdd( float * float[20] ) ok
+[127:printClocks] count = 1 , clocks =  35, 76% melhor
+[127:printClocks] generic->mulAdd( float * float[21] )
+[127:printClocks] count =  1, clocks = 157
+[127:printClocks]    simd->mulAdd( float * float[21] ) ok
+[127:printClocks] count = 1 , clocks =  38, 75% melhor
+[127:printClocks] generic->mulAdd( float * float[22] )
+[127:printClocks] count =  1, clocks = 163
+[127:printClocks]    simd->mulAdd( float * float[22] ) ok
+[127:printClocks] count = 1 , clocks =  38, 76% melhor
+[127:printClocks] generic->mulAdd( float * float[23] )
+[127:printClocks] count =  1, clocks = 169
+[127:printClocks]    simd->mulAdd( float * float[23] ) ok
+[127:printClocks] count = 1 , clocks =  41, 75% melhor
+[127:printClocks] generic->mulAdd( float * float[24] )
+[127:printClocks] count =  1, clocks = 172
+[127:printClocks]    simd->mulAdd( float * float[24] ) ok
+[127:printClocks] count = 1 , clocks =  35, 79% melhor
+[127:printClocks] generic->mulAdd( float * float[25] )
+[127:printClocks] count =  1, clocks = 181
+[127:printClocks]    simd->mulAdd( float * float[25] ) ok
+[127:printClocks] count = 1 , clocks =  38, 79% melhor
+[127:printClocks] generic->mulAdd( float * float[26] )
+[127:printClocks] count =  1, clocks = 190
+[127:printClocks]    simd->mulAdd( float * float[26] ) ok
+[127:printClocks] count = 1 , clocks =  41, 78% melhor
+[127:printClocks] generic->mulAdd( float * float[27] )
+[127:printClocks] count =  1, clocks = 196
+[127:printClocks]    simd->mulAdd( float * float[27] ) ok
+[127:printClocks] count = 1 , clocks =  41, 79% melhor
+[127:printClocks] generic->mulAdd( float * float[28] )
+[127:printClocks] count =  1, clocks = 199
+[127:printClocks]    simd->mulAdd( float * float[28] ) ok
+[127:printClocks] count = 1 , clocks =  38, 80% melhor
+[127:printClocks] generic->mulAdd( float * float[29] )
+[127:printClocks] count =  1, clocks = 210
+[127:printClocks]    simd->mulAdd( float * float[29] ) ok
+[127:printClocks] count = 1 , clocks =  41, 80% melhor
+[127:printClocks] generic->mulAdd( float * float[30] )
+[127:printClocks] count =  1, clocks = 216
+[127:printClocks]    simd->mulAdd( float * float[30] ) ok
+[127:printClocks] count = 1 , clocks =  41, 81% melhor
+[127:printClocks] generic->mulAdd( float * float[31] )
+[127:printClocks] count =  1, clocks = 222
+[127:printClocks]    simd->mulAdd( float * float[31] ) ok
+[127:printClocks] count = 1 , clocks =  41, 81% melhor
+[127:printClocks] generic->mulAdd( float * float[32] )
+[127:printClocks] count =  1, clocks = 225
+[127:printClocks]    simd->mulAdd( float * float[32] ) ok
+[127:printClocks] count = 1 , clocks =  38, 83% melhor
+[127:printClocks] generic->mulAdd( float * float[33] )
+[127:printClocks] count =  1, clocks = 231
+[127:printClocks]    simd->mulAdd( float * float[33] ) ok
+[127:printClocks] count = 1 , clocks =  41, 82% melhor
+[127:printClocks] generic->mulAdd( float * float[34] )
+[127:printClocks] count =  1, clocks = 240
+[127:printClocks]    simd->mulAdd( float * float[34] ) ok
+[127:printClocks] count = 1 , clocks =  41, 82% melhor
+[127:printClocks] generic->mulAdd( float * float[35] )
+[127:printClocks] count =  1, clocks = 246
+[127:printClocks]    simd->mulAdd( float * float[35] ) ok
+[127:printClocks] count = 1 , clocks =  44, 82% melhor
+[127:printClocks] generic->mulAdd( float * float[36] )
+[127:printClocks] count =  1, clocks = 252
+[127:printClocks]    simd->mulAdd( float * float[36] ) ok
+[127:printClocks] count = 1 , clocks =  41, 83% melhor
+[127:printClocks] generic->mulAdd( float * float[37] )
+[127:printClocks] count =  1, clocks = 258
+[127:printClocks]    simd->mulAdd( float * float[37] ) ok
+[127:printClocks] count = 1 , clocks =  44, 82% melhor
+[127:printClocks] generic->mulAdd( float * float[38] )
+[127:printClocks] count =  1, clocks = 264
+[127:printClocks]    simd->mulAdd( float * float[38] ) ok
+[127:printClocks] count = 1 , clocks =  44, 83% melhor
+[127:printClocks] generic->mulAdd( float * float[39] )
+[127:printClocks] count =  1, clocks = 270
+[127:printClocks]    simd->mulAdd( float * float[39] ) ok
+[127:printClocks] count = 1 , clocks =  47, 82% melhor
+[127:printClocks] generic->mulAdd( float * float[40] )
+[127:printClocks] count =  1, clocks = 273
+[127:printClocks]    simd->mulAdd( float * float[40] ) ok
+[127:printClocks] count = 1 , clocks =  41, 84% melhor
+[127:printClocks] generic->mulAdd( float * float[41] )
+[127:printClocks] count =  1, clocks = 282
+[127:printClocks]    simd->mulAdd( float * float[41] ) ok
+[127:printClocks] count = 1 , clocks =  44, 84% melhor
+[127:printClocks] generic->mulAdd( float * float[42] )
+[127:printClocks] count =  1, clocks = 285
+[127:printClocks]    simd->mulAdd( float * float[42] ) ok
+[127:printClocks] count = 1 , clocks =  47, 83% melhor
+[127:printClocks] generic->mulAdd( float * float[43] )
+[127:printClocks] count =  1, clocks = 299
+[127:printClocks]    simd->mulAdd( float * float[43] ) ok
+[127:printClocks] count = 1 , clocks =  47, 84% melhor
+[127:printClocks] generic->mulAdd( float * float[44] )
+[127:printClocks] count =  1, clocks = 294
+[127:printClocks]    simd->mulAdd( float * float[44] ) ok
+[127:printClocks] count = 1 , clocks =  44, 85% melhor
+[127:printClocks] generic->mulAdd( float * float[45] )
+[127:printClocks] count =  1, clocks = 305
+[127:printClocks]    simd->mulAdd( float * float[45] ) ok
+[127:printClocks] count = 1 , clocks =  47, 84% melhor
+[127:printClocks] generic->mulAdd( float * float[46] )
+[127:printClocks] count =  1, clocks = 317
+[127:printClocks]    simd->mulAdd( float * float[46] ) ok
+[127:printClocks] count = 1 , clocks =  47, 85% melhor
+[127:printClocks] generic->mulAdd( float * float[47] )
+[127:printClocks] count =  1, clocks = 323
+[127:printClocks]    simd->mulAdd( float * float[47] ) ok
+[127:printClocks] count = 1 , clocks =  50, 84% melhor
+[127:printClocks] generic->mulAdd( float * float[48] )
+[127:printClocks] count =  1, clocks = 323
+[127:printClocks]    simd->mulAdd( float * float[48] ) ok
+[127:printClocks] count = 1 , clocks =  44, 86% melhor
+[127:printClocks] generic->mulAdd( float * float[49] )
+[127:printClocks] count =  1, clocks = 332
+[127:printClocks]    simd->mulAdd( float * float[49] ) ok
+[127:printClocks] count = 1 , clocks =  47, 85% melhor
+[127:TestMulSub] ====================================
+[127:printClocks] generic->mulSub( float * float[ 0] )
+[127:printClocks] count =  1, clocks = 12
+[127:printClocks]    simd->mulSub( float * float[ 0] ) ok
+[127:printClocks] count = 1 , clocks =  9, 25% melhor
+[127:printClocks] generic->mulSub( float * float[ 1] )
+[127:printClocks] count =  1, clocks = 32
+[127:printClocks]    simd->mulSub( float * float[ 1] ) ok
+[127:printClocks] count = 1 , clocks =  18, 43% melhor
+[127:printClocks] generic->mulSub( float * float[ 2] )
+[127:printClocks] count =  1, clocks = 38
+[127:printClocks]    simd->mulSub( float * float[ 2] ) ok
+[127:printClocks] count = 1 , clocks =  26, 31% melhor
+[127:printClocks] generic->mulSub( float * float[ 3] )
+[127:printClocks] count =  1, clocks = 47
+[127:printClocks]    simd->mulSub( float * float[ 3] ) ok
+[127:printClocks] count = 1 , clocks =  32, 31% melhor
+[127:printClocks] generic->mulSub( float * float[ 4] )
+[127:printClocks] count =  1, clocks = 47
+[127:printClocks]    simd->mulSub( float * float[ 4] ) ok
+[127:printClocks] count = 1 , clocks =  32, 31% melhor
+[127:printClocks] generic->mulSub( float * float[ 5] )
+[127:printClocks] count =  1, clocks = 56
+[127:printClocks]    simd->mulSub( float * float[ 5] ) ok
+[127:printClocks] count = 1 , clocks =  35, 37% melhor
+[127:printClocks] generic->mulSub( float * float[ 6] )
+[127:printClocks] count =  1, clocks = 62
+[127:printClocks]    simd->mulSub( float * float[ 6] ) ok
+[127:printClocks] count = 1 , clocks =  41, 33% melhor
+[127:printClocks] generic->mulSub( float * float[ 7] )
+[127:printClocks] count =  1, clocks = 71
+[127:printClocks]    simd->mulSub( float * float[ 7] ) ok
+[127:printClocks] count = 1 , clocks =  41, 42% melhor
+[127:printClocks] generic->mulSub( float * float[ 8] )
+[127:printClocks] count =  1, clocks = 71
+[127:printClocks]    simd->mulSub( float * float[ 8] ) ok
+[127:printClocks] count = 1 , clocks =  44, 38% melhor
+[127:printClocks] generic->mulSub( float * float[ 9] )
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]    simd->mulSub( float * float[ 9] ) ok
+[127:printClocks] count = 1 , clocks =  44, 42% melhor
+[127:printClocks] generic->mulSub( float * float[10] )
+[127:printClocks] count =  1, clocks = 86
+[127:printClocks]    simd->mulSub( float * float[10] ) ok
+[127:printClocks] count = 1 , clocks =  47, 45% melhor
+[127:printClocks] generic->mulSub( float * float[11] )
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->mulSub( float * float[11] ) ok
+[127:printClocks] count = 1 , clocks =  50, 47% melhor
+[127:printClocks] generic->mulSub( float * float[12] )
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->mulSub( float * float[12] ) ok
+[127:printClocks] count = 1 , clocks =  35, 63% melhor
+[127:printClocks] generic->mulSub( float * float[13] )
+[127:printClocks] count =  1, clocks = 104
+[127:printClocks]    simd->mulSub( float * float[13] ) ok
+[127:printClocks] count = 1 , clocks =  35, 66% melhor
+[127:printClocks] generic->mulSub( float * float[14] )
+[127:printClocks] count =  1, clocks = 115
+[127:printClocks]    simd->mulSub( float * float[14] ) ok
+[127:printClocks] count = 1 , clocks =  38, 66% melhor
+[127:printClocks] generic->mulSub( float * float[15] )
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->mulSub( float * float[15] ) ok
+[127:printClocks] count = 1 , clocks =  38, 68% melhor
+[127:printClocks] generic->mulSub( float * float[16] )
+[127:printClocks] count =  1, clocks = 124
+[127:printClocks]    simd->mulSub( float * float[16] ) ok
+[127:printClocks] count = 1 , clocks =  35, 71% melhor
+[127:printClocks] generic->mulSub( float * float[17] )
+[127:printClocks] count =  1, clocks = 133
+[127:printClocks]    simd->mulSub( float * float[17] ) ok
+[127:printClocks] count = 1 , clocks =  38, 71% melhor
+[127:printClocks] generic->mulSub( float * float[18] )
+[127:printClocks] count =  1, clocks = 136
+[127:printClocks]    simd->mulSub( float * float[18] ) ok
+[127:printClocks] count = 1 , clocks =  38, 72% melhor
+[127:printClocks] generic->mulSub( float * float[19] )
+[127:printClocks] count =  1, clocks = 145
+[127:printClocks]    simd->mulSub( float * float[19] ) ok
+[127:printClocks] count = 1 , clocks =  41, 71% melhor
+[127:printClocks] generic->mulSub( float * float[20] )
+[127:printClocks] count =  1, clocks = 145
+[127:printClocks]    simd->mulSub( float * float[20] ) ok
+[127:printClocks] count = 1 , clocks =  38, 73% melhor
+[127:printClocks] generic->mulSub( float * float[21] )
+[127:printClocks] count =  1, clocks = 154
+[127:printClocks]    simd->mulSub( float * float[21] ) ok
+[127:printClocks] count = 1 , clocks =  50, 67% melhor
+[127:printClocks] generic->mulSub( float * float[22] )
+[127:printClocks] count =  1, clocks = 163
+[127:printClocks]    simd->mulSub( float * float[22] ) ok
+[127:printClocks] count = 1 , clocks =  41, 74% melhor
+[127:printClocks] generic->mulSub( float * float[23] )
+[127:printClocks] count =  1, clocks = 169
+[127:printClocks]    simd->mulSub( float * float[23] ) ok
+[127:printClocks] count = 1 , clocks =  41, 75% melhor
+[127:printClocks] generic->mulSub( float * float[24] )
+[127:printClocks] count =  1, clocks = 169
+[127:printClocks]    simd->mulSub( float * float[24] ) ok
+[127:printClocks] count = 1 , clocks =  38, 77% melhor
+[127:printClocks] generic->mulSub( float * float[25] )
+[127:printClocks] count =  1, clocks = 178
+[127:printClocks]    simd->mulSub( float * float[25] ) ok
+[127:printClocks] count = 1 , clocks =  41, 76% melhor
+[127:printClocks] generic->mulSub( float * float[26] )
+[127:printClocks] count =  1, clocks = 189
+[127:printClocks]    simd->mulSub( float * float[26] ) ok
+[127:printClocks] count = 1 , clocks =  41, 78% melhor
+[127:printClocks] generic->mulSub( float * float[27] )
+[127:printClocks] count =  1, clocks = 193
+[127:printClocks]    simd->mulSub( float * float[27] ) ok
+[127:printClocks] count = 1 , clocks =  41, 78% melhor
+[127:printClocks] generic->mulSub( float * float[28] )
+[127:printClocks] count =  1, clocks = 190
+[127:printClocks]    simd->mulSub( float * float[28] ) ok
+[127:printClocks] count = 1 , clocks =  41, 78% melhor
+[127:printClocks] generic->mulSub( float * float[29] )
+[127:printClocks] count =  1, clocks = 199
+[127:printClocks]    simd->mulSub( float * float[29] ) ok
+[127:printClocks] count = 1 , clocks =  53, 73% melhor
+[127:printClocks] generic->mulSub( float * float[30] )
+[127:printClocks] count =  1, clocks = 218
+[127:printClocks]    simd->mulSub( float * float[30] ) ok
+[127:printClocks] count = 1 , clocks =  41, 81% melhor
+[127:printClocks] generic->mulSub( float * float[31] )
+[127:printClocks] count =  1, clocks = 222
+[127:printClocks]    simd->mulSub( float * float[31] ) ok
+[127:printClocks] count = 1 , clocks =  44, 80% melhor
+[127:printClocks] generic->mulSub( float * float[32] )
+[127:printClocks] count =  1, clocks = 219
+[127:printClocks]    simd->mulSub( float * float[32] ) ok
+[127:printClocks] count = 1 , clocks =  41, 81% melhor
+[127:printClocks] generic->mulSub( float * float[33] )
+[127:printClocks] count =  1, clocks = 228
+[127:printClocks]    simd->mulSub( float * float[33] ) ok
+[127:printClocks] count = 1 , clocks =  41, 82% melhor
+[127:printClocks] generic->mulSub( float * float[34] )
+[127:printClocks] count =  1, clocks = 237
+[127:printClocks]    simd->mulSub( float * float[34] ) ok
+[127:printClocks] count = 1 , clocks =  44, 81% melhor
+[127:printClocks] generic->mulSub( float * float[35] )
+[127:printClocks] count =  1, clocks = 246
+[127:printClocks]    simd->mulSub( float * float[35] ) ok
+[127:printClocks] count = 1 , clocks =  47, 80% melhor
+[127:printClocks] generic->mulSub( float * float[36] )
+[127:printClocks] count =  1, clocks = 246
+[127:printClocks]    simd->mulSub( float * float[36] ) ok
+[127:printClocks] count = 1 , clocks =  41, 83% melhor
+[127:printClocks] generic->mulSub( float * float[37] )
+[127:printClocks] count =  1, clocks = 255
+[127:printClocks]    simd->mulSub( float * float[37] ) ok
+[127:printClocks] count = 1 , clocks =  44, 82% melhor
+[127:printClocks] generic->mulSub( float * float[38] )
+[127:printClocks] count =  1, clocks = 261
+[127:printClocks]    simd->mulSub( float * float[38] ) ok
+[127:printClocks] count = 1 , clocks =  47, 81% melhor
+[127:printClocks] generic->mulSub( float * float[39] )
+[127:printClocks] count =  1, clocks = 270
+[127:printClocks]    simd->mulSub( float * float[39] ) ok
+[127:printClocks] count = 1 , clocks =  47, 82% melhor
+[127:printClocks] generic->mulSub( float * float[40] )
+[127:printClocks] count =  1, clocks = 264
+[127:printClocks]    simd->mulSub( float * float[40] ) ok
+[127:printClocks] count = 1 , clocks =  44, 83% melhor
+[127:printClocks] generic->mulSub( float * float[41] )
+[127:printClocks] count =  1, clocks = 279
+[127:printClocks]    simd->mulSub( float * float[41] ) ok
+[127:printClocks] count = 1 , clocks =  47, 83% melhor
+[127:printClocks] generic->mulSub( float * float[42] )
+[127:printClocks] count =  1, clocks = 285
+[127:printClocks]    simd->mulSub( float * float[42] ) ok
+[127:printClocks] count = 1 , clocks =  47, 83% melhor
+[127:printClocks] generic->mulSub( float * float[43] )
+[127:printClocks] count =  1, clocks = 294
+[127:printClocks]    simd->mulSub( float * float[43] ) ok
+[127:printClocks] count = 1 , clocks =  47, 84% melhor
+[127:printClocks] generic->mulSub( float * float[44] )
+[127:printClocks] count =  1, clocks = 291
+[127:printClocks]    simd->mulSub( float * float[44] ) ok
+[127:printClocks] count = 1 , clocks =  44, 84% melhor
+[127:printClocks] generic->mulSub( float * float[45] )
+[127:printClocks] count =  1, clocks = 305
+[127:printClocks]    simd->mulSub( float * float[45] ) ok
+[127:printClocks] count = 1 , clocks =  47, 84% melhor
+[127:printClocks] generic->mulSub( float * float[46] )
+[127:printClocks] count =  1, clocks = 314
+[127:printClocks]    simd->mulSub( float * float[46] ) ok
+[127:printClocks] count = 1 , clocks =  50, 84% melhor
+[127:printClocks] generic->mulSub( float * float[47] )
+[127:printClocks] count =  1, clocks = 320
+[127:printClocks]    simd->mulSub( float * float[47] ) ok
+[127:printClocks] count = 1 , clocks =  50, 84% melhor
+[127:printClocks] generic->mulSub( float * float[48] )
+[127:printClocks] count =  1, clocks = 320
+[127:printClocks]    simd->mulSub( float * float[48] ) ok
+[127:printClocks] count = 1 , clocks =  47, 85% melhor
+[127:printClocks] generic->mulSub( float * float[49] )
+[127:printClocks] count =  1, clocks = 332
+[127:printClocks]    simd->mulSub( float * float[49] ) ok
+[127:printClocks] count = 1 , clocks =  50, 84% melhor
+[127:TestDot] ====================================
+[127:printClocks] generic->dot( CVec3D * CVec3D[] )
+[127:printClocks] count =  1024, clocks = 18102
+[127:printClocks]    simd->dot( CVec3D * CVec3D[] ) ok
+[127:printClocks] count = 1024 , clocks =  2481, 86% melhor
+[127:printClocks] generic->dot( CVec3D * CPlane[] )
+[127:printClocks] count =  1024, clocks = 31312
+[127:printClocks]    simd->dot( CVec3D * CPlane[] ) ok
+[127:printClocks] count = 1024 , clocks =  3095, 90% melhor
+[127:printClocks] generic->dot( CVec3D * CVertex[] )
+[127:printClocks] count =  1024, clocks = 18070
+[127:printClocks]    simd->dot( CVec3D * CVertex[] ) ok
+[127:printClocks] count = 1024 , clocks =  2724, 84% melhor
+[127:printClocks] generic->dot( CPlane * CVec3D[] )
+[127:printClocks] count =  1024, clocks = 30416
+[127:printClocks]    simd->dot( CPlane * CVec3D[] ) ok
+[127:printClocks] count = 1024 , clocks =  2484, 91% melhor
+[127:printClocks] generic->dot( CPlane * CPlane[] )
+[127:printClocks] count =  1024, clocks = 43411
+[127:printClocks]    simd->dot( CPlane * CPlane[] ) ok
+[127:printClocks] count = 1024 , clocks =  3279, 92% melhor
+[127:printClocks] generic->dot( CPlane * CVertex[] )
+[127:printClocks] count =  1024, clocks = 29958
+[127:printClocks]    simd->dot( CPlane * CVertex[] ) ok
+[127:printClocks] count = 1024 , clocks =  2768, 90% melhor
+[127:printClocks] generic->dot( CVec3D[] * CVec3D[] )
+[127:printClocks] count =  1024, clocks = 20424
+[127:printClocks]    simd->dot( CVec3D[] * CVec3D[] ) ok
+[127:printClocks] count = 1024 , clocks =  3694, 81% melhor
+[127:TestDot] ====================================
+[127:printClocks] generic->dot( float[ 0] * float[ 0] )
+[127:printClocks] count =  1, clocks = 20
+[127:printClocks]    simd->dot( float[ 0] * float[ 0] ) ok
+[127:printClocks] count = 1 , clocks =  26, -30% melhor
+[127:printClocks] generic->dot( float[ 1] * float[ 1] )
+[127:printClocks] count =  1, clocks = 29
+[127:printClocks]    simd->dot( float[ 1] * float[ 1] ) ok
+[127:printClocks] count = 1 , clocks =  29, 0% melhor
+[127:printClocks] generic->dot( float[ 2] * float[ 2] )
+[127:printClocks] count =  1, clocks = 26
+[127:printClocks]    simd->dot( float[ 2] * float[ 2] ) ok
+[127:printClocks] count = 1 , clocks =  29, -11% melhor
+[127:printClocks] generic->dot( float[ 3] * float[ 3] )
+[127:printClocks] count =  1, clocks = 38
+[127:printClocks]    simd->dot( float[ 3] * float[ 3] ) ok
+[127:printClocks] count = 1 , clocks =  32, 15% melhor
+[127:printClocks] generic->dot( float[ 4] * float[ 4] )
+[127:printClocks] count =  1, clocks = 68
+[127:printClocks]    simd->dot( float[ 4] * float[ 4] ) ok
+[127:printClocks] count = 1 , clocks =  29, 57% melhor
+[127:printClocks] generic->dot( float[ 5] * float[ 5] )
+[127:printClocks] count =  1, clocks = 68
+[127:printClocks]    simd->dot( float[ 5] * float[ 5] ) ok
+[127:printClocks] count = 1 , clocks =  32, 52% melhor
+[127:printClocks] generic->dot( float[ 6] * float[ 6] )
+[127:printClocks] count =  1, clocks = 71
+[127:printClocks]    simd->dot( float[ 6] * float[ 6] ) ok
+[127:printClocks] count = 1 , clocks =  32, 54% melhor
+[127:printClocks] generic->dot( float[ 7] * float[ 7] )
+[127:printClocks] count =  1, clocks = 74
+[127:printClocks]    simd->dot( float[ 7] * float[ 7] ) ok
+[127:printClocks] count = 1 , clocks =  32, 56% melhor
+[127:printClocks] generic->dot( float[ 8] * float[ 8] )
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]    simd->dot( float[ 8] * float[ 8] ) ok
+[127:printClocks] count = 1 , clocks =  32, 58% melhor
+[127:printClocks] generic->dot( float[ 9] * float[ 9] )
+[127:printClocks] count =  1, clocks = 83
+[127:printClocks]    simd->dot( float[ 9] * float[ 9] ) ok
+[127:printClocks] count = 1 , clocks =  35, 57% melhor
+[127:printClocks] generic->dot( float[10] * float[10] )
+[127:printClocks] count =  1, clocks = 86
+[127:printClocks]    simd->dot( float[10] * float[10] ) ok
+[127:printClocks] count = 1 , clocks =  38, 55% melhor
+[127:printClocks] generic->dot( float[11] * float[11] )
+[127:printClocks] count =  1, clocks = 89
+[127:printClocks]    simd->dot( float[11] * float[11] ) ok
+[127:printClocks] count = 1 , clocks =  35, 60% melhor
+[127:printClocks] generic->dot( float[12] * float[12] )
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->dot( float[12] * float[12] ) ok
+[127:printClocks] count = 1 , clocks =  35, 63% melhor
+[127:printClocks] generic->dot( float[13] * float[13] )
+[127:printClocks] count =  1, clocks = 98
+[127:printClocks]    simd->dot( float[13] * float[13] ) ok
+[127:printClocks] count = 1 , clocks =  38, 61% melhor
+[127:printClocks] generic->dot( float[14] * float[14] )
+[127:printClocks] count =  1, clocks = 101
+[127:printClocks]    simd->dot( float[14] * float[14] ) ok
+[127:printClocks] count = 1 , clocks =  38, 62% melhor
+[127:printClocks] generic->dot( float[15] * float[15] )
+[127:printClocks] count =  1, clocks = 104
+[127:printClocks]    simd->dot( float[15] * float[15] ) ok
+[127:printClocks] count = 1 , clocks =  38, 63% melhor
+[127:printClocks] generic->dot( float[16] * float[16] )
+[127:printClocks] count =  1, clocks = 110
+[127:printClocks]    simd->dot( float[16] * float[16] ) ok
+[127:printClocks] count = 1 , clocks =  38, 65% melhor
+[127:printClocks] generic->dot( float[17] * float[17] )
+[127:printClocks] count =  1, clocks = 118
+[127:printClocks]    simd->dot( float[17] * float[17] ) ok
+[127:printClocks] count = 1 , clocks =  41, 65% melhor
+[127:printClocks] generic->dot( float[18] * float[18] )
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->dot( float[18] * float[18] ) ok
+[127:printClocks] count = 1 , clocks =  41, 66% melhor
+[127:printClocks] generic->dot( float[19] * float[19] )
+[127:printClocks] count =  1, clocks = 124
+[127:printClocks]    simd->dot( float[19] * float[19] ) ok
+[127:printClocks] count = 1 , clocks =  41, 66% melhor
+[127:printClocks] generic->dot( float[20] * float[20] )
+[127:printClocks] count =  1, clocks = 130
+[127:printClocks]    simd->dot( float[20] * float[20] ) ok
+[127:printClocks] count = 1 , clocks =  41, 68% melhor
+[127:printClocks] generic->dot( float[21] * float[21] )
+[127:printClocks] count =  1, clocks = 136
+[127:printClocks]    simd->dot( float[21] * float[21] ) ok
+[127:printClocks] count = 1 , clocks =  41, 69% melhor
+[127:printClocks] generic->dot( float[22] * float[22] )
+[127:printClocks] count =  1, clocks = 139
+[127:printClocks]    simd->dot( float[22] * float[22] ) ok
+[127:printClocks] count = 1 , clocks =  41, 70% melhor
+[127:printClocks] generic->dot( float[23] * float[23] )
+[127:printClocks] count =  1, clocks = 139
+[127:printClocks]    simd->dot( float[23] * float[23] ) ok
+[127:printClocks] count = 1 , clocks =  41, 70% melhor
+[127:printClocks] generic->dot( float[24] * float[24] )
+[127:printClocks] count =  1, clocks = 142
+[127:printClocks]    simd->dot( float[24] * float[24] ) ok
+[127:printClocks] count = 1 , clocks =  44, 69% melhor
+[127:printClocks] generic->dot( float[25] * float[25] )
+[127:printClocks] count =  1, clocks = 148
+[127:printClocks]    simd->dot( float[25] * float[25] ) ok
+[127:printClocks] count = 1 , clocks =  44, 70% melhor
+[127:printClocks] generic->dot( float[26] * float[26] )
+[127:printClocks] count =  1, clocks = 151
+[127:printClocks]    simd->dot( float[26] * float[26] ) ok
+[127:printClocks] count = 1 , clocks =  44, 70% melhor
+[127:printClocks] generic->dot( float[27] * float[27] )
+[127:printClocks] count =  1, clocks = 154
+[127:printClocks]    simd->dot( float[27] * float[27] ) ok
+[127:printClocks] count = 1 , clocks =  44, 71% melhor
+[127:printClocks] generic->dot( float[28] * float[28] )
+[127:printClocks] count =  1, clocks = 166
+[127:printClocks]    simd->dot( float[28] * float[28] ) ok
+[127:printClocks] count = 1 , clocks =  44, 73% melhor
+[127:printClocks] generic->dot( float[29] * float[29] )
+[127:printClocks] count =  1, clocks = 166
+[127:printClocks]    simd->dot( float[29] * float[29] ) ok
+[127:printClocks] count = 1 , clocks =  47, 71% melhor
+[127:printClocks] generic->dot( float[30] * float[30] )
+[127:printClocks] count =  1, clocks = 169
+[127:printClocks]    simd->dot( float[30] * float[30] ) ok
+[127:printClocks] count = 1 , clocks =  47, 72% melhor
+[127:printClocks] generic->dot( float[31] * float[31] )
+[127:printClocks] count =  1, clocks = 172
+[127:printClocks]    simd->dot( float[31] * float[31] ) ok
+[127:printClocks] count = 1 , clocks =  47, 72% melhor
+[127:printClocks] generic->dot( float[32] * float[32] )
+[127:printClocks] count =  1, clocks = 175
+[127:printClocks]    simd->dot( float[32] * float[32] ) ok
+[127:printClocks] count = 1 , clocks =  47, 73% melhor
+[127:printClocks] generic->dot( float[33] * float[33] )
+[127:printClocks] count =  1, clocks = 181
+[127:printClocks]    simd->dot( float[33] * float[33] ) ok
+[127:printClocks] count = 1 , clocks =  50, 72% melhor
+[127:printClocks] generic->dot( float[34] * float[34] )
+[127:printClocks] count =  1, clocks = 184
+[127:printClocks]    simd->dot( float[34] * float[34] ) ok
+[127:printClocks] count = 1 , clocks =  50, 72% melhor
+[127:printClocks] generic->dot( float[35] * float[35] )
+[127:printClocks] count =  1, clocks = 187
+[127:printClocks]    simd->dot( float[35] * float[35] ) ok
+[127:printClocks] count = 1 , clocks =  50, 73% melhor
+[127:printClocks] generic->dot( float[36] * float[36] )
+[127:printClocks] count =  1, clocks = 198
+[127:printClocks]    simd->dot( float[36] * float[36] ) ok
+[127:printClocks] count = 1 , clocks =  50, 74% melhor
+[127:printClocks] generic->dot( float[37] * float[37] )
+[127:printClocks] count =  1, clocks = 196
+[127:printClocks]    simd->dot( float[37] * float[37] ) ok
+[127:printClocks] count = 1 , clocks =  50, 74% melhor
+[127:printClocks] generic->dot( float[38] * float[38] )
+[127:printClocks] count =  1, clocks = 199
+[127:printClocks]    simd->dot( float[38] * float[38] ) ok
+[127:printClocks] count = 1 , clocks =  50, 74% melhor
+[127:printClocks] generic->dot( float[39] * float[39] )
+[127:printClocks] count =  1, clocks = 202
+[127:printClocks]    simd->dot( float[39] * float[39] ) ok
+[127:printClocks] count = 1 , clocks =  50, 75% melhor
+[127:printClocks] generic->dot( float[40] * float[40] )
+[127:printClocks] count =  1, clocks = 216
+[127:printClocks]    simd->dot( float[40] * float[40] ) ok
+[127:printClocks] count = 1 , clocks =  50, 76% melhor
+[127:printClocks] generic->dot( float[41] * float[41] )
+[127:printClocks] count =  1, clocks = 216
+[127:printClocks]    simd->dot( float[41] * float[41] ) ok
+[127:printClocks] count = 1 , clocks =  53, 75% melhor
+[127:printClocks] generic->dot( float[42] * float[42] )
+[127:printClocks] count =  1, clocks = 222
+[127:printClocks]    simd->dot( float[42] * float[42] ) ok
+[127:printClocks] count = 1 , clocks =  53, 76% melhor
+[127:printClocks] generic->dot( float[43] * float[43] )
+[127:printClocks] count =  1, clocks = 222
+[127:printClocks]    simd->dot( float[43] * float[43] ) ok
+[127:printClocks] count = 1 , clocks =  53, 76% melhor
+[127:printClocks] generic->dot( float[44] * float[44] )
+[127:printClocks] count =  1, clocks = 231
+[127:printClocks]    simd->dot( float[44] * float[44] ) ^1X
+[127:printClocks] count = 1 , clocks =  53, 77% melhor
+[127:printClocks] generic->dot( float[45] * float[45] )
+[127:printClocks] count =  1, clocks = 231
+[127:printClocks]    simd->dot( float[45] * float[45] ) ^1X
+[127:printClocks] count = 1 , clocks =  56, 75% melhor
+[127:printClocks] generic->dot( float[46] * float[46] )
+[127:printClocks] count =  1, clocks = 234
+[127:printClocks]    simd->dot( float[46] * float[46] ) ok
+[127:printClocks] count = 1 , clocks =  56, 76% melhor
+[127:printClocks] generic->dot( float[47] * float[47] )
+[127:printClocks] count =  1, clocks = 237
+[127:printClocks]    simd->dot( float[47] * float[47] ) ok
+[127:printClocks] count = 1 , clocks =  56, 76% melhor
+[127:printClocks] generic->dot( float[48] * float[48] )
+[127:printClocks] count =  1, clocks = 240
+[127:printClocks]    simd->dot( float[48] * float[48] ) ok
+[127:printClocks] count = 1 , clocks =  56, 76% melhor
+[127:printClocks] generic->dot( float[49] * float[49] )
+[127:printClocks] count =  1, clocks = 243
+[127:printClocks]    simd->dot( float[49] * float[49] ) ok
+[127:printClocks] count = 1 , clocks =  59, 75% melhor
+[127:TestCompare] ====================================
+
+[127:printClocks] generic->cmpGT( float[] >= float )
+[127:printClocks] count =  1024, clocks = 4828
+[127:printClocks]    simd->cmpGT( float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1065, 77% melhor
+[127:printClocks] generic->cmpGT( 2, float[] >= float )
+[127:printClocks] count =  1024, clocks = 8710
+[127:printClocks]    simd->cmpGT( 2, float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1528, 82% melhor
+[127:printClocks] generic->cmpGE( float[] >= float )
+[127:printClocks] count =  1024, clocks = 4677
+[127:printClocks]    simd->cmpGE( float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1074, 77% melhor
+[127:printClocks] generic->cmpGE( 2, float[] >= float )
+[127:printClocks] count =  1024, clocks = 8743
+[127:printClocks]    simd->cmpGE( 2, float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1525, 82% melhor
+[127:printClocks] generic->cmpLT( float[] >= float )
+[127:printClocks] count =  1024, clocks = 4816
+[127:printClocks]    simd->cmpLT( float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1068, 77% melhor
+[127:printClocks] generic->cmpLT( 2, float[] >= float )
+[127:printClocks] count =  1024, clocks = 8594
+[127:printClocks]    simd->cmpLT( 2, float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1519, 82% melhor
+[127:printClocks] generic->cmpLE( float[] >= float )
+[127:printClocks] count =  1024, clocks = 4626
+[127:printClocks]    simd->cmpLE( float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1166, 74% melhor
+[127:printClocks] generic->cmpLE( 2, float[] >= float )
+[127:printClocks] count =  1024, clocks = 8606
+[127:printClocks]    simd->cmpLE( 2, float[] >= float ) ok
+[127:printClocks] count = 1024 , clocks =  1611, 81% melhor
+[127:TestMinMax] ====================================
+
+[127:printClocks] generic->minMax( float[] )
+[127:printClocks] count =  1024, clocks = 8057
+[127:printClocks]    simd->minMax( float[] ) ok
+[127:printClocks] count = 1024 , clocks =  641, 92% melhor
+[127:printClocks] generic->minMax( CVec2D[] )
+[127:printClocks] count =  1024, clocks = 75205
+[127:printClocks]    simd->minMax( CVec2D[] ) ok
+[127:printClocks] count = 1024 , clocks =  1258, 98% melhor
+[127:printClocks] generic->minMax( CVec3D[] )
+[127:printClocks] count =  1024, clocks = 112996
+[127:printClocks]    simd->minMax( CVec3D[] ) ok
+[127:printClocks] count = 1024 , clocks =  1665, 98% melhor
+[127:printClocks] generic->minMax( CVertex[] )
+[127:printClocks] count =  1024, clocks = 112403
+[127:printClocks]    simd->minMax( CVertex[] ) ok
+[127:printClocks] count = 1024 , clocks =  2199, 98% melhor
+[127:printClocks] generic->minMax( CVertex[], indexes[] )
+[127:printClocks] count =  1024, clocks = 113519
+[127:printClocks]    simd->minMax( CVertex[], indexes[] ) ok
+[127:printClocks] count = 1024 , clocks =  3077, 97% melhor
+[127:TestClamp] ====================================
+
+[127:printClocks] generic->clamp( float[] )
+[127:printClocks] count =  1024, clocks = 10627
+[127:printClocks]    simd->clamp( float[] ) ok
+[127:printClocks] count = 1024 , clocks =  451, 95% melhor
+[127:printClocks] generic->clampMin( float[] )
+[127:printClocks] count =  1024, clocks = 7240
+[127:printClocks]    simd->clampMin( float[] ) ok
+[127:printClocks] count = 1024 , clocks =  338, 95% melhor
+[127:printClocks] generic->clampMax( float[] )
+[127:printClocks] count =  1024, clocks = 8351
+[127:printClocks]    simd->clampMax( float[] ) ok
+[127:printClocks] count = 1024 , clocks =  338, 95% melhor
+[127:TestMemcpy] ====================================
+
+[127:TestMemcpy]    simd->memCopy() ok
+
+[127:TestMemset]    simd->memSet() ok
+
+[127:TestNegate] ====================================
+
+[127:printClocks] generic->negate16( float[] )
+[127:printClocks] count =  1024, clocks = 5953
+[127:printClocks]    simd->negate16( float[] ) ok
+[127:printClocks] count = 1024 , clocks =  451, 92% melhor
+[127:TestMatXMultiplyVecX] ================= NxN * Nx1 ===================
+
+[127:printClocks] generic->matX_MultiplyVecX 1x1*1x1
+[127:printClocks] count =  1, clocks = 62
+[127:printClocks]    simd->matX_MultiplyVecX 1x1*1x1 ok
+[127:printClocks] count = 1 , clocks =  62, 0% melhor
+[127:printClocks] generic->matX_MultiplyVecX 2x2*2x1
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]    simd->matX_MultiplyVecX 2x2*2x1 ok
+[127:printClocks] count = 1 , clocks =  65, 15% melhor
+[127:printClocks] generic->matX_MultiplyVecX 3x3*3x1
+[127:printClocks] count =  1, clocks = 89
+[127:printClocks]    simd->matX_MultiplyVecX 3x3*3x1 ok
+[127:printClocks] count = 1 , clocks =  71, 20% melhor
+[127:printClocks] generic->matX_MultiplyVecX 4x4*4x1
+[127:printClocks] count =  1, clocks = 107
+[127:printClocks]    simd->matX_MultiplyVecX 4x4*4x1 ok
+[127:printClocks] count = 1 , clocks =  77, 28% melhor
+[127:printClocks] generic->matX_MultiplyVecX 5x5*5x1
+[127:printClocks] count =  1, clocks = 136
+[127:printClocks]    simd->matX_MultiplyVecX 5x5*5x1 ok
+[127:printClocks] count = 1 , clocks =  92, 32% melhor
+[127:printClocks] generic->matX_MultiplyVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 154
+[127:printClocks]    simd->matX_MultiplyVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  89, 42% melhor
+[127:TestMatXMultiplyVecX] ================= Nx6 * 6x1 ===================
+
+[127:printClocks] generic->matX_MultiplyVecX 1x6*6x1
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]    simd->matX_MultiplyVecX 1x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  74, 3% melhor
+[127:printClocks] generic->matX_MultiplyVecX 2x6*6x1
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->matX_MultiplyVecX 2x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  77, 18% melhor
+[127:printClocks] generic->matX_MultiplyVecX 3x6*6x1
+[127:printClocks] count =  1, clocks = 110
+[127:printClocks]    simd->matX_MultiplyVecX 3x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  77, 30% melhor
+[127:printClocks] generic->matX_MultiplyVecX 4x6*6x1
+[127:printClocks] count =  1, clocks = 127
+[127:printClocks]    simd->matX_MultiplyVecX 4x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  80, 37% melhor
+[127:printClocks] generic->matX_MultiplyVecX 5x6*6x1
+[127:printClocks] count =  1, clocks = 142
+[127:printClocks]    simd->matX_MultiplyVecX 5x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  80, 43% melhor
+[127:printClocks] generic->matX_MultiplyVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 160
+[127:printClocks]    simd->matX_MultiplyVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  89, 44% melhor
+[127:TestMatXMultiplyVecX] ================= 6xN * Nx1 ===================
+
+[127:printClocks] generic->matX_MultiplyVecX 6x1*1x1
+[127:printClocks] count =  1, clocks = 92
+[127:printClocks]    simd->matX_MultiplyVecX 6x1*1x1 ok
+[127:printClocks] count = 1 , clocks =  65, 29% melhor
+[127:printClocks] generic->matX_MultiplyVecX 6x2*2x1
+[127:printClocks] count =  1, clocks = 107
+[127:printClocks]    simd->matX_MultiplyVecX 6x2*2x1 ok
+[127:printClocks] count = 1 , clocks =  68, 36% melhor
+[127:printClocks] generic->matX_MultiplyVecX 6x3*3x1
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->matX_MultiplyVecX 6x3*3x1 ok
+[127:printClocks] count = 1 , clocks =  80, 33% melhor
+[127:printClocks] generic->matX_MultiplyVecX 6x4*4x1
+[127:printClocks] count =  1, clocks = 133
+[127:printClocks]    simd->matX_MultiplyVecX 6x4*4x1 ok
+[127:printClocks] count = 1 , clocks =  89, 33% melhor
+[127:printClocks] generic->matX_MultiplyVecX 6x5*5x1
+[127:printClocks] count =  1, clocks = 148
+[127:printClocks]    simd->matX_MultiplyVecX 6x5*5x1 ok
+[127:printClocks] count = 1 , clocks =  98, 33% melhor
+[127:printClocks] generic->matX_MultiplyVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 160
+[127:printClocks]    simd->matX_MultiplyVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  89, 44% melhor
+[127:TestMatXMultiplyAddVecX] ================= NxN * Nx1 ===================
+
+[127:printClocks] generic->matX_MultiplyAddVecX 1x1*1x1
+[127:printClocks] count =  1, clocks = 68
+[127:printClocks]    simd->matX_MultiplyAddVecX 1x1*1x1 ok
+[127:printClocks] count = 1 , clocks =  62, 8% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 2x2*2x1
+[127:printClocks] count =  1, clocks = 80
+[127:printClocks]    simd->matX_MultiplyAddVecX 2x2*2x1 ok
+[127:printClocks] count = 1 , clocks =  65, 18% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 3x3*3x1
+[127:printClocks] count =  1, clocks = 98
+[127:printClocks]    simd->matX_MultiplyAddVecX 3x3*3x1 ok
+[127:printClocks] count = 1 , clocks =  74, 24% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 4x4*4x1
+[127:printClocks] count =  1, clocks = 127
+[127:printClocks]    simd->matX_MultiplyAddVecX 4x4*4x1 ok
+[127:printClocks] count = 1 , clocks =  77, 39% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 5x5*5x1
+[127:printClocks] count =  1, clocks = 207
+[127:printClocks]    simd->matX_MultiplyAddVecX 5x5*5x1 ok
+[127:printClocks] count = 1 , clocks =  89, 57% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 175
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  92, 47% melhor
+[127:TestMatXMultiplyAddVecX] ================= Nx6 * 6x1 ===================
+
+[127:printClocks] generic->matX_MultiplyAddVecX 1x6*6x1
+[127:printClocks] count =  1, clocks = 80
+[127:printClocks]    simd->matX_MultiplyAddVecX 1x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  80, 0% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 2x6*6x1
+[127:printClocks] count =  1, clocks = 98
+[127:printClocks]    simd->matX_MultiplyAddVecX 2x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  80, 18% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 3x6*6x1
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->matX_MultiplyAddVecX 3x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  83, 31% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 4x6*6x1
+[127:printClocks] count =  1, clocks = 139
+[127:printClocks]    simd->matX_MultiplyAddVecX 4x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  83, 40% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 5x6*6x1
+[127:printClocks] count =  1, clocks = 157
+[127:printClocks]    simd->matX_MultiplyAddVecX 5x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  83, 47% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 175
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  92, 47% melhor
+[127:TestMatXMultiplyAddVecX] ================= 6xN * Nx1 ===================
+
+[127:printClocks] generic->matX_MultiplyAddVecX 6x1*1x1
+[127:printClocks] count =  1, clocks = 104
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x1*1x1 ok
+[127:printClocks] count = 1 , clocks =  68, 34% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 6x2*2x1
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x2*2x1 ok
+[127:printClocks] count = 1 , clocks =  74, 38% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 6x3*3x1
+[127:printClocks] count =  1, clocks = 145
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x3*3x1 ok
+[127:printClocks] count = 1 , clocks =  80, 44% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 6x4*4x1
+[127:printClocks] count =  1, clocks = 154
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x4*4x1 ok
+[127:printClocks] count = 1 , clocks =  89, 42% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 6x5*5x1
+[127:printClocks] count =  1, clocks = 169
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x5*5x1 ok
+[127:printClocks] count = 1 , clocks =  104, 38% melhor
+[127:printClocks] generic->matX_MultiplyAddVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 175
+[127:printClocks]    simd->matX_MultiplyAddVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  92, 47% melhor
+[127:TestMatXTransposeMultiplyVecX] ================= Nx6 * Nx1 ===================
+
+[127:printClocks] generic->matX_TransposeMulVecX 1x6*1x1
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->matX_TransposeMulVecX 1x6*1x1 ok
+[127:printClocks] count = 1 , clocks =  65, 31% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 2x6*2x1
+[127:printClocks] count =  1, clocks = 127
+[127:printClocks]    simd->matX_TransposeMulVecX 2x6*2x1 ok
+[127:printClocks] count = 1 , clocks =  83, 34% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 3x6*3x1
+[127:printClocks] count =  1, clocks = 142
+[127:printClocks]    simd->matX_TransposeMulVecX 3x6*3x1 ok
+[127:printClocks] count = 1 , clocks =  95, 33% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 4x6*4x1
+[127:printClocks] count =  1, clocks = 163
+[127:printClocks]    simd->matX_TransposeMulVecX 4x6*4x1 ok
+[127:printClocks] count = 1 , clocks =  95, 41% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 5x6*5x1
+[127:printClocks] count =  1, clocks = 178
+[127:printClocks]    simd->matX_TransposeMulVecX 5x6*5x1 ok
+[127:printClocks] count = 1 , clocks =  101, 43% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 196
+[127:printClocks]    simd->matX_TransposeMulVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  115, 41% melhor
+[127:TestMatXTransposeMultiplyVecX] ================= 6xN * 6x1 ===================
+
+[127:printClocks] generic->matX_TransposeMulVecX 6x1*6x1
+[127:printClocks] count =  1, clocks = 92
+[127:printClocks]    simd->matX_TransposeMulVecX 6x1*6x1 ok
+[127:printClocks] count = 1 , clocks =  83, 9% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 6x2*6x1
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->matX_TransposeMulVecX 6x2*6x1 ok
+[127:printClocks] count = 1 , clocks =  83, 31% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 6x3*6x1
+[127:printClocks] count =  1, clocks = 139
+[127:printClocks]    simd->matX_TransposeMulVecX 6x3*6x1 ok
+[127:printClocks] count = 1 , clocks =  89, 35% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 6x4*6x1
+[127:printClocks] count =  1, clocks = 157
+[127:printClocks]    simd->matX_TransposeMulVecX 6x4*6x1 ok
+[127:printClocks] count = 1 , clocks =  92, 41% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 6x5*6x1
+[127:printClocks] count =  1, clocks = 175
+[127:printClocks]    simd->matX_TransposeMulVecX 6x5*6x1 ok
+[127:printClocks] count = 1 , clocks =  115, 34% melhor
+[127:printClocks] generic->matX_TransposeMulVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 193
+[127:printClocks]    simd->matX_TransposeMulVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  118, 38% melhor
+[127:TestMatXTransposeMultiplyAddVecX] ================= Nx6 * Nx1 ===================
+
+[127:printClocks] generic->matX_TransposeMulAddVecX 1x6*1x1
+[127:printClocks] count =  1, clocks = 121
+[127:printClocks]    simd->matX_TransposeMulAddVecX 1x6*1x1 ok
+[127:printClocks] count = 1 , clocks =  77, 36% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 2x6*2x1
+[127:printClocks] count =  1, clocks = 136
+[127:printClocks]    simd->matX_TransposeMulAddVecX 2x6*2x1 ok
+[127:printClocks] count = 1 , clocks =  89, 34% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 3x6*3x1
+[127:printClocks] count =  1, clocks = 154
+[127:printClocks]    simd->matX_TransposeMulAddVecX 3x6*3x1 ok
+[127:printClocks] count = 1 , clocks =  98, 36% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 4x6*4x1
+[127:printClocks] count =  1, clocks = 172
+[127:printClocks]    simd->matX_TransposeMulAddVecX 4x6*4x1 ok
+[127:printClocks] count = 1 , clocks =  101, 41% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 5x6*5x1
+[127:printClocks] count =  1, clocks = 184
+[127:printClocks]    simd->matX_TransposeMulAddVecX 5x6*5x1 ok
+[127:printClocks] count = 1 , clocks =  104, 43% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 216
+[127:printClocks]    simd->matX_TransposeMulAddVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  121, 43% melhor
+[127:TestMatXTransposeMultiplyAddVecX] ================= 6xN * 6x1 ===================
+
+[127:printClocks] generic->matX_TransposeMulAddVecX 6x1*6x1
+[127:printClocks] count =  1, clocks = 95
+[127:printClocks]    simd->matX_TransposeMulAddVecX 6x1*6x1 ok
+[127:printClocks] count = 1 , clocks =  89, 6% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 6x2*6x1
+[127:printClocks] count =  1, clocks = 127
+[127:printClocks]    simd->matX_TransposeMulAddVecX 6x2*6x1 ok
+[127:printClocks] count = 1 , clocks =  89, 29% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 6x3*6x1
+[127:printClocks] count =  1, clocks = 148
+[127:printClocks]    simd->matX_TransposeMulAddVecX 6x3*6x1 ok
+[127:printClocks] count = 1 , clocks =  95, 35% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 6x4*6x1
+[127:printClocks] count =  1, clocks = 166
+[127:printClocks]    simd->matX_TransposeMulAddVecX 6x4*6x1 ok
+[127:printClocks] count = 1 , clocks =  95, 42% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 6x5*6x1
+[127:printClocks] count =  1, clocks = 187
+[127:printClocks]    simd->matX_TransposeMulAddVecX 6x5*6x1 ok
+[127:printClocks] count = 1 , clocks =  142, 24% melhor
+[127:printClocks] generic->matX_TransposeMulAddVecX 6x6*6x1
+[127:printClocks] count =  1, clocks = 216
+[127:printClocks]    simd->matX_TransposeMulAddVecX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  121, 43% melhor
+[127:TestMatXMultiplyMatX] ================= NxN * Nx6 ===================
+[127:printClocks] generic->matX_MultiplyMatX 1x1*1x6
+[127:printClocks] count =  1, clocks = 86
+[127:printClocks]    simd->matX_MultiplyMatX 1x1*1x6 ok
+[127:printClocks] count = 1 , clocks =  77, 10% melhor
+[127:printClocks] generic->matX_MultiplyMatX 2x2*2x6
+[127:printClocks] count =  1, clocks = 142
+[127:printClocks]    simd->matX_MultiplyMatX 2x2*2x6 ok
+[127:printClocks] count = 1 , clocks =  92, 35% melhor
+[127:printClocks] generic->matX_MultiplyMatX 3x3*3x6
+[127:printClocks] count =  1, clocks = 219
+[127:printClocks]    simd->matX_MultiplyMatX 3x3*3x6 ok
+[127:printClocks] count = 1 , clocks =  95, 56% melhor
+[127:printClocks] generic->matX_MultiplyMatX 4x4*4x6
+[127:printClocks] count =  1, clocks = 338
+[127:printClocks]    simd->matX_MultiplyMatX 4x4*4x6 ^1X
+[127:printClocks] count = 1 , clocks =  127, 62% melhor
+[127:printClocks] generic->matX_MultiplyMatX 5x5*5x6
+[127:printClocks] count =  1, clocks = 507
+[127:printClocks]    simd->matX_MultiplyMatX 5x5*5x6 ok
+[127:printClocks] count = 1 , clocks =  157, 69% melhor
+[127:TestMatXMultiplyMatX] ================= 6xN * Nx6 ===================
+
+[127:printClocks] generic->matX_MultiplyMatX 6x1*1x6
+[127:printClocks] count =  1, clocks = 255
+[127:printClocks]    simd->matX_MultiplyMatX 6x1*1x6 ok
+[127:printClocks] count = 1 , clocks =  95, 62% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x2*2x6
+[127:printClocks] count =  1, clocks = 361
+[127:printClocks]    simd->matX_MultiplyMatX 6x2*2x6 ok
+[127:printClocks] count = 1 , clocks =  130, 63% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x3*3x6
+[127:printClocks] count =  1, clocks = 451
+[127:printClocks]    simd->matX_MultiplyMatX 6x3*3x6 ok
+[127:printClocks] count = 1 , clocks =  142, 68% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x4*4x6
+[127:printClocks] count =  1, clocks = 593
+[127:printClocks]    simd->matX_MultiplyMatX 6x4*4x6 ^1X
+[127:printClocks] count = 1 , clocks =  148, 75% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x5*5x6
+[127:printClocks] count =  1, clocks = 699
+[127:printClocks]    simd->matX_MultiplyMatX 6x5*5x6 ok
+[127:printClocks] count = 1 , clocks =  180, 74% melhor
+[127:TestMatXMultiplyMatX] ================= Nx6 * 6xN ===================
+
+[127:printClocks] generic->matX_MultiplyMatX 1x6*6x1
+[127:printClocks] count =  1, clocks = 86
+[127:printClocks]    simd->matX_MultiplyMatX 1x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  92, -6% melhor
+[127:printClocks] generic->matX_MultiplyMatX 2x6*6x2
+[127:printClocks] count =  1, clocks = 136
+[127:printClocks]    simd->matX_MultiplyMatX 2x6*6x2 ok
+[127:printClocks] count = 1 , clocks =  77, 43% melhor
+[127:printClocks] generic->matX_MultiplyMatX 3x6*6x3
+[127:printClocks] count =  1, clocks = 228
+[127:printClocks]    simd->matX_MultiplyMatX 3x6*6x3 ok
+[127:printClocks] count = 1 , clocks =  92, 59% melhor
+[127:printClocks] generic->matX_MultiplyMatX 4x6*6x4
+[127:printClocks] count =  1, clocks = 356
+[127:printClocks]    simd->matX_MultiplyMatX 4x6*6x4 ok
+[127:printClocks] count = 1 , clocks =  92, 74% melhor
+[127:printClocks] generic->matX_MultiplyMatX 5x6*6x5
+[127:printClocks] count =  1, clocks = 522
+[127:printClocks]    simd->matX_MultiplyMatX 5x6*6x5 ok
+[127:printClocks] count = 1 , clocks =  124, 76% melhor
+[127:TestMatXMultiplyMatX] ================= 6x6 * 6xN ===================
+
+[127:printClocks] generic->matX_MultiplyMatX 6x6*6x1
+[127:printClocks] count =  1, clocks = 163
+[127:printClocks]    simd->matX_MultiplyMatX 6x6*6x1 ok
+[127:printClocks] count = 1 , clocks =  86, 47% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x6*6x2
+[127:printClocks] count =  1, clocks = 291
+[127:printClocks]    simd->matX_MultiplyMatX 6x6*6x2 ok
+[127:printClocks] count = 1 , clocks =  95, 67% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x6*6x3
+[127:printClocks] count =  1, clocks = 400
+[127:printClocks]    simd->matX_MultiplyMatX 6x6*6x3 ok
+[127:printClocks] count = 1 , clocks =  104, 74% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x6*6x4
+[127:printClocks] count =  1, clocks = 507
+[127:printClocks]    simd->matX_MultiplyMatX 6x6*6x4 ok
+[127:printClocks] count = 1 , clocks =  98, 80% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x6*6x5
+[127:printClocks] count =  1, clocks = 617
+[127:printClocks]    simd->matX_MultiplyMatX 6x6*6x5 ok
+[127:printClocks] count = 1 , clocks =  136, 77% melhor
+[127:printClocks] generic->matX_MultiplyMatX 6x6*6x6
+[127:printClocks] count =  1, clocks = 724
+[127:printClocks]    simd->matX_MultiplyMatX 6x6*6x6 ok
+[127:printClocks] count = 1 , clocks =  169, 76% melhor
+[127:TestMatXTransposeMultiplyMatX] ================= Nx6 * NxN ===================
+
+[127:printClocks] generic->matX_TransMultiplyMatX 1x6*1x1
+[127:printClocks] count =  1, clocks = 89
+[127:printClocks]    simd->matX_TransMultiplyMatX 1x6*1x1 ok
+[127:printClocks] count = 1 , clocks =  62, 30% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 2x6*2x2
+[127:printClocks] count =  1, clocks = 133
+[127:printClocks]    simd->matX_TransMultiplyMatX 2x6*2x2 ok
+[127:printClocks] count = 1 , clocks =  83, 37% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 3x6*3x3
+[127:printClocks] count =  1, clocks = 202
+[127:printClocks]    simd->matX_TransMultiplyMatX 3x6*3x3 ok
+[127:printClocks] count = 1 , clocks =  98, 51% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 4x6*4x4
+[127:printClocks] count =  1, clocks = 314
+[127:printClocks]    simd->matX_TransMultiplyMatX 4x6*4x4 ok
+[127:printClocks] count = 1 , clocks =  86, 72% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 5x6*5x5
+[127:printClocks] count =  1, clocks = 451
+[127:printClocks]    simd->matX_TransMultiplyMatX 5x6*5x5 ok
+[127:printClocks] count = 1 , clocks =  124, 72% melhor
+[127:TestMatXTransposeMultiplyMatX] ================= 6xN * 6x6 ===================
+
+[127:printClocks] generic->matX_TransMultiplyMatX 6x1*6x6
+[127:printClocks] count =  1, clocks = 154
+[127:printClocks]    simd->matX_TransMultiplyMatX 6x1*6x6 ok
+[127:printClocks] count = 1 , clocks =  95, 38% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 6x2*6x6
+[127:printClocks] count =  1, clocks = 264
+[127:printClocks]    simd->matX_TransMultiplyMatX 6x2*6x6 ok
+[127:printClocks] count = 1 , clocks =  110, 58% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 6x3*6x6
+[127:printClocks] count =  1, clocks = 368
+[127:printClocks]    simd->matX_TransMultiplyMatX 6x3*6x6 ok
+[127:printClocks] count = 1 , clocks =  127, 65% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 6x4*6x6
+[127:printClocks] count =  1, clocks = 469
+[127:printClocks]    simd->matX_TransMultiplyMatX 6x4*6x6 ok
+[127:printClocks] count = 1 , clocks =  151, 67% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 6x5*6x6
+[127:printClocks] count =  1, clocks = 575
+[127:printClocks]    simd->matX_TransMultiplyMatX 6x5*6x6 ok
+[127:printClocks] count = 1 , clocks =  163, 71% melhor
+[127:printClocks] generic->matX_TransMultiplyMatX 6x6*6x6
+[127:printClocks] count =  1, clocks = 739
+[127:printClocks]    simd->matX_TransMultiplyMatX 6x6*6x6 ok
+[127:printClocks] count = 1 , clocks =  222, 69% melhor
+[127:TestMatXLowerTriangularsolve] ====================================
+
+[127:printClocks] generic->matX_LowerTriangularsolve 1x1
+[127:printClocks] count =  1, clocks = 50
+[127:printClocks]    simd->matX_LowerTriangularsolve 1x1 ok
+[127:printClocks] count = 1 , clocks =  50, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 2x2
+[127:printClocks] count =  1, clocks = 68
+[127:printClocks]    simd->matX_LowerTriangularsolve 2x2 ok
+[127:printClocks] count = 1 , clocks =  65, 4% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 3x3
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]    simd->matX_LowerTriangularsolve 3x3 ok
+[127:printClocks] count = 1 , clocks =  77, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 4x4
+[127:printClocks] count =  1, clocks = 89
+[127:printClocks]    simd->matX_LowerTriangularsolve 4x4 ok
+[127:printClocks] count = 1 , clocks =  89, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 5x5
+[127:printClocks] count =  1, clocks = 101
+[127:printClocks]    simd->matX_LowerTriangularsolve 5x5 ok
+[127:printClocks] count = 1 , clocks =  112, -10% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 6x6
+[127:printClocks] count =  1, clocks = 124
+[127:printClocks]    simd->matX_LowerTriangularsolve 6x6 ok
+[127:printClocks] count = 1 , clocks =  121, 2% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 7x7
+[127:printClocks] count =  1, clocks = 145
+[127:printClocks]    simd->matX_LowerTriangularsolve 7x7 ok
+[127:printClocks] count = 1 , clocks =  145, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 8x8
+[127:printClocks] count =  1, clocks = 314
+[127:printClocks]    simd->matX_LowerTriangularsolve 8x8 ok
+[127:printClocks] count = 1 , clocks =  311, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 9x9
+[127:printClocks] count =  1, clocks = 374
+[127:printClocks]    simd->matX_LowerTriangularsolve 9x9 ok
+[127:printClocks] count = 1 , clocks =  368, 1% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 10x10
+[127:printClocks] count =  1, clocks = 445
+[127:printClocks]    simd->matX_LowerTriangularsolve 10x10 ok
+[127:printClocks] count = 1 , clocks =  442, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 11x11
+[127:printClocks] count =  1, clocks = 522
+[127:printClocks]    simd->matX_LowerTriangularsolve 11x11 ok
+[127:printClocks] count = 1 , clocks =  519, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 12x12
+[127:printClocks] count =  1, clocks = 599
+[127:printClocks]    simd->matX_LowerTriangularsolve 12x12 ok
+[127:printClocks] count = 1 , clocks =  596, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 13x13
+[127:printClocks] count =  1, clocks = 685
+[127:printClocks]    simd->matX_LowerTriangularsolve 13x13 ok
+[127:printClocks] count = 1 , clocks =  682, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 14x14
+[127:printClocks] count =  1, clocks = 774
+[127:printClocks]    simd->matX_LowerTriangularsolve 14x14 ok
+[127:printClocks] count = 1 , clocks =  771, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 15x15
+[127:printClocks] count =  1, clocks = 898
+[127:printClocks]    simd->matX_LowerTriangularsolve 15x15 ok
+[127:printClocks] count = 1 , clocks =  899, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 16x16
+[127:printClocks] count =  1, clocks = 997
+[127:printClocks]    simd->matX_LowerTriangularsolve 16x16 ok
+[127:printClocks] count = 1 , clocks =  994, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 17x17
+[127:printClocks] count =  1, clocks = 1095
+[127:printClocks]    simd->matX_LowerTriangularsolve 17x17 ok
+[127:printClocks] count = 1 , clocks =  1095, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 18x18
+[127:printClocks] count =  1, clocks = 1199
+[127:printClocks]    simd->matX_LowerTriangularsolve 18x18 ok
+[127:printClocks] count = 1 , clocks =  1199, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 19x19
+[127:printClocks] count =  1, clocks = 1311
+[127:printClocks]    simd->matX_LowerTriangularsolve 19x19 ok
+[127:printClocks] count = 1 , clocks =  1317, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 20x20
+[127:printClocks] count =  1, clocks = 1418
+[127:printClocks]    simd->matX_LowerTriangularsolve 20x20 ok
+[127:printClocks] count = 1 , clocks =  1418, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 21x21
+[127:printClocks] count =  1, clocks = 1537
+[127:printClocks]    simd->matX_LowerTriangularsolve 21x21 ok
+[127:printClocks] count = 1 , clocks =  1531, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 22x22
+[127:printClocks] count =  1, clocks = 1688
+[127:printClocks]    simd->matX_LowerTriangularsolve 22x22 ok
+[127:printClocks] count = 1 , clocks =  1679, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 23x23
+[127:printClocks] count =  1, clocks = 1804
+[127:printClocks]    simd->matX_LowerTriangularsolve 23x23 ok
+[127:printClocks] count = 1 , clocks =  1807, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 24x24
+[127:printClocks] count =  1, clocks = 1926
+[127:printClocks]    simd->matX_LowerTriangularsolve 24x24 ok
+[127:printClocks] count = 1 , clocks =  1792, 6% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 25x25
+[127:printClocks] count =  1, clocks = 1908
+[127:printClocks]    simd->matX_LowerTriangularsolve 25x25 ok
+[127:printClocks] count = 1 , clocks =  1908, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 26x26
+[127:printClocks] count =  1, clocks = 2036
+[127:printClocks]    simd->matX_LowerTriangularsolve 26x26 ok
+[127:printClocks] count = 1 , clocks =  2199, -8% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 27x27
+[127:printClocks] count =  1, clocks = 2338
+[127:printClocks]    simd->matX_LowerTriangularsolve 27x27 ok
+[127:printClocks] count = 1 , clocks =  2341, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 28x28
+[127:printClocks] count =  1, clocks = 2329
+[127:printClocks]    simd->matX_LowerTriangularsolve 28x28 ok
+[127:printClocks] count = 1 , clocks =  2323, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 29x29
+[127:printClocks] count =  1, clocks = 2460
+[127:printClocks]    simd->matX_LowerTriangularsolve 29x29 ok
+[127:printClocks] count = 1 , clocks =  2468, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 30x30
+[127:printClocks] count =  1, clocks = 2611
+[127:printClocks]    simd->matX_LowerTriangularsolve 30x30 ok
+[127:printClocks] count = 1 , clocks =  2608, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 31x31
+[127:printClocks] count =  1, clocks = 2745
+[127:printClocks]    simd->matX_LowerTriangularsolve 31x31 ok
+[127:printClocks] count = 1 , clocks =  2748, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 32x32
+[127:printClocks] count =  1, clocks = 2935
+[127:printClocks]    simd->matX_LowerTriangularsolve 32x32 ok
+[127:printClocks] count = 1 , clocks =  2932, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 33x33
+[127:printClocks] count =  1, clocks = 3119
+[127:printClocks]    simd->matX_LowerTriangularsolve 33x33 ok
+[127:printClocks] count = 1 , clocks =  3107, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 34x34
+[127:printClocks] count =  1, clocks = 3288
+[127:printClocks]    simd->matX_LowerTriangularsolve 34x34 ok
+[127:printClocks] count = 1 , clocks =  3273, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 35x35
+[127:printClocks] count =  1, clocks = 3472
+[127:printClocks]    simd->matX_LowerTriangularsolve 35x35 ok
+[127:printClocks] count = 1 , clocks =  3478, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 36x36
+[127:printClocks] count =  1, clocks = 3641
+[127:printClocks]    simd->matX_LowerTriangularsolve 36x36 ok
+[127:printClocks] count = 1 , clocks =  3718, -2% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 37x37
+[127:printClocks] count =  1, clocks = 4101
+[127:printClocks]    simd->matX_LowerTriangularsolve 37x37 ok
+[127:printClocks] count = 1 , clocks =  4110, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 38x38
+[127:printClocks] count =  1, clocks = 4300
+[127:printClocks]    simd->matX_LowerTriangularsolve 38x38 ok
+[127:printClocks] count = 1 , clocks =  4294, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 39x39
+[127:printClocks] count =  1, clocks = 4210
+[127:printClocks]    simd->matX_LowerTriangularsolve 39x39 ok
+[127:printClocks] count = 1 , clocks =  4205, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 40x40
+[127:printClocks] count =  1, clocks = 4389
+[127:printClocks]    simd->matX_LowerTriangularsolve 40x40 ok
+[127:printClocks] count = 1 , clocks =  4404, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 41x41
+[127:printClocks] count =  1, clocks = 4570
+[127:printClocks]    simd->matX_LowerTriangularsolve 41x41 ok
+[127:printClocks] count = 1 , clocks =  4588, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 42x42
+[127:printClocks] count =  1, clocks = 4890
+[127:printClocks]    simd->matX_LowerTriangularsolve 42x42 ok
+[127:printClocks] count = 1 , clocks =  4790, 2% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 43x43
+[127:printClocks] count =  1, clocks = 4997
+[127:printClocks]    simd->matX_LowerTriangularsolve 43x43 ok
+[127:printClocks] count = 1 , clocks =  5018, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 44x44
+[127:printClocks] count =  1, clocks = 5211
+[127:printClocks]    simd->matX_LowerTriangularsolve 44x44 ok
+[127:printClocks] count = 1 , clocks =  5211, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 45x45
+[127:printClocks] count =  1, clocks = 5413
+[127:printClocks]    simd->matX_LowerTriangularsolve 45x45 ok
+[127:printClocks] count = 1 , clocks =  5404, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 46x46
+[127:printClocks] count =  1, clocks = 5629
+[127:printClocks]    simd->matX_LowerTriangularsolve 46x46 ok
+[127:printClocks] count = 1 , clocks =  5641, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 47x47
+[127:printClocks] count =  1, clocks = 5861
+[127:printClocks]    simd->matX_LowerTriangularsolve 47x47 ok
+[127:printClocks] count = 1 , clocks =  5858, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 48x48
+[127:printClocks] count =  1, clocks = 6078
+[127:printClocks]    simd->matX_LowerTriangularsolve 48x48 ok
+[127:printClocks] count = 1 , clocks =  6083, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 49x49
+[127:printClocks] count =  1, clocks = 6312
+[127:printClocks]    simd->matX_LowerTriangularsolve 49x49 ok
+[127:printClocks] count = 1 , clocks =  6318, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 50x50
+[127:printClocks] count =  1, clocks = 6558
+[127:printClocks]    simd->matX_LowerTriangularsolve 50x50 ok
+[127:printClocks] count = 1 , clocks =  6561, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 51x51
+[127:printClocks] count =  1, clocks = 6784
+[127:printClocks]    simd->matX_LowerTriangularsolve 51x51 ok
+[127:printClocks] count = 1 , clocks =  6787, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 52x52
+[127:printClocks] count =  1, clocks = 7021
+[127:printClocks]    simd->matX_LowerTriangularsolve 52x52 ok
+[127:printClocks] count = 1 , clocks =  7012, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 53x53
+[127:printClocks] count =  1, clocks = 7249
+[127:printClocks]    simd->matX_LowerTriangularsolve 53x53 ok
+[127:printClocks] count = 1 , clocks =  7241, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 54x54
+[127:printClocks] count =  1, clocks = 7499
+[127:printClocks]    simd->matX_LowerTriangularsolve 54x54 ok
+[127:printClocks] count = 1 , clocks =  7496, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 55x55
+[127:printClocks] count =  1, clocks = 7766
+[127:printClocks]    simd->matX_LowerTriangularsolve 55x55 ok
+[127:printClocks] count = 1 , clocks =  7763, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 56x56
+[127:printClocks] count =  1, clocks = 8039
+[127:printClocks]    simd->matX_LowerTriangularsolve 56x56 ok
+[127:printClocks] count = 1 , clocks =  8021, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 57x57
+[127:printClocks] count =  1, clocks = 8280
+[127:printClocks]    simd->matX_LowerTriangularsolve 57x57 ok
+[127:printClocks] count = 1 , clocks =  8303, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 58x58
+[127:printClocks] count =  1, clocks = 8547
+[127:printClocks]    simd->matX_LowerTriangularsolve 58x58 ok
+[127:printClocks] count = 1 , clocks =  8547, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 59x59
+[127:printClocks] count =  1, clocks = 8802
+[127:printClocks]    simd->matX_LowerTriangularsolve 59x59 ok
+[127:printClocks] count = 1 , clocks =  8805, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 60x60
+[127:printClocks] count =  1, clocks = 9090
+[127:printClocks]    simd->matX_LowerTriangularsolve 60x60 ok
+[127:printClocks] count = 1 , clocks =  9093, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 61x61
+[127:printClocks] count =  1, clocks = 9354
+[127:printClocks]    simd->matX_LowerTriangularsolve 61x61 ok
+[127:printClocks] count = 1 , clocks =  9348, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 62x62
+[127:printClocks] count =  1, clocks = 9621
+[127:printClocks]    simd->matX_LowerTriangularsolve 62x62 ok
+[127:printClocks] count = 1 , clocks =  9624, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 63x63
+[127:printClocks] count =  1, clocks = 9909
+[127:printClocks]    simd->matX_LowerTriangularsolve 63x63 ok
+[127:printClocks] count = 1 , clocks =  9903, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 64x64
+[127:printClocks] count =  1, clocks = 10188
+[127:printClocks]    simd->matX_LowerTriangularsolve 64x64 ok
+[127:printClocks] count = 1 , clocks =  10190, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 65x65
+[127:printClocks] count =  1, clocks = 10488
+[127:printClocks]    simd->matX_LowerTriangularsolve 65x65 ok
+[127:printClocks] count = 1 , clocks =  10485, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 66x66
+[127:printClocks] count =  1, clocks = 10799
+[127:printClocks]    simd->matX_LowerTriangularsolve 66x66 ok
+[127:printClocks] count = 1 , clocks =  10781, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 67x67
+[127:printClocks] count =  1, clocks = 11069
+[127:printClocks]    simd->matX_LowerTriangularsolve 67x67 ok
+[127:printClocks] count = 1 , clocks =  11072, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 68x68
+[127:printClocks] count =  1, clocks = 11369
+[127:printClocks]    simd->matX_LowerTriangularsolve 68x68 ok
+[127:printClocks] count = 1 , clocks =  11378, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 69x69
+[127:printClocks] count =  1, clocks = 11633
+[127:printClocks]    simd->matX_LowerTriangularsolve 69x69 ok
+[127:printClocks] count = 1 , clocks =  11642, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 70x70
+[127:printClocks] count =  1, clocks = 11957
+[127:printClocks]    simd->matX_LowerTriangularsolve 70x70 ok
+[127:printClocks] count = 1 , clocks =  11983, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 71x71
+[127:printClocks] count =  1, clocks = 12292
+[127:printClocks]    simd->matX_LowerTriangularsolve 71x71 ok
+[127:printClocks] count = 1 , clocks =  12298, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 72x72
+[127:printClocks] count =  1, clocks = 12591
+[127:printClocks]    simd->matX_LowerTriangularsolve 72x72 ok
+[127:printClocks] count = 1 , clocks =  12595, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 73x73
+[127:printClocks] count =  1, clocks = 12918
+[127:printClocks]    simd->matX_LowerTriangularsolve 73x73 ok
+[127:printClocks] count = 1 , clocks =  12930, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 74x74
+[127:printClocks] count =  1, clocks = 13277
+[127:printClocks]    simd->matX_LowerTriangularsolve 74x74 ok
+[127:printClocks] count = 1 , clocks =  13227, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 75x75
+[127:printClocks] count =  1, clocks = 13574
+[127:printClocks]    simd->matX_LowerTriangularsolve 75x75 ok
+[127:printClocks] count = 1 , clocks =  13529, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 76x76
+[127:printClocks] count =  1, clocks = 13897
+[127:printClocks]    simd->matX_LowerTriangularsolve 76x76 ok
+[127:printClocks] count = 1 , clocks =  13906, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 77x77
+[127:printClocks] count =  1, clocks = 14230
+[127:printClocks]    simd->matX_LowerTriangularsolve 77x77 ok
+[127:printClocks] count = 1 , clocks =  14236, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 78x78
+[127:printClocks] count =  1, clocks = 14539
+[127:printClocks]    simd->matX_LowerTriangularsolve 78x78 ok
+[127:printClocks] count = 1 , clocks =  14556, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 79x79
+[127:printClocks] count =  1, clocks = 14910
+[127:printClocks]    simd->matX_LowerTriangularsolve 79x79 ok
+[127:printClocks] count = 1 , clocks =  14898, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 80x80
+[127:printClocks] count =  1, clocks = 15224
+[127:printClocks]    simd->matX_LowerTriangularsolve 80x80 ok
+[127:printClocks] count = 1 , clocks =  15259, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 81x81
+[127:printClocks] count =  1, clocks = 15622
+[127:printClocks]    simd->matX_LowerTriangularsolve 81x81 ok
+[127:printClocks] count = 1 , clocks =  15636, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 82x82
+[127:printClocks] count =  1, clocks = 15969
+[127:printClocks]    simd->matX_LowerTriangularsolve 82x82 ok
+[127:printClocks] count = 1 , clocks =  15954, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 83x83
+[127:printClocks] count =  1, clocks = 16316
+[127:printClocks]    simd->matX_LowerTriangularsolve 83x83 ok
+[127:printClocks] count = 1 , clocks =  16322, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 84x84
+[127:printClocks] count =  1, clocks = 16672
+[127:printClocks]    simd->matX_LowerTriangularsolve 84x84 ok
+[127:printClocks] count = 1 , clocks =  16681, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 85x85
+[127:printClocks] count =  1, clocks = 17020
+[127:printClocks]    simd->matX_LowerTriangularsolve 85x85 ok
+[127:printClocks] count = 1 , clocks =  17008, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 86x86
+[127:printClocks] count =  1, clocks = 17397
+[127:printClocks]    simd->matX_LowerTriangularsolve 86x86 ok
+[127:printClocks] count = 1 , clocks =  17396, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 87x87
+[127:printClocks] count =  1, clocks = 17788
+[127:printClocks]    simd->matX_LowerTriangularsolve 87x87 ok
+[127:printClocks] count = 1 , clocks =  17791, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 88x88
+[127:printClocks] count =  1, clocks = 18126
+[127:printClocks]    simd->matX_LowerTriangularsolve 88x88 ok
+[127:printClocks] count = 1 , clocks =  18109, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 89x89
+[127:printClocks] count =  1, clocks = 18504
+[127:printClocks]    simd->matX_LowerTriangularsolve 89x89 ok
+[127:printClocks] count = 1 , clocks =  18515, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 90x90
+[127:printClocks] count =  1, clocks = 18895
+[127:printClocks]    simd->matX_LowerTriangularsolve 90x90 ok
+[127:printClocks] count = 1 , clocks =  18913, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 91x91
+[127:printClocks] count =  1, clocks = 19287
+[127:printClocks]    simd->matX_LowerTriangularsolve 91x91 ok
+[127:printClocks] count = 1 , clocks =  19287, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 92x92
+[127:printClocks] count =  1, clocks = 19655
+[127:printClocks]    simd->matX_LowerTriangularsolve 92x92 ok
+[127:printClocks] count = 1 , clocks =  19681, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 93x93
+[127:printClocks] count =  1, clocks = 20026
+[127:printClocks]    simd->matX_LowerTriangularsolve 93x93 ok
+[127:printClocks] count = 1 , clocks =  20026, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 94x94
+[127:printClocks] count =  1, clocks = 20424
+[127:printClocks]    simd->matX_LowerTriangularsolve 94x94 ok
+[127:printClocks] count = 1 , clocks =  20450, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 95x95
+[127:printClocks] count =  1, clocks = 20845
+[127:printClocks]    simd->matX_LowerTriangularsolve 95x95 ok
+[127:printClocks] count = 1 , clocks =  20887, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 96x96
+[127:printClocks] count =  1, clocks = 21243
+[127:printClocks]    simd->matX_LowerTriangularsolve 96x96 ok
+[127:printClocks] count = 1 , clocks =  21246, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 97x97
+[127:printClocks] count =  1, clocks = 21631
+[127:printClocks]    simd->matX_LowerTriangularsolve 97x97 ok
+[127:printClocks] count = 1 , clocks =  21684, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 98x98
+[127:printClocks] count =  1, clocks = 22073
+[127:printClocks]    simd->matX_LowerTriangularsolve 98x98 ok
+[127:printClocks] count = 1 , clocks =  22056, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolve 99x99
+[127:printClocks] count =  1, clocks = 22453
+[127:printClocks]    simd->matX_LowerTriangularsolve 99x99 ok
+[127:printClocks] count = 1 , clocks =  22483, 0% melhor
+[127:TestMatXLowerTriangularsolveTranspose] ====================================
+
+[127:printClocks] generic->matX_LowerTriangularsolveT 1x1
+[127:printClocks] count =  1, clocks = 38
+[127:printClocks]    simd->matX_LowerTriangularsolveT 1x1 ok
+[127:printClocks] count = 1 , clocks =  38, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 2x2
+[127:printClocks] count =  1, clocks = 53
+[127:printClocks]    simd->matX_LowerTriangularsolveT 2x2 ok
+[127:printClocks] count = 1 , clocks =  50, 5% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 3x3
+[127:printClocks] count =  1, clocks = 65
+[127:printClocks]    simd->matX_LowerTriangularsolveT 3x3 ok
+[127:printClocks] count = 1 , clocks =  62, 4% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 4x4
+[127:printClocks] count =  1, clocks = 77
+[127:printClocks]    simd->matX_LowerTriangularsolveT 4x4 ok
+[127:printClocks] count = 1 , clocks =  77, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 5x5
+[127:printClocks] count =  1, clocks = 86
+[127:printClocks]    simd->matX_LowerTriangularsolveT 5x5 ok
+[127:printClocks] count = 1 , clocks =  86, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 6x6
+[127:printClocks] count =  1, clocks = 98
+[127:printClocks]    simd->matX_LowerTriangularsolveT 6x6 ok
+[127:printClocks] count = 1 , clocks =  101, -3% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 7x7
+[127:printClocks] count =  1, clocks = 124
+[127:printClocks]    simd->matX_LowerTriangularsolveT 7x7 ok
+[127:printClocks] count = 1 , clocks =  139, -12% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 8x8
+[127:printClocks] count =  1, clocks = 181
+[127:printClocks]    simd->matX_LowerTriangularsolveT 8x8 ok
+[127:printClocks] count = 1 , clocks =  181, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 9x9
+[127:printClocks] count =  1, clocks = 273
+[127:printClocks]    simd->matX_LowerTriangularsolveT 9x9 ok
+[127:printClocks] count = 1 , clocks =  273, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 10x10
+[127:printClocks] count =  1, clocks = 362
+[127:printClocks]    simd->matX_LowerTriangularsolveT 10x10 ok
+[127:printClocks] count = 1 , clocks =  362, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 11x11
+[127:printClocks] count =  1, clocks = 460
+[127:printClocks]    simd->matX_LowerTriangularsolveT 11x11 ok
+[127:printClocks] count = 1 , clocks =  451, 1% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 12x12
+[127:printClocks] count =  1, clocks = 341
+[127:printClocks]    simd->matX_LowerTriangularsolveT 12x12 ok
+[127:printClocks] count = 1 , clocks =  338, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 13x13
+[127:printClocks] count =  1, clocks = 460
+[127:printClocks]    simd->matX_LowerTriangularsolveT 13x13 ok
+[127:printClocks] count = 1 , clocks =  463, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 14x14
+[127:printClocks] count =  1, clocks = 584
+[127:printClocks]    simd->matX_LowerTriangularsolveT 14x14 ok
+[127:printClocks] count = 1 , clocks =  578, 1% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 15x15
+[127:printClocks] count =  1, clocks = 709
+[127:printClocks]    simd->matX_LowerTriangularsolveT 15x15 ok
+[127:printClocks] count = 1 , clocks =  709, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 16x16
+[127:printClocks] count =  1, clocks = 555
+[127:printClocks]    simd->matX_LowerTriangularsolveT 16x16 ok
+[127:printClocks] count = 1 , clocks =  555, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 17x17
+[127:printClocks] count =  1, clocks = 715
+[127:printClocks]    simd->matX_LowerTriangularsolveT 17x17 ok
+[127:printClocks] count = 1 , clocks =  712, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 18x18
+[127:printClocks] count =  1, clocks = 866
+[127:printClocks]    simd->matX_LowerTriangularsolveT 18x18 ok
+[127:printClocks] count = 1 , clocks =  866, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 19x19
+[127:printClocks] count =  1, clocks = 1021
+[127:printClocks]    simd->matX_LowerTriangularsolveT 19x19 ok
+[127:printClocks] count = 1 , clocks =  1021, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 20x20
+[127:printClocks] count =  1, clocks = 831
+[127:printClocks]    simd->matX_LowerTriangularsolveT 20x20 ok
+[127:printClocks] count = 1 , clocks =  840, -1% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 21x21
+[127:printClocks] count =  1, clocks = 1024
+[127:printClocks]    simd->matX_LowerTriangularsolveT 21x21 ok
+[127:printClocks] count = 1 , clocks =  1030, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 22x22
+[127:printClocks] count =  1, clocks = 1314
+[127:printClocks]    simd->matX_LowerTriangularsolveT 22x22 ok
+[127:printClocks] count = 1 , clocks =  1300, 1% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 23x23
+[127:printClocks] count =  1, clocks = 1403
+[127:printClocks]    simd->matX_LowerTriangularsolveT 23x23 ok
+[127:printClocks] count = 1 , clocks =  1403, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 24x24
+[127:printClocks] count =  1, clocks = 1190
+[127:printClocks]    simd->matX_LowerTriangularsolveT 24x24 ok
+[127:printClocks] count = 1 , clocks =  1190, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 25x25
+[127:printClocks] count =  1, clocks = 1394
+[127:printClocks]    simd->matX_LowerTriangularsolveT 25x25 ok
+[127:printClocks] count = 1 , clocks =  1395, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 26x26
+[127:printClocks] count =  1, clocks = 1611
+[127:printClocks]    simd->matX_LowerTriangularsolveT 26x26 ok
+[127:printClocks] count = 1 , clocks =  1605, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 27x27
+[127:printClocks] count =  1, clocks = 1831
+[127:printClocks]    simd->matX_LowerTriangularsolveT 27x27 ok
+[127:printClocks] count = 1 , clocks =  1840, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 28x28
+[127:printClocks] count =  1, clocks = 1587
+[127:printClocks]    simd->matX_LowerTriangularsolveT 28x28 ok
+[127:printClocks] count = 1 , clocks =  1587, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 29x29
+[127:printClocks] count =  1, clocks = 1828
+[127:printClocks]    simd->matX_LowerTriangularsolveT 29x29 ok
+[127:printClocks] count = 1 , clocks =  1828, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 30x30
+[127:printClocks] count =  1, clocks = 2074
+[127:printClocks]    simd->matX_LowerTriangularsolveT 30x30 ok
+[127:printClocks] count = 1 , clocks =  2071, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 31x31
+[127:printClocks] count =  1, clocks = 2332
+[127:printClocks]    simd->matX_LowerTriangularsolveT 31x31 ok
+[127:printClocks] count = 1 , clocks =  2332, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 32x32
+[127:printClocks] count =  1, clocks = 2044
+[127:printClocks]    simd->matX_LowerTriangularsolveT 32x32 ok
+[127:printClocks] count = 1 , clocks =  2050, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 33x33
+[127:printClocks] count =  1, clocks = 2326
+[127:printClocks]    simd->matX_LowerTriangularsolveT 33x33 ok
+[127:printClocks] count = 1 , clocks =  2326, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 34x34
+[127:printClocks] count =  1, clocks = 2605
+[127:printClocks]    simd->matX_LowerTriangularsolveT 34x34 ok
+[127:printClocks] count = 1 , clocks =  2599, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 35x35
+[127:printClocks] count =  1, clocks = 2896
+[127:printClocks]    simd->matX_LowerTriangularsolveT 35x35 ok
+[127:printClocks] count = 1 , clocks =  2896, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 36x36
+[127:printClocks] count =  1, clocks = 2576
+[127:printClocks]    simd->matX_LowerTriangularsolveT 36x36 ok
+[127:printClocks] count = 1 , clocks =  2579, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 37x37
+[127:printClocks] count =  1, clocks = 2887
+[127:printClocks]    simd->matX_LowerTriangularsolveT 37x37 ok
+[127:printClocks] count = 1 , clocks =  2881, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 38x38
+[127:printClocks] count =  1, clocks = 3202
+[127:printClocks]    simd->matX_LowerTriangularsolveT 38x38 ok
+[127:printClocks] count = 1 , clocks =  3196, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 39x39
+[127:printClocks] count =  1, clocks = 3549
+[127:printClocks]    simd->matX_LowerTriangularsolveT 39x39 ok
+[127:printClocks] count = 1 , clocks =  3546, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 40x40
+[127:printClocks] count =  1, clocks = 3160
+[127:printClocks]    simd->matX_LowerTriangularsolveT 40x40 ok
+[127:printClocks] count = 1 , clocks =  3160, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 41x41
+[127:printClocks] count =  1, clocks = 3493
+[127:printClocks]    simd->matX_LowerTriangularsolveT 41x41 ok
+[127:printClocks] count = 1 , clocks =  3493, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 42x42
+[127:printClocks] count =  1, clocks = 3849
+[127:printClocks]    simd->matX_LowerTriangularsolveT 42x42 ok
+[127:printClocks] count = 1 , clocks =  3852, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 43x43
+[127:printClocks] count =  1, clocks = 4226
+[127:printClocks]    simd->matX_LowerTriangularsolveT 43x43 ok
+[127:printClocks] count = 1 , clocks =  4220, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 44x44
+[127:printClocks] count =  1, clocks = 3804
+[127:printClocks]    simd->matX_LowerTriangularsolveT 44x44 ok
+[127:printClocks] count = 1 , clocks =  3795, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 45x45
+[127:printClocks] count =  1, clocks = 4172
+[127:printClocks]    simd->matX_LowerTriangularsolveT 45x45 ok
+[127:printClocks] count = 1 , clocks =  4175, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 46x46
+[127:printClocks] count =  1, clocks = 4555
+[127:printClocks]    simd->matX_LowerTriangularsolveT 46x46 ok
+[127:printClocks] count = 1 , clocks =  4555, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 47x47
+[127:printClocks] count =  1, clocks = 4973
+[127:printClocks]    simd->matX_LowerTriangularsolveT 47x47 ok
+[127:printClocks] count = 1 , clocks =  4968, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 48x48
+[127:printClocks] count =  1, clocks = 4517
+[127:printClocks]    simd->matX_LowerTriangularsolveT 48x48 ok
+[127:printClocks] count = 1 , clocks =  4499, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 49x49
+[127:printClocks] count =  1, clocks = 4911
+[127:printClocks]    simd->matX_LowerTriangularsolveT 49x49 ok
+[127:printClocks] count = 1 , clocks =  4917, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 50x50
+[127:printClocks] count =  1, clocks = 5333
+[127:printClocks]    simd->matX_LowerTriangularsolveT 50x50 ok
+[127:printClocks] count = 1 , clocks =  5324, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 51x51
+[127:printClocks] count =  1, clocks = 5777
+[127:printClocks]    simd->matX_LowerTriangularsolveT 51x51 ok
+[127:printClocks] count = 1 , clocks =  5781, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 52x52
+[127:printClocks] count =  1, clocks = 5267
+[127:printClocks]    simd->matX_LowerTriangularsolveT 52x52 ok
+[127:printClocks] count = 1 , clocks =  5294, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 53x53
+[127:printClocks] count =  1, clocks = 5716
+[127:printClocks]    simd->matX_LowerTriangularsolveT 53x53 ok
+[127:printClocks] count = 1 , clocks =  5710, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 54x54
+[127:printClocks] count =  1, clocks = 6181
+[127:printClocks]    simd->matX_LowerTriangularsolveT 54x54 ok
+[127:printClocks] count = 1 , clocks =  6167, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 55x55
+[127:printClocks] count =  1, clocks = 6635
+[127:printClocks]    simd->matX_LowerTriangularsolveT 55x55 ok
+[127:printClocks] count = 1 , clocks =  6644, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 56x56
+[127:printClocks] count =  1, clocks = 6125
+[127:printClocks]    simd->matX_LowerTriangularsolveT 56x56 ok
+[127:printClocks] count = 1 , clocks =  6113, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 57x57
+[127:printClocks] count =  1, clocks = 6558
+[127:printClocks]    simd->matX_LowerTriangularsolveT 57x57 ok
+[127:printClocks] count = 1 , clocks =  6570, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 58x58
+[127:printClocks] count =  1, clocks = 7062
+[127:printClocks]    simd->matX_LowerTriangularsolveT 58x58 ok
+[127:printClocks] count = 1 , clocks =  7054, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 59x59
+[127:printClocks] count =  1, clocks = 7570
+[127:printClocks]    simd->matX_LowerTriangularsolveT 59x59 ok
+[127:printClocks] count = 1 , clocks =  7552, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 60x60
+[127:printClocks] count =  1, clocks = 7001
+[127:printClocks]    simd->matX_LowerTriangularsolveT 60x60 ok
+[127:printClocks] count = 1 , clocks =  6995, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 61x61
+[127:printClocks] count =  1, clocks = 7493
+[127:printClocks]    simd->matX_LowerTriangularsolveT 61x61 ok
+[127:printClocks] count = 1 , clocks =  7478, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 62x62
+[127:printClocks] count =  1, clocks = 8004
+[127:printClocks]    simd->matX_LowerTriangularsolveT 62x62 ok
+[127:printClocks] count = 1 , clocks =  8019, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 63x63
+[127:printClocks] count =  1, clocks = 8556
+[127:printClocks]    simd->matX_LowerTriangularsolveT 63x63 ok
+[127:printClocks] count = 1 , clocks =  8544, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 64x64
+[127:printClocks] count =  1, clocks = 7962
+[127:printClocks]    simd->matX_LowerTriangularsolveT 64x64 ok
+[127:printClocks] count = 1 , clocks =  7959, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 65x65
+[127:printClocks] count =  1, clocks = 8493
+[127:printClocks]    simd->matX_LowerTriangularsolveT 65x65 ok
+[127:printClocks] count = 1 , clocks =  8493, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 66x66
+[127:printClocks] count =  1, clocks = 9034
+[127:printClocks]    simd->matX_LowerTriangularsolveT 66x66 ok
+[127:printClocks] count = 1 , clocks =  9027, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 67x67
+[127:printClocks] count =  1, clocks = 9612
+[127:printClocks]    simd->matX_LowerTriangularsolveT 67x67 ok
+[127:printClocks] count = 1 , clocks =  9609, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 68x68
+[127:printClocks] count =  1, clocks = 8991
+[127:printClocks]    simd->matX_LowerTriangularsolveT 68x68 ok
+[127:printClocks] count = 1 , clocks =  8983, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 69x69
+[127:printClocks] count =  1, clocks = 9540
+[127:printClocks]    simd->matX_LowerTriangularsolveT 69x69 ok
+[127:printClocks] count = 1 , clocks =  9535, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 70x70
+[127:printClocks] count =  1, clocks = 10110
+[127:printClocks]    simd->matX_LowerTriangularsolveT 70x70 ok
+[127:printClocks] count = 1 , clocks =  10096, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 71x71
+[127:printClocks] count =  1, clocks = 10725
+[127:printClocks]    simd->matX_LowerTriangularsolveT 71x71 ok
+[127:printClocks] count = 1 , clocks =  10713, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 72x72
+[127:printClocks] count =  1, clocks = 10069
+[127:printClocks]    simd->matX_LowerTriangularsolveT 72x72 ok
+[127:printClocks] count = 1 , clocks =  10063, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 73x73
+[127:printClocks] count =  1, clocks = 10642
+[127:printClocks]    simd->matX_LowerTriangularsolveT 73x73 ok
+[127:printClocks] count = 1 , clocks =  10642, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 74x74
+[127:printClocks] count =  1, clocks = 11262
+[127:printClocks]    simd->matX_LowerTriangularsolveT 74x74 ok
+[127:printClocks] count = 1 , clocks =  11244, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 75x75
+[127:printClocks] count =  1, clocks = 11909
+[127:printClocks]    simd->matX_LowerTriangularsolveT 75x75 ok
+[127:printClocks] count = 1 , clocks =  11885, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 76x76
+[127:printClocks] count =  1, clocks = 11200
+[127:printClocks]    simd->matX_LowerTriangularsolveT 76x76 ok
+[127:printClocks] count = 1 , clocks =  11197, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 77x77
+[127:printClocks] count =  1, clocks = 11814
+[127:printClocks]    simd->matX_LowerTriangularsolveT 77x77 ok
+[127:printClocks] count = 1 , clocks =  11829, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 78x78
+[127:printClocks] count =  1, clocks = 12464
+[127:printClocks]    simd->matX_LowerTriangularsolveT 78x78 ok
+[127:printClocks] count = 1 , clocks =  12464, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 79x79
+[127:printClocks] count =  1, clocks = 13138
+[127:printClocks]    simd->matX_LowerTriangularsolveT 79x79 ok
+[127:printClocks] count = 1 , clocks =  13132, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 80x80
+[127:printClocks] count =  1, clocks = 12410
+[127:printClocks]    simd->matX_LowerTriangularsolveT 80x80 ok
+[127:printClocks] count = 1 , clocks =  12407, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 81x81
+[127:printClocks] count =  1, clocks = 13052
+[127:printClocks]    simd->matX_LowerTriangularsolveT 81x81 ok
+[127:printClocks] count = 1 , clocks =  13057, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 82x82
+[127:printClocks] count =  1, clocks = 13748
+[127:printClocks]    simd->matX_LowerTriangularsolveT 82x82 ok
+[127:printClocks] count = 1 , clocks =  13758, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 83x83
+[127:printClocks] count =  1, clocks = 14467
+[127:printClocks]    simd->matX_LowerTriangularsolveT 83x83 ok
+[127:printClocks] count = 1 , clocks =  14432, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 84x84
+[127:printClocks] count =  1, clocks = 13692
+[127:printClocks]    simd->matX_LowerTriangularsolveT 84x84 ok
+[127:printClocks] count = 1 , clocks =  13687, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 85x85
+[127:printClocks] count =  1, clocks = 14378
+[127:printClocks]    simd->matX_LowerTriangularsolveT 85x85 ok
+[127:printClocks] count = 1 , clocks =  14429, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 86x86
+[127:printClocks] count =  1, clocks = 15055
+[127:printClocks]    simd->matX_LowerTriangularsolveT 86x86 ok
+[127:printClocks] count = 1 , clocks =  15102, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 87x87
+[127:printClocks] count =  1, clocks = 15821
+[127:printClocks]    simd->matX_LowerTriangularsolveT 87x87 ok
+[127:printClocks] count = 1 , clocks =  15791, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 88x88
+[127:printClocks] count =  1, clocks = 15067
+[127:printClocks]    simd->matX_LowerTriangularsolveT 88x88 ok
+[127:printClocks] count = 1 , clocks =  15073, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 89x89
+[127:printClocks] count =  1, clocks = 15767
+[127:printClocks]    simd->matX_LowerTriangularsolveT 89x89 ok
+[127:printClocks] count = 1 , clocks =  15776, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 90x90
+[127:printClocks] count =  1, clocks = 16500
+[127:printClocks]    simd->matX_LowerTriangularsolveT 90x90 ok
+[127:printClocks] count = 1 , clocks =  16467, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 91x91
+[127:printClocks] count =  1, clocks = 17301
+[127:printClocks]    simd->matX_LowerTriangularsolveT 91x91 ok
+[127:printClocks] count = 1 , clocks =  17313, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 92x92
+[127:printClocks] count =  1, clocks = 16467
+[127:printClocks]    simd->matX_LowerTriangularsolveT 92x92 ok
+[127:printClocks] count = 1 , clocks =  16462, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 93x93
+[127:printClocks] count =  1, clocks = 17215
+[127:printClocks]    simd->matX_LowerTriangularsolveT 93x93 ok
+[127:printClocks] count = 1 , clocks =  17206, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 94x94
+[127:printClocks] count =  1, clocks = 17951
+[127:printClocks]    simd->matX_LowerTriangularsolveT 94x94 ok
+[127:printClocks] count = 1 , clocks =  18005, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 95x95
+[127:printClocks] count =  1, clocks = 18764
+[127:printClocks]    simd->matX_LowerTriangularsolveT 95x95 ok
+[127:printClocks] count = 1 , clocks =  18824, 0% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 96x96
+[127:printClocks] count =  1, clocks = 17945
+[127:printClocks]    simd->matX_LowerTriangularsolveT 96x96 ok
+[127:printClocks] count = 1 , clocks =  19251, -7% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 97x97
+[127:printClocks] count =  1, clocks = 20085
+[127:printClocks]    simd->matX_LowerTriangularsolveT 97x97 ok
+[127:printClocks] count = 1 , clocks =  18655, 7% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 98x98
+[127:printClocks] count =  1, clocks = 19474
+[127:printClocks]    simd->matX_LowerTriangularsolveT 98x98 ok
+[127:printClocks] count = 1 , clocks =  20869, -7% melhor
+[127:printClocks] generic->matX_LowerTriangularsolveT 99x99
+[127:printClocks] count =  1, clocks = 20367
+[127:printClocks]    simd->matX_LowerTriangularsolveT 99x99 ok
+[127:printClocks] count = 1 , clocks =  20358, 0% melhor
+[127:TestMatXLDLTFactor] ====================================
+
+[127:printClocks] generic->matX_LDLTFactor 1x1
+[127:printClocks] count =  1, clocks = 127
+[127:printClocks]    simd->matX_LDLTFactor 1x1 ok
+[127:printClocks] count = 1 , clocks =  148, -16% melhor
+[127:printClocks] generic->matX_LDLTFactor 2x2
+[127:printClocks] count =  1, clocks = 199
+[127:printClocks]    simd->matX_LDLTFactor 2x2 ok
+[127:printClocks] count = 1 , clocks =  219, -10% melhor
+[127:printClocks] generic->matX_LDLTFactor 3x3
+[127:printClocks] count =  1, clocks = 305
+[127:printClocks]    simd->matX_LDLTFactor 3x3 ok
+[127:printClocks] count = 1 , clocks =  314, -2% melhor
+[127:printClocks] generic->matX_LDLTFactor 4x4
+[127:printClocks] count =  1, clocks = 418
+[127:printClocks]    simd->matX_LDLTFactor 4x4 ok
+[127:printClocks] count = 1 , clocks =  433, -3% melhor
+[127:printClocks] generic->matX_LDLTFactor 5x5
+[127:printClocks] count =  1, clocks = 593
+[127:printClocks]    simd->matX_LDLTFactor 5x5 ok
+[127:printClocks] count = 1 , clocks =  555, 6% melhor
+[127:printClocks] generic->matX_LDLTFactor 6x6
+[127:printClocks] count =  1, clocks = 804
+[127:printClocks]    simd->matX_LDLTFactor 6x6 ok
+[127:printClocks] count = 1 , clocks =  662, 17% melhor
+[127:printClocks] generic->matX_LDLTFactor 7x7
+[127:printClocks] count =  1, clocks = 1121
+[127:printClocks]    simd->matX_LDLTFactor 7x7 ok
+[127:printClocks] count = 1 , clocks =  777, 30% melhor
+[127:printClocks] generic->matX_LDLTFactor 8x8
+[127:printClocks] count =  1, clocks = 1442
+[127:printClocks]    simd->matX_LDLTFactor 8x8 ok
+[127:printClocks] count = 1 , clocks =  875, 39% melhor
+[127:printClocks] generic->matX_LDLTFactor 9x9
+[127:printClocks] count =  1, clocks = 1834
+[127:printClocks]    simd->matX_LDLTFactor 9x9 ok
+[127:printClocks] count = 1 , clocks =  1068, 41% melhor
+[127:printClocks] generic->matX_LDLTFactor 10x10
+[127:printClocks] count =  1, clocks = 2288
+[127:printClocks]    simd->matX_LDLTFactor 10x10 ok
+[127:printClocks] count = 1 , clocks =  1089, 52% melhor
+[127:printClocks] generic->matX_LDLTFactor 11x11
+[127:printClocks] count =  1, clocks = 2786
+[127:printClocks]    simd->matX_LDLTFactor 11x11 ok
+[127:printClocks] count = 1 , clocks =  1219, 56% melhor
+[127:printClocks] generic->matX_LDLTFactor 12x12
+[127:printClocks] count =  1, clocks = 3380
+[127:printClocks]    simd->matX_LDLTFactor 12x12 ok
+[127:printClocks] count = 1 , clocks =  1341, 60% melhor
+[127:printClocks] generic->matX_LDLTFactor 13x13
+[127:printClocks] count =  1, clocks = 4048
+[127:printClocks]    simd->matX_LDLTFactor 13x13 ok
+[127:printClocks] count = 1 , clocks =  1504, 62% melhor
+[127:printClocks] generic->matX_LDLTFactor 14x14
+[127:printClocks] count =  1, clocks = 4774
+[127:printClocks]    simd->matX_LDLTFactor 14x14 ok
+[127:printClocks] count = 1 , clocks =  1670, 65% melhor
+[127:printClocks] generic->matX_LDLTFactor 15x15
+[127:printClocks] count =  1, clocks = 5615
+[127:printClocks]    simd->matX_LDLTFactor 15x15 ok
+[127:printClocks] count = 1 , clocks =  1843, 67% melhor
+[127:printClocks] generic->matX_LDLTFactor 16x16
+[127:printClocks] count =  1, clocks = 6535
+[127:printClocks]    simd->matX_LDLTFactor 16x16 ok
+[127:printClocks] count = 1 , clocks =  2018, 69% melhor
+[127:printClocks] generic->matX_LDLTFactor 17x17
+[127:printClocks] count =  1, clocks = 7591
+[127:printClocks]    simd->matX_LDLTFactor 17x17 ok
+[127:printClocks] count = 1 , clocks =  2199, 71% melhor
+[127:printClocks] generic->matX_LDLTFactor 18x18
+[127:printClocks] count =  1, clocks = 8707
+[127:printClocks]    simd->matX_LDLTFactor 18x18 ok
+[127:printClocks] count = 1 , clocks =  2398, 72% melhor
+[127:printClocks] generic->matX_LDLTFactor 19x19
+[127:printClocks] count =  1, clocks = 9956
+[127:printClocks]    simd->matX_LDLTFactor 19x19 ok
+[127:printClocks] count = 1 , clocks =  2585, 74% melhor
+[127:printClocks] generic->matX_LDLTFactor 20x20
+[127:printClocks] count =  1, clocks = 11360
+[127:printClocks]    simd->matX_LDLTFactor 20x20 ok
+[127:printClocks] count = 1 , clocks =  2792, 75% melhor
+[127:printClocks] generic->matX_LDLTFactor 21x21
+[127:printClocks] count =  1, clocks = 12889
+[127:printClocks]    simd->matX_LDLTFactor 21x21 ok
+[127:printClocks] count = 1 , clocks =  3042, 76% melhor
+[127:printClocks] generic->matX_LDLTFactor 22x22
+[127:printClocks] count =  1, clocks = 14556
+[127:printClocks]    simd->matX_LDLTFactor 22x22 ok
+[127:printClocks] count = 1 , clocks =  3303, 77% melhor
+[127:printClocks] generic->matX_LDLTFactor 23x23
+[127:printClocks] count =  1, clocks = 16301
+[127:printClocks]    simd->matX_LDLTFactor 23x23 ok
+[127:printClocks] count = 1 , clocks =  3573, 78% melhor
+[127:printClocks] generic->matX_LDLTFactor 24x24
+[127:printClocks] count =  1, clocks = 17972
+[127:printClocks]    simd->matX_LDLTFactor 24x24 ok
+[127:printClocks] count = 1 , clocks =  3855, 78% melhor
+[127:printClocks] generic->matX_LDLTFactor 25x25
+[127:printClocks] count =  1, clocks = 20109
+[127:printClocks]    simd->matX_LDLTFactor 25x25 ok
+[127:printClocks] count = 1 , clocks =  4128, 79% melhor
+[127:printClocks] generic->matX_LDLTFactor 26x26
+[127:printClocks] count =  1, clocks = 22222
+[127:printClocks]    simd->matX_LDLTFactor 26x26 ok
+[127:printClocks] count = 1 , clocks =  4439, 80% melhor
+[127:printClocks] generic->matX_LDLTFactor 27x27
+[127:printClocks] count =  1, clocks = 24465
+[127:printClocks]    simd->matX_LDLTFactor 27x27 ok
+[127:printClocks] count = 1 , clocks =  4769, 80% melhor
+[127:printClocks] generic->matX_LDLTFactor 28x28
+[127:printClocks] count =  1, clocks = 26938
+[127:printClocks]    simd->matX_LDLTFactor 28x28 ok
+[127:printClocks] count = 1 , clocks =  5092, 81% melhor
+[127:printClocks] generic->matX_LDLTFactor 29x29
+[127:printClocks] count =  1, clocks = 29543
+[127:printClocks]    simd->matX_LDLTFactor 29x29 ok
+[127:printClocks] count = 1 , clocks =  5483, 81% melhor
+[127:printClocks] generic->matX_LDLTFactor 30x30
+[127:printClocks] count =  1, clocks = 32232
+[127:printClocks]    simd->matX_LDLTFactor 30x30 ok
+[127:printClocks] count = 1 , clocks =  5831, 81% melhor
+[127:printClocks] generic->matX_LDLTFactor 31x31
+[127:printClocks] count =  1, clocks = 35019
+[127:printClocks]    simd->matX_LDLTFactor 31x31 ok
+[127:printClocks] count = 1 , clocks =  6237, 82% melhor
+[127:printClocks] generic->matX_LDLTFactor 32x32
+[127:printClocks] count =  1, clocks = 38111
+[127:printClocks]    simd->matX_LDLTFactor 32x32 ok
+[127:printClocks] count = 1 , clocks =  6606, 82% melhor
+[127:printClocks] generic->matX_LDLTFactor 33x33
+[127:printClocks] count =  1, clocks = 41355
+[127:printClocks]    simd->matX_LDLTFactor 33x33 ok
+[127:printClocks] count = 1 , clocks =  6944, 83% melhor
+[127:printClocks] generic->matX_LDLTFactor 34x34
+[127:printClocks] count =  1, clocks = 44824
+[127:printClocks]    simd->matX_LDLTFactor 34x34 ok
+[127:printClocks] count = 1 , clocks =  7392, 83% melhor
+[127:printClocks] generic->matX_LDLTFactor 35x35
+[127:printClocks] count =  1, clocks = 48287
+[127:printClocks]    simd->matX_LDLTFactor 35x35 ok
+[127:printClocks] count = 1 , clocks =  7903, 83% melhor
+[127:printClocks] generic->matX_LDLTFactor 36x36
+[127:printClocks] count =  1, clocks = 51991
+[127:printClocks]    simd->matX_LDLTFactor 36x36 ok
+[127:printClocks] count = 1 , clocks =  8392, 83% melhor
+[127:printClocks] generic->matX_LDLTFactor 37x37
+[127:printClocks] count =  1, clocks = 55912
+[127:printClocks]    simd->matX_LDLTFactor 37x37 ok
+[127:printClocks] count = 1 , clocks =  8784, 84% melhor
+[127:printClocks] generic->matX_LDLTFactor 38x38
+[127:printClocks] count =  1, clocks = 60054
+[127:printClocks]    simd->matX_LDLTFactor 38x38 ok
+[127:printClocks] count = 1 , clocks =  9327, 84% melhor
+[127:printClocks] generic->matX_LDLTFactor 39x39
+[127:printClocks] count =  1, clocks = 64231
+[127:printClocks]    simd->matX_LDLTFactor 39x39 ok
+[127:printClocks] count = 1 , clocks =  9829, 84% melhor
+[127:printClocks] generic->matX_LDLTFactor 40x40
+[127:printClocks] count =  1, clocks = 68759
+[127:printClocks]    simd->matX_LDLTFactor 40x40 ok
+[127:printClocks] count = 1 , clocks =  10306, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 41x41
+[127:printClocks] count =  1, clocks = 73504
+[127:printClocks]    simd->matX_LDLTFactor 41x41 ok
+[127:printClocks] count = 1 , clocks =  11220, 84% melhor
+[127:printClocks] generic->matX_LDLTFactor 42x42
+[127:printClocks] count =  1, clocks = 78285
+[127:printClocks]    simd->matX_LDLTFactor 42x42 ok
+[127:printClocks] count = 1 , clocks =  11805, 84% melhor
+[127:printClocks] generic->matX_LDLTFactor 43x43
+[127:printClocks] count =  1, clocks = 83470
+[127:printClocks]    simd->matX_LDLTFactor 43x43 ok
+[127:printClocks] count = 1 , clocks =  12381, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 44x44
+[127:printClocks] count =  1, clocks = 88708
+[127:printClocks]    simd->matX_LDLTFactor 44x44 ok
+[127:printClocks] count = 1 , clocks =  13048, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 45x45
+[127:printClocks] count =  1, clocks = 94371
+[127:printClocks]    simd->matX_LDLTFactor 45x45 ok
+[127:printClocks] count = 1 , clocks =  13805, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 46x46
+[127:printClocks] count =  1, clocks = 100300
+[127:printClocks]    simd->matX_LDLTFactor 46x46 ok
+[127:printClocks] count = 1 , clocks =  14497, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 47x47
+[127:printClocks] count =  1, clocks = 106025
+[127:printClocks]    simd->matX_LDLTFactor 47x47 ok
+[127:printClocks] count = 1 , clocks =  15195, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 48x48
+[127:printClocks] count =  1, clocks = 112192
+[127:printClocks]    simd->matX_LDLTFactor 48x48 ok
+[127:printClocks] count = 1 , clocks =  15945, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 49x49
+[127:printClocks] count =  1, clocks = 118887
+[127:printClocks]    simd->matX_LDLTFactor 49x49 ok
+[127:printClocks] count = 1 , clocks =  17420, 85% melhor
+[127:printClocks] generic->matX_LDLTFactor 50x50
+[127:printClocks] count =  1, clocks = 125674
+[127:printClocks]    simd->matX_LDLTFactor 50x50 ok
+[127:printClocks] count = 1 , clocks =  16897, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 51x51
+[127:printClocks] count =  1, clocks = 132660
+[127:printClocks]    simd->matX_LDLTFactor 51x51 ok
+[127:printClocks] count = 1 , clocks =  17723, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 52x52
+[127:printClocks] count =  1, clocks = 139892
+[127:printClocks]    simd->matX_LDLTFactor 52x52 ok
+[127:printClocks] count = 1 , clocks =  18500, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 53x53
+[127:printClocks] count =  1, clocks = 146514
+[127:printClocks]    simd->matX_LDLTFactor 53x53 ok
+[127:printClocks] count = 1 , clocks =  19417, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 54x54
+[127:printClocks] count =  1, clocks = 154183
+[127:printClocks]    simd->matX_LDLTFactor 54x54 ok
+[127:printClocks] count = 1 , clocks =  20296, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 55x55
+[127:printClocks] count =  1, clocks = 161976
+[127:printClocks]    simd->matX_LDLTFactor 55x55 ok
+[127:printClocks] count = 1 , clocks =  21165, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 56x56
+[127:printClocks] count =  1, clocks = 170146
+[127:printClocks]    simd->matX_LDLTFactor 56x56 ok
+[127:printClocks] count = 1 , clocks =  22115, 87% melhor
+[127:printClocks] generic->matX_LDLTFactor 57x57
+[127:printClocks] count =  1, clocks = 178480
+[127:printClocks]    simd->matX_LDLTFactor 57x57 ok
+[127:printClocks] count = 1 , clocks =  23863, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 58x58
+[127:printClocks] count =  1, clocks = 187276
+[127:printClocks]    simd->matX_LDLTFactor 58x58 ok
+[127:printClocks] count = 1 , clocks =  24842, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 59x59
+[127:printClocks] count =  1, clocks = 196182
+[127:printClocks]    simd->matX_LDLTFactor 59x59 ok
+[127:printClocks] count = 1 , clocks =  25848, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 60x60
+[127:printClocks] count =  1, clocks = 205254
+[127:printClocks]    simd->matX_LDLTFactor 60x60 ok
+[127:printClocks] count = 1 , clocks =  26967, 86% melhor
+[127:printClocks] generic->matX_LDLTFactor 61x61
+[127:printClocks] count =  1, clocks = 215718
+[127:printClocks]    simd->matX_LDLTFactor 61x61 ok
+[127:printClocks] count = 1 , clocks =  27979, 87% melhor
+[127:printClocks] generic->matX_LDLTFactor 62x62
+[127:printClocks] count =  1, clocks = 225788
+[127:printClocks]    simd->matX_LDLTFactor 62x62 ok
+[127:printClocks] count = 1 , clocks =  29145, 87% melhor
+[127:printClocks] generic->matX_LDLTFactor 63x63
+[127:printClocks] count =  1, clocks = 235917
+[127:printClocks]    simd->matX_LDLTFactor 63x63 ok
+[127:printClocks] count = 1 , clocks =  30288, 87% melhor
+[127:Test_f] ====================================
+
+[127:printClocks] generic->blendJoints()
+[127:printClocks] count =  1024, clocks = 625775
+[127:printClocks]    simd->blendJoints() ^1X
+[127:printClocks] count = 1024 , clocks =  448550, 28% melhor
+[127:printClocks] generic->convertJointQuatsToJointMats()
+[127:printClocks] count =  1024, clocks = 469496
+[127:printClocks]    simd->convertJointQuatsToJointMats() ok
+[127:printClocks] count = 1024 , clocks =  65981, 85% melhor
+[127:printClocks] generic->convertJointMatsToJointQuats()
+[127:printClocks] count =  1024, clocks = 253575
+[127:printClocks]    simd->convertJointMatsToJointQuats() ok
+[127:printClocks] count = 1024 , clocks =  21438, 91% melhor
+[127:printClocks] generic->transformJoints()
+[127:printClocks] count =  1024, clocks = 121330
+[127:printClocks]    simd->transformJoints() ok
+[127:printClocks] count = 1024 , clocks =  20355, 83% melhor
+[127:printClocks] generic->untransformJoints()
+[127:printClocks] count =  1024, clocks = 119837
+[127:printClocks]    simd->untransformJoints() ok
+[127:printClocks] count = 1024 , clocks =  17696, 85% melhor
+[127:printClocks] generic->transformVerts()
+[127:printClocks] count =  1024, clocks = 180928
+[127:printClocks]    simd->transformVerts() ok
+[127:printClocks] count = 1024 , clocks =  6602, 96% melhor
+[127:printClocks] generic->tracePointCull()
+[127:printClocks] count =  1024, clocks = 102630
+[127:printClocks]    simd->tracePointCull() ok
+[127:printClocks] count = 1024 , clocks =  10576, 89% melhor
+[127:printClocks] generic->decalPointCull()
+[127:printClocks] count =  1024, clocks = 113350
+[127:printClocks]    simd->decalPointCull() ok
+[127:printClocks] count = 1024 , clocks =  9455, 91% melhor
+[127:printClocks] generic->overlayPointCull()
+[127:printClocks] count =  1024, clocks = 67260
+[127:printClocks]    simd->overlayPointCull() ok
+[127:printClocks] count = 1024 , clocks =  5092, 92% melhor
+[127:printClocks] generic->deriveTriPlanes()
+[127:printClocks] count =  1024, clocks = 233801
+[127:printClocks]    simd->deriveTriPlanes() ok
+[127:printClocks] count = 1024 , clocks =  22907, 90% melhor
+[127:printClocks] generic-> deriveTangents()
+[127:printClocks] count =  1024, clocks = 598685
+[127:printClocks]    simd-> deriveTangents() ok
+[127:printClocks] count = 1024 , clocks =  539654, 9% melhor
+[127:printClocks] generic-> normalizeTangents()
+[127:printClocks] count =  1024, clocks = 288357
+[127:printClocks]    simd-> normalizeTangents() ok
+[127:printClocks] count = 1024 , clocks =  24904, 91% melhor
+[127:printClocks] generic-> createTextureSpaceLightVectors()
+[127:printClocks] count =  1024, clocks = 120665
+[127:printClocks]    simd-> createTextureSpaceLightVectors() ok
+[127:printClocks] count = 1024 , clocks =  286743, -137% melhor
+[127:printClocks] generic-> createSpecularTextureCoords()
+[127:printClocks] count =  1024, clocks = 310924
+[127:printClocks]    simd-> createSpecularTextureCoords() ok
+[127:printClocks] count = 1024 , clocks =  45248, 85% melhor
+[127:printClocks] generic-> createShadowCache()
+[127:printClocks] count =  1024, clocks = 4911
+[127:printClocks]    simd-> createShadowCache() ok
+[127:printClocks] count = 1024 , clocks =  1083, 77% melhor
+[127:printClocks] generic-> createVertexProgramShadowCache()
+[127:printClocks] count =  1024, clocks = 84554
+[127:printClocks]    simd-> createVertexProgramShadowCache() ok
+[127:printClocks] count = 1024 , clocks =  4614, 94% melhor
+[127:Test_f] ====================================
+
+[127:printClocks] generic-> upSamplePCMTo44kHz( 11025, 1 )
+[127:printClocks] count =  1024, clocks = 14805
+[127:printClocks]    simd-> upSamplePCMTo44kHz( 11025, 1 ) ok
+[127:printClocks] count = 1024 , clocks =  2196, 85% melhor
+[127:printClocks] generic-> upSamplePCMTo44kHz( 22050, 1 )
+[127:printClocks] count =  2048, clocks = 18762
+[127:printClocks]    simd-> upSamplePCMTo44kHz( 22050, 1 ) ok
+[127:printClocks] count = 2048 , clocks =  3338, 82% melhor
+[127:printClocks] generic-> upSamplePCMTo44kHz( 44100, 1 )
+[127:printClocks] count =  4096, clocks = 30323
+[127:printClocks]    simd-> upSamplePCMTo44kHz( 44100, 1 ) ok
+[127:printClocks] count = 4096 , clocks =  5685, 81% melhor
+[127:printClocks] generic-> upSamplePCMTo44kHz( 11025, 2 )
+[127:printClocks] count =  2048, clocks = 28561
+[127:printClocks]    simd-> upSamplePCMTo44kHz( 11025, 2 ) ok
+[127:printClocks] count = 2048 , clocks =  3899, 86% melhor
+[127:printClocks] generic-> upSamplePCMTo44kHz( 22050, 2 )
+[127:printClocks] count =  4096, clocks = 32790
+[127:printClocks]    simd-> upSamplePCMTo44kHz( 22050, 2 ) ok
+[127:printClocks] count = 4096 , clocks =  7164, 78% melhor
+[127:printClocks] generic-> upSamplePCMTo44kHz( 44100, 2 )
+[127:printClocks] count =  8192, clocks = 61711
+[127:printClocks]    simd-> upSamplePCMTo44kHz( 44100, 2 ) ok
+[127:printClocks] count = 8192 , clocks =  11144, 81% melhor
+[127:printClocks] generic-> upSampleOGGTo44kHz( 11025, 1 )
+[127:printClocks] count =  1024, clocks = 15945
+[127:printClocks]    simd-> upSampleOGGTo44kHz( 11025, 1 ) ok
+[127:printClocks] count = 1024 , clocks =  1765, 88% melhor
+[127:printClocks] generic-> upSampleOGGTo44kHz( 22050, 1 )
+[127:printClocks] count =  2048, clocks = 19201
+[127:printClocks]    simd-> upSampleOGGTo44kHz( 22050, 1 ) ok
+[127:printClocks] count = 2048 , clocks =  1938, 89% melhor
+[127:printClocks] generic-> upSampleOGGTo44kHz( 44100, 1 )
+[127:printClocks] count =  4096, clocks = 24263
+[127:printClocks]    simd-> upSampleOGGTo44kHz( 44100, 1 ) ok
+[127:printClocks] count = 4096 , clocks =  1662, 93% melhor
+[127:printClocks] generic-> upSampleOGGTo44kHz( 11025, 2 )
+[127:printClocks] count =  2048, clocks = 28881
+[127:printClocks]    simd-> upSampleOGGTo44kHz( 11025, 2 ) ok
+[127:printClocks] count = 2048 , clocks =  4038, 86% melhor
+[127:printClocks] generic-> upSampleOGGTo44kHz( 22050, 2 )
+[127:printClocks] count =  4096, clocks = 33547
+[127:printClocks]    simd-> upSampleOGGTo44kHz( 22050, 2 ) ok
+[127:printClocks] count = 4096 , clocks =  5730, 82% melhor
+[127:printClocks] generic-> upSampleOGGTo44kHz( 44100, 2 )
+[127:printClocks] count =  8192, clocks = 42019
+[127:printClocks]    simd-> upSampleOGGTo44kHz( 44100, 2 ) ok
+[127:printClocks] count = 8192 , clocks =  11414, 72% melhor
+[127:printClocks] generic-> mixSoundTwoSpeakerMono()
+[127:printClocks] count =  4096, clocks = 62497
+[127:printClocks]    simd-> mixSoundTwoSpeakerMono() ok
+[127:printClocks] count = 4096 , clocks =  5015, 91% melhor
+[127:printClocks] generic-> mixSoundTwoSpeakerStereo()
+[127:printClocks] count =  4096, clocks = 71490
+[127:printClocks]    simd-> mixSoundTwoSpeakerStereo() ok
+[127:printClocks] count = 4096 , clocks =  5027, 92% melhor
+[127:printClocks] generic-> mixSoundSixSpeakerMono()
+[127:printClocks] count =  4096, clocks = 198452
+[127:printClocks]    simd-> mixSoundSixSpeakerMono() ok
+[127:printClocks] count = 4096 , clocks =  12864, 93% melhor
+[127:printClocks] generic-> mixSoundSixSpeakerStereo()
+[127:printClocks] count =  4096, clocks = 203441
+[127:printClocks]    simd-> mixSoundSixSpeakerStereo() ^1X
+[127:printClocks] count = 4096 , clocks =  12981, 93% melhor
+[127:printClocks] generic-> mixedSoundToSamples()
+[127:printClocks] count =  4096, clocks = 181231
+[127:printClocks]    simd-> mixedSoundToSamples() ^1X
+[127:printClocks] count = 4096 , clocks =  26, 99% melhor

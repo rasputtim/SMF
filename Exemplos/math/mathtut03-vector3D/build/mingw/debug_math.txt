@@ -1,0 +1,148 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:Test3D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestVector3DSum] Testing Vector3D Sum()...
+[127:printClocks] generic->vector3D_Sum 
+[127:printClocks] count =  1, clocks = 69759
+[127:printClocks]    simd->vector3D_Sum  ok
+[127:printClocks] count = 1 , clocks =  38491, 44% melhor
+[127:TestVector3DSumOf] Testing Vector3D SumOf()...
+[127:printClocks] generic->vector3D_SumOf 
+[127:printClocks] count =  1, clocks = 3507
+[127:printClocks]    simd->vector3D_SumOf  ok
+[127:printClocks] count = 1 , clocks =  320, 90% melhor
+[127:TestVector3DDiff] Testing Vector3D Diff()...
+[127:printClocks] generic->vector3D_Diff 
+[127:printClocks] count =  1, clocks = 697
+[127:printClocks]    simd->vector3D_Diff  ok
+[127:printClocks] count = 1 , clocks =  667, 4% melhor
+[127:TestVector3DDiffOf] Testing Vector3D DiffOf()...
+[127:printClocks] generic->vector3D_DiffOf 
+[127:printClocks] count =  1, clocks = 895
+[127:printClocks]    simd->Vector3DD_DiffOf  ok
+[127:printClocks] count = 1 , clocks =  934, -4% melhor
+[127:TestVector3DScale] Testing Vector3D scale()...
+[127:printClocks] generic->vector3D_Scale 
+[127:printClocks] count =  1, clocks = 652
+[127:printClocks]    simd->vector3D_Scale  ok
+[127:printClocks] count = 1 , clocks =  1631, -150% melhor
+[127:TestVector3DScaleOf] Testing Vector3D ScaleOf()...
+[127:printClocks] generic->vector3D_ScaleOf 
+[127:printClocks] count =  1, clocks = 275
+[127:printClocks]    simd->vector3D_ScaleOf  ok
+[127:printClocks] count = 1 , clocks =  338, -22% melhor
+[127:TestVector3DDot] Testing Vector3D dot()...
+[127:printClocks] generic->vector3D_Dot 
+[127:printClocks] count =  1, clocks = 275
+[127:printClocks]    simd->vector3D_Dot  ok
+[127:printClocks] count = 1 , clocks =  1133, -312% melhor
+[127:TestCVec3DLengthSq] Testing Vector3D getLengthSqr()...
+[127:printClocks] generic->vector3D_LengthSq 
+[127:printClocks] count =  1, clocks = 566
+[127:printClocks]    simd->vector3D_LengthSq  ok
+[127:printClocks] count = 1 , clocks =  2326668, -410972% melhor
+[127:TestCVec3DLength] Testing Vector3D getLenght()...
+[127:printClocks] generic->vector3D_Length 
+[127:printClocks] count =  1, clocks = 3005
+[127:printClocks]    simd->vector3D_Length  ok
+[127:printClocks] count = 1 , clocks =  1747, 41% melhor
+[127:TestVector3DCross] Testing Vector3D cross()...
+[127:printClocks] generic->vector3D_Cross 
+[127:printClocks] count =  1, clocks = 519
+[127:printClocks]    simd->vector3D_Cross  ok
+[127:printClocks] count = 1 , clocks =  664, -27% melhor
+[127:TestVector3DCrossOf] Testing Vector3D CrossOf()...
+[127:printClocks] generic->vector3D_CrossOf 
+[127:printClocks] count =  1, clocks = 412
+[127:printClocks]    simd->vector3D_CrossOf  ok
+[127:printClocks] count = 1 , clocks =  367, 10% melhor
+[127:TestCVec3DNormalize] Testing Vector3D  toNormal()...
+[127:printClocks] generic->vector3D_Normalize 
+[127:printClocks] count =  1, clocks = 1738
+[127:printClocks]    simd->vector3D_Normalize  ok
+[127:printClocks] count = 1 , clocks =  1153, 33% melhor
+[127:TestCVec3DNormalizeOf] Testing Vector3D NormalizeOf()...
+[127:printClocks] generic->vector3D_NormalizeOf 
+[127:printClocks] count =  1, clocks = 1652
+[127:printClocks]    simd->vector3D_NormalizeOf  ok
+[127:printClocks] count = 1 , clocks =  2097, -26% melhor
+[127:TestCVec3DDistance] Testing Vector3D distance()...
+[127:printClocks] generic->vector3D_Distance 
+[127:printClocks] count =  1, clocks = 771
+[127:printClocks]    simd->vector3D_Distance  ok
+[127:printClocks] count = 1 , clocks =  1088, -41% melhor
+[127:TestVector3DAlignedSum] Testing Vector3D Aligned Sum()...
+[127:printClocks] generic->vector3D_AlignedSum 
+[127:printClocks] count =  1, clocks = 160
+[127:printClocks]    simd->vector3D_AlignedSum  ok
+[127:printClocks] count = 1 , clocks =  907, -466% melhor
+[127:TestVector3DAlignedSumOf] Testing Vector3D Aligned SumOf()...
+[127:printClocks] generic->vector3D_AlignedSumOf 
+[127:printClocks] count =  1, clocks = 34143
+[127:printClocks]    simd->vector3D_AlignedSumOf  ok
+[127:printClocks] count = 1 , clocks =  412, 98% melhor
+[127:TestVector3DAlignedDiff] Testing Vector3D Aligned Diff()...
+[127:printClocks] generic->vector3D_AlignedDiff 
+[127:printClocks] count =  1, clocks = 358
+[127:printClocks]    simd->vector3D_AlignedDiff  ok
+[127:printClocks] count = 1 , clocks =  189, 47% melhor
+[127:TestVector3DAlignedDiffOf] Testing Vector3D Aligned DiffOf()...
+[127:printClocks] generic->vector3D_AlignedDiffOf 
+[127:printClocks] count =  1, clocks = 308
+[127:printClocks]    simd->vector3D_AlignedDiffOf  ok
+[127:printClocks] count = 1 , clocks =  296, 3% melhor
+[127:TestVector3DAlignedScale] Testing Vector3D Aligned scale()...
+[127:printClocks] generic->vector3D_AlignedScale 
+[127:printClocks] count =  1, clocks = 397
+[127:printClocks]    simd->vector3D_AlignedScale  ok
+[127:printClocks] count = 1 , clocks =  233, 41% melhor
+[127:TestVector3DAlignedScaleOf] Testing Vector3D Aligned ScaleOf()...
+[127:printClocks] generic->vector3D_AlignedScaleOf 
+[127:printClocks] count =  1, clocks = 278
+[127:printClocks]    simd->vector3D_AlignedScaleOf  ^1X
+[127:printClocks] count = 1 , clocks =  231, 16% melhor
+[127:TestVector3DAlignedDot] Testing Vector3D Aligned dot()...
+[127:printClocks] generic->vector3D_AlignedDot 
+[127:printClocks] count =  1, clocks = 278
+[127:printClocks]    simd->vector3D_AlignedDot  ok
+[127:printClocks] count = 1 , clocks =  255, 8% melhor
+[127:TestVector3DAlignedLengthSq] Testing Vector3D Aligned getLengthSqr()...
+[127:printClocks] generic->vector3D_AlignedLengthSq 
+[127:printClocks] count =  1, clocks = 314
+[127:printClocks]    simd->vector3D_AlignedLengthSq  ok
+[127:printClocks] count = 1 , clocks =  2306599, -734485% melhor
+[127:TestVector3DAlignedLength] Testing Vector3D Aligned getLenght()...
+[127:printClocks] generic->vector3D_AlignedLength 
+[127:printClocks] count =  1, clocks = 1210
+[127:printClocks]    simd->vector3D_AlignedLength  ok
+[127:printClocks] count = 1 , clocks =  667, 44% melhor
+[127:TestVector3DAlignedCross] Testing Vector3D Aligned cross()...
+[127:printClocks] generic->vector3D_AlignedCross 
+[127:printClocks] count =  1, clocks = 504
+[127:printClocks]    simd->vector3D_AlignedCross  ok
+[127:printClocks] count = 1 , clocks =  302, 40% melhor
+[127:TestVector3DAlignedCrossOf] Testing Vector3D Aligned CrossOf()...
+[127:printClocks] generic->vector3D_AlignedCrossOf 
+[127:printClocks] count =  1, clocks = 284
+[127:printClocks]    simd->vector3D_AlignedCrossOf  ^1X
+[127:printClocks] count = 1 , clocks =  4566, -1507% melhor
+[127:TestCVec3DAlignedNormalize] Testing Vector3D Aligned toNormal()...
+[127:printClocks] generic->vector3D_AlignedNormalize 
+[127:printClocks] count =  1, clocks = 438
+[127:printClocks]    simd->vector3D_AlignedNormalize  ok
+[127:printClocks] count = 1 , clocks =  1103, -151% melhor
+[127:TestCVec3DAlignedNormalizeOf] Testing Vector3D Aligned NormalizeOf()...
+[127:printClocks] generic->vector3D_AlignedNormalizeOf 
+[127:printClocks] count =  1, clocks = 2121
+[127:printClocks]    simd->vector3D_AlignedNormalizeOf  ok
+[127:printClocks] count = 1 , clocks =  3611, -70% melhor
+[127:TestCVec3DAlignedDistance] Testing Vector3D Aligned distance()...
+[127:printClocks] generic->vector3D_AlignedDistance 
+[127:printClocks] count =  1, clocks = 4291
+[127:printClocks]    simd->vector3D_AlignedDistance  ok
+[127:printClocks] count = 1 , clocks =  2857, 33% melhor
+[127:TesteLenght3D] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestCVec3DLength] Testing Vector3D getLenght()...
+[127:printClocks] generic->vector3D_Length 
+[127:printClocks] count =  1, clocks = 421
+[127:printClocks]    simd->vector3D_Length  ok
+[127:printClocks] count = 1 , clocks =  257, 38% melhor

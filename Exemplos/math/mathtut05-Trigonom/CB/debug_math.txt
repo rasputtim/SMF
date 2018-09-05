@@ -1,0 +1,8 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:TestSin] ====================================
+[127:PrintClocks] generic->Sin( float )
+[127:PrintClocks] count =  360, clocks = 279
+[127:PrintClocks]    simd->Sin( float ) ok
+[127:PrintClocks] count = 360 , clocks =  297, -6% melhor
+[127:PrintClocks] generic->Sin4( float[]  )
+[127:PrintClocks] count =  90, clocks = 445

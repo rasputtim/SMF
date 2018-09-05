@@ -1,0 +1,42 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:TestPlane4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:Test_plane_FromPoints] Testing  plane_FromPoints...
+[127:printClocks] generic-> plane_FromPoints 
+[127:printClocks] count =  2048, clocks = 118
+[127:printClocks]    simd-> plane_FromPoints  ok
+[127:printClocks] count = 2048 , clocks =  50, 57% melhor
+[127:Test_plane_DistToPoint] Testing  plane_DistToPoint...
+[127:printClocks] generic-> plane_DistToPoint 
+[127:printClocks] count =  2048, clocks = 41
+[127:printClocks]    simd-> plane_DistToPoint  ok
+[127:printClocks] count = 2048 , clocks =  412, -904% melhor
+[127:Test_plane_Dot] Testing Test_plane_Dot...
+[127:printClocks] generic->Test_plane_Dot 
+[127:printClocks] count =  2048, clocks = 38
+[127:printClocks]    simd->Test_plane_Dot  ok
+[127:printClocks] count = 2048 , clocks =  377, -892% melhor
+[127:Test_plane_Dot4] Testing Test_plane_Dot4...
+[127:printClocks] generic->Test_plane_Dot4 
+[127:printClocks] count =  2048, clocks = 56
+[127:printClocks]    simd->Test_plane_Dot4  ok
+[127:printClocks] count = 2048 , clocks =  371, -562% melhor
+[127:Test_plane_DotNormal] Testing  plane_DotNormal...
+[127:printClocks] generic-> plane_DotNormal 
+[127:printClocks] count =  2048, clocks = 26
+[127:printClocks]    simd-> plane_DotNormal  ok
+[127:printClocks] count = 2048 , clocks =  374, -1338% melhor
+[127:Test_plane_DotPlane] Testing  plane_DotPlane...
+[127:printClocks] generic-> plane_DotPlane 
+[127:printClocks] count =  2048, clocks = 23
+[127:printClocks]    simd-> plane_DotPlane  ok
+[127:printClocks] count = 2048 , clocks =  368, -1500% melhor
+[127:Test_plane_Normalize] Testing  plane_Normalize...
+[127:printClocks] generic-> plane_Normalize 
+[127:printClocks] count =  2048, clocks = 86
+[127:printClocks]    simd-> plane_Normalize  ok
+[127:printClocks] count = 2048 , clocks =  50, 41% melhor
+[127:Test_plane_NormalizeOf] Testing  plane_NormalizeOf...
+[127:printClocks] generic-> plane_NormalizeOf 
+[127:printClocks] count =  2048, clocks = 86
+[127:printClocks]    simd-> plane_NormalizeOf  ok
+[127:printClocks] count = 2048 , clocks =  38, 55% melhor

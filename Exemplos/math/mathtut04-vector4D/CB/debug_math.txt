@@ -1,0 +1,5 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:Test4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestVector4DSum] Testing Vector4D Sum()...
+[127:PrintClocks] generic->Vector4D_Sum 
+[127:PrintClocks] count =  1, clocks = -2045020610

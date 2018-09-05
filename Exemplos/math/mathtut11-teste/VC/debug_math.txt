@@ -1,0 +1,4 @@
+[127:SMF::MATH::CSIMD::initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:SMF::MATH::CSIMD::initProcessor] enabled Flush-To-Zero mode
+[127:SMF::MATH::CSIMD::initProcessor] enabled Denormals-Are-Zero mode
+

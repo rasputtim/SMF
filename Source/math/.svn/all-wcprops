@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/TTimo/doom3.gpl.git/!svn/ver/18/trunk/neo/idlib/math
+END
+Math.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/TTimo/doom3.gpl.git/!svn/ver/18/trunk/neo/idlib/math/Math.h
+END
+Simd_SSE3.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_SSE3.h
+END
+Rotation.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Rotation.h
+END
+Plane.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Plane.h
+END
+Simd_3DNow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_3DNow.cpp
+END
+Simd_SSE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_SSE.cpp
+END
+Complex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Complex.cpp
+END
+Ode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Ode.cpp
+END
+Vector.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Vector.h
+END
+Simd_AltiVec.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/TTimo/doom3.gpl.git/!svn/ver/18/trunk/neo/idlib/math/Simd_AltiVec.h
+END
+Matrix.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Matrix.h
+END
+Quat.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Quat.cpp
+END
+Pluecker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Pluecker.cpp
+END
+Simd_MMX.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_MMX.cpp
+END
+Angles.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Angles.h
+END
+Polynomial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Polynomial.cpp
+END
+Lcp.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Lcp.h
+END
+Random.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Random.h
+END
+Simd_Generic.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_Generic.cpp
+END
+Simd_SSE2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_SSE2.cpp
+END
+Math.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Math.cpp
+END
+Simd_SSE3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_SSE3.cpp
+END
+Extrapolate.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Extrapolate.h
+END
+Rotation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Rotation.cpp
+END
+Plane.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Plane.cpp
+END
+Simd.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd.h
+END
+Vector.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Vector.cpp
+END
+Simd_AltiVec.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_AltiVec.cpp
+END
+Matrix.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Matrix.cpp
+END
+Angles.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Angles.cpp
+END
+Simd_3DNow.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_3DNow.h
+END
+Simd_SSE.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_SSE.h
+END
+Complex.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Complex.h
+END
+Ode.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Ode.h
+END
+Lcp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Lcp.cpp
+END
+Quat.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Quat.h
+END
+Pluecker.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Pluecker.h
+END
+Simd_MMX.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_MMX.h
+END
+Polynomial.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Polynomial.h
+END
+Curve.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/TTimo/doom3.gpl.git/!svn/ver/18/trunk/neo/idlib/math/Curve.h
+END
+Interpolate.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Interpolate.h
+END
+Simd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/TTimo/doom3.gpl.git/!svn/ver/16/trunk/neo/idlib/math/Simd.cpp
+END
+Simd_Generic.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_Generic.h
+END
+Simd_SSE2.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/TTimo/doom3.gpl.git/!svn/ver/1/trunk/neo/idlib/math/Simd_SSE2.h
+END

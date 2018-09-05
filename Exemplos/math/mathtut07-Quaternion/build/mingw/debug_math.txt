@@ -1,0 +1,22 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:TestQuat4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:Test_quaternion_Normalize] Testing  quaternion_Normalize...
+[127:printClocks] generic-> quaternion_Normalize 
+[127:printClocks] count =  2048, clocks = 89
+[127:printClocks]    simd-> quaternion_Normalize  ok
+[127:printClocks] count = 2048 , clocks =  50, 43% melhor
+[127:Test_quaternion_NormalizeOf] Testing  quaternion_NormalizeOf...
+[127:printClocks] generic-> quaternion_NormalizeOf 
+[127:printClocks] count =  2048, clocks = 89
+[127:printClocks]    simd-> quaternion_NormalizeOf  ok
+[127:printClocks] count = 2048 , clocks =  50, 43% melhor
+[127:Test_quaternion_Multiply] Testing  quaternion_Multiply...
+[127:printClocks] generic-> quaternion_Multiply 
+[127:printClocks] count =  2048, clocks = 53
+[127:printClocks]    simd-> quaternion_Multiply  ok
+[127:printClocks] count = 2048 , clocks =  38, 28% melhor
+[127:Test_quaternion_MultiplyOf] Testing  quaternion_MultiplyOf...
+[127:printClocks] generic-> quaternion_MultiplyOf 
+[127:printClocks] count =  2048, clocks = 59
+[127:printClocks]    simd-> quaternion_MultiplyOf  ok
+[127:printClocks] count = 2048 , clocks =  38, 35% melhor

@@ -1,0 +1,122 @@
+[127:initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:Test4D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:TestVector4DSum] Testing Vector4D Sum()...
+[127:printClocks] generic->vector4D_Sum 
+[127:printClocks] count =  1, clocks = 6330
+[127:printClocks]    simd->vector4D_Sum  ok
+[127:printClocks] count = 1 , clocks =  4400, 30% melhor
+[127:TestVector4DSumOf] Testing Vector4D SumOf()...
+[127:printClocks] generic->vector4D_SumOf 
+[127:printClocks] count =  1, clocks = 269
+[127:printClocks]    simd->vector4D_SumOf  ok
+[127:printClocks] count = 1 , clocks =  439, -63% melhor
+[127:TestVector4DDiff] Testing Vector4D Diff()...
+[127:printClocks] generic->vector4D_Diff 
+[127:printClocks] count =  1, clocks = 281
+[127:printClocks]    simd->vector4D_Diff  ok
+[127:printClocks] count = 1 , clocks =  248, 11% melhor
+[127:TestVector4DDiffOf] Testing Vector4D DiffOf()...
+[127:printClocks] generic->vector4D_DiffOf 
+[127:printClocks] count =  1, clocks = 189
+[127:printClocks]    simd->vector4D_DiffOf  ok
+[127:printClocks] count = 1 , clocks =  260, -37% melhor
+[127:TestVector4DScale] Testing Vector4D scale()...
+[127:printClocks] generic->vector4D_Scale 
+[127:printClocks] count =  1, clocks = 7089
+[127:printClocks]    simd->vector4D_Scale  ok
+[127:printClocks] count = 1 , clocks =  444, 93% melhor
+[127:TestVector4DScaleOf] Testing Vector4D ScaleOf()...
+[127:printClocks] generic->vector4D_ScaleOf 
+[127:printClocks] count =  1, clocks = 230
+[127:printClocks]    simd->vector4D_ScaleOf  ok
+[127:printClocks] count = 1 , clocks =  178, 22% melhor
+[127:TestVector4DDot] Testing Vector4D Sum()...
+[127:printClocks] generic->vector4D_Dot 
+[127:printClocks] count =  1, clocks = 207
+[127:printClocks]    simd->vector4D_Dot  ok
+[127:printClocks] count = 1 , clocks =  498, -140% melhor
+[127:TestCVec4DLengthSq] Testing Vector4D getLengthSqr()...
+[127:printClocks] generic->vector4D_LengthSq 
+[127:printClocks] count =  1, clocks = 248
+[127:printClocks]    simd->vector4D_LengthSq  ok
+[127:printClocks] count = 1 , clocks =  474, -91% melhor
+[127:TestCVec4DLength] Testing Vector4D getLenght()...
+[127:printClocks] generic->vector4D_Length 
+[127:printClocks] count =  1, clocks = 646
+[127:printClocks]    simd->vector4D_Length  ok
+[127:printClocks] count = 1 , clocks =  162, 74% melhor
+[127:TestCVec4DNormalize] Testing Vector4D  toNormal()...
+[127:printClocks] generic->vector4D_Normalize 
+[127:printClocks] count =  1, clocks = 394
+[127:printClocks]    simd->vector4D_Normalize  ok
+[127:printClocks] count = 1 , clocks =  100, 74% melhor
+[127:TestCVec4DNormalizeOf] Testing Vector4D NormalizeOf()...
+[127:printClocks] generic->vector4D_NormalizeOf 
+[127:printClocks] count =  1, clocks = 498
+[127:printClocks]    simd->vector4D_NormalizeOf  ok
+[127:printClocks] count = 1 , clocks =  201, 59% melhor
+[127:TestCVec4DDistance] Testing Vector4D distance()...
+[127:printClocks] generic->vector4D_Distance 
+[127:printClocks] count =  1, clocks = 415
+[127:printClocks]    simd->vector4D_Distance  ok
+[127:printClocks] count = 1 , clocks =  287, 30% melhor
+[127:TestVector4DAlignedSum] Testing Vector4D Aligned Sum()...
+[127:printClocks] generic->vector4D_AlignedSum 
+[127:printClocks] count =  1, clocks = 236
+[127:printClocks]    simd->vector4D_AlignedSum  ok
+[127:printClocks] count = 1 , clocks =  305, -29% melhor
+[127:TestVector4DAlignedSumOf] Testing Vector4D Aligned SumOf()...
+[127:printClocks] generic->vector4D_AlignedSumOf 
+[127:printClocks] count =  1, clocks = 296
+[127:printClocks]    simd->vector4D_AlignedSumOf  ok
+[127:printClocks] count = 1 , clocks =  267, 9% melhor
+[127:TestVector4DAlignedDiff] Testing Vector4D Aligned Diff()...
+[127:printClocks] generic->vector4D_AlignedDiff 
+[127:printClocks] count =  1, clocks = 388
+[127:printClocks]    simd->vector4D_AlignedDiff  ok
+[127:printClocks] count = 1 , clocks =  397, -2% melhor
+[127:TestVector4DAlignedDiffOf] Testing Vector4D Aligned DiffOf()...
+[127:printClocks] generic->vector4D_AlignedDiffOf 
+[127:printClocks] count =  1, clocks = 82
+[127:printClocks]    simd->vector4D_AlignedDiffOf  ok
+[127:printClocks] count = 1 , clocks =  94, -14% melhor
+[127:TestVector4DAlignedScale] Testing Vector4D Aligned scale()...
+[127:printClocks] generic->vector4D_AlignedScale 
+[127:printClocks] count =  1, clocks = 159
+[127:printClocks]    simd->vector4D_AlignedScale  ok
+[127:printClocks] count = 1 , clocks =  3914, -2361% melhor
+[127:TestVector4DAlignedScaleOf] Testing Vector4D Aligned ScaleOf()...
+[127:printClocks] generic->vector4D_AlignedScaleOf 
+[127:printClocks] count =  1, clocks = 85
+[127:printClocks]    simd->vector4D_AlignedScaleOf  ok
+[127:printClocks] count = 1 , clocks =  207, -143% melhor
+[127:TestVector4DAlignedDot] Testing Vector4D Aligned dot()...
+[127:printClocks] generic->vector4D_AlignedDot 
+[127:printClocks] count =  1, clocks = 74
+[127:printClocks]    simd->vector4D_AlignedDot  ok
+[127:printClocks] count = 1 , clocks =  228, -208% melhor
+[127:TestCVec4DAlignedLengthSq] Testing Vector4D Aligned getLengthSqr()...
+[127:printClocks] generic->vector4D_AlignedLengthSq 
+[127:printClocks] count =  1, clocks = 65
+[127:printClocks]    simd->vector4D_AlignedLengthSq  ok
+[127:printClocks] count = 1 , clocks =  201, -209% melhor
+[127:TestCVec4DAlignedLength] Testing Vector4D Aligned getLenght()...
+[127:printClocks] generic->vector4D_AlignedLength 
+[127:printClocks] count =  1, clocks = 263
+[127:printClocks]    simd->vector4D_AlignedLength  ok
+[127:printClocks] count = 1 , clocks =  172, 34% melhor
+[127:TestCVec4DAlignedNormalize] Testing Vector4D  Aligned toNormal()...
+[127:printClocks] generic->vector4D_AlignedNormalize 
+[127:printClocks] count =  1, clocks = 281
+[127:printClocks]    simd->vector4D_AlignedNormalize  ok
+[127:printClocks] count = 1 , clocks =  106, 62% melhor
+[127:TestCVec4DAlignedNormalizeOf] Testing Vector4D Aligned NormalizeOf()...
+[127:printClocks] generic->vector4D_AlignedNormalizeOf 
+[127:printClocks] count =  1, clocks = 305
+[127:printClocks]    simd->vector4D_AlignedNormalizeOf  ok
+[127:printClocks] count = 1 , clocks =  3839, -1158% melhor
+[127:TestCVec4DAlignedDistance] Testing Vector4D Aligned distance()...
+[127:printClocks] generic->vector4D_AlignedDistance 
+[127:printClocks] count =  1, clocks = 441
+[127:printClocks]    simd->vector4D_AlignedDistance  ok
+[127:printClocks] count = 1 , clocks =  299, 32% melhor

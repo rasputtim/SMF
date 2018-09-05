@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SMF" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="../build/win/Debug/SMF" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../objs" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-fpermissive" />
+					<Add option="-msse" />
+					<Add option="-march=native" />
+					<Add option="-masm=intel" />
+					<Add option="-D_LIB" />
+					<Add option="-DFT_DEBUG_LEVEL_ERROR" />
+					<Add option="-DFT_DEBUG_LEVEL_TRACE" />
+					<Add option="-DFT2_BUILD_LIBRARY" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DWIN32" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-DLOAD_BMP" />
+					<Add option="-DLOAD_GIF" />
+					<Add option="-DLOAD_JPG" />
+					<Add option="-DLOAD_LBM" />
+					<Add option="-DLOAD_PCX" />
+					<Add option="-DLOAD_PNG" />
+					<Add option="-DLOAD_PNM" />
+					<Add option="-DLOAD_TGA" />
+					<Add option="-DLOAD_TIF" />
+					<Add option="-DLOAD_XPM" />
+					<Add option="-DLOAD_WEBP" />
+					<Add option="-DLOAD_XV" />
+					<Add option="-DPNG_USE_DLL" />
+					<Add option="-D_CRT_SECURE_NO_WARNINGS" />
+					<Add option="-DWAV_MUSIC" />
+					<Add option="-DMOD_MUSIC" />
+					<Add option="-DMID_MUSIC" />
+					<Add option="-DUSE_TIMIDITY_MIDI" />
+					<Add option="-DUSE_NATIVE_MIDI" />
+					<Add option="-DOGG_MUSIC" />
+					<Add option="-DMP3_MUSIC" />
+					<Add option="-DXMLTOKAPI=__declspec(dllimport)" />
+					<Add option="-DXML_DTD" />
+					<Add option="-DZLIB_WINAPI" />
+					<Add option="-D_CRT_NONSTDC_NO_DEPRECATE" />
+					<Add option="-D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="-D_CRT_NONSTDC_NO_WARNINGS" />
+					<Add option="-DMASM_INTEL" />
+					<Add directory="../Gamecore" />
+				</Compiler>
+				<Linker>
+					<Add library="intl.lib" />
+					<Add library="Msimg32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="version.lib" />
+					<Add library="imm32.lib" />
+				</Linker>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="GameEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../objs" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="$(TBB30_INSTALL_DIR)/include" />
+				</Compiler>
+				<Linker>
+					<Add library="tbb.lib" />
+					<Add directory="$(TBB30_INSTALL_DIR)/lib/ia32/vc10" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-fpermissive" />
+		</Compiler>
+		<Unit filename="../Gamecore/SMF.h" />
+		<Unit filename="../Gamecore/SMF_Config.h" />
+		<Unit filename="../Gamecore/SMF_Types.h" />
+		<Unit filename="../Gamecore/exceptions/SMF_Error.h" />
+		<Unit filename="../Gamecore/exceptions/SMF_Exception.h" />
+		<Unit filename="../Gamecore/exceptions/SMF_LoadException.h" />
+		<Unit filename="../Gamecore/exceptions/all.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DAABBox.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DCircle.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DCircleSector.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DCircleSegment.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DConics.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DDrawVert.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DEllipse.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DLine.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DLineSegment.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DParabola.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DPoint.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DPointHom.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DRay.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2DTriangle.h" />
+		<Unit filename="../Gamecore/geometry/SMF_2Dpolygon.h" />
+		<Unit filename="../Gamecore/geometry/SMF_AABBox.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Circle.h" />
+		<Unit filename="../Gamecore/geometry/SMF_DrawVert.h" />
+		<Unit filename="../Gamecore/geometry/SMF_GeoDefs.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Line.h" />
+		<Unit filename="../Gamecore/geometry/SMF_LineSegment.h" />
+		<Unit filename="../Gamecore/geometry/SMF_OBBox.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Plane.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Polygon.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Polyhedron.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Ray.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Sphere.h" />
+		<Unit filename="../Gamecore/geometry/SMF_Triangle.h" />
+		<Unit filename="../Gamecore/geometry/SMF_TriangleMesh.h" />
+		<Unit filename="../Gamecore/geometry/all.h" />
+		<Unit filename="../Gamecore/math/SMF_Complex.h" />
+		<Unit filename="../Gamecore/math/SMF_Curve.h" />
+		<Unit filename="../Gamecore/math/SMF_EulerAngles.h" />
+		<Unit filename="../Gamecore/math/SMF_Extrapolate.h" />
+		<Unit filename="../Gamecore/math/SMF_Interpolation.h" />
+		<Unit filename="../Gamecore/math/SMF_JointTransform.h" />
+		<Unit filename="../Gamecore/math/SMF_Lincp.h" />
+		<Unit filename="../Gamecore/math/SMF_Mat3D.h" />
+		<Unit filename="../Gamecore/math/SMF_Math.h" />
+		<Unit filename="../Gamecore/math/SMF_Matriz.h" />
+		<Unit filename="../Gamecore/math/SMF_Odife.h" />
+		<Unit filename="../Gamecore/math/SMF_Pluecker.h" />
+		<Unit filename="../Gamecore/math/SMF_Polynomial.h" />
+		<Unit filename="../Gamecore/math/SMF_Quaternion.h" />
+		<Unit filename="../Gamecore/math/SMF_Rotation.h" />
+		<Unit filename="../Gamecore/math/SMF_Simd.h" />
+		<Unit filename="../Gamecore/math/SMF_Simd3DNow.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdAVX.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdGeneric.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdMMX.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdSSE.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdSSE2.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdSSE3.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdSSE41.h" />
+		<Unit filename="../Gamecore/math/SMF_SimdSSE42.h" />
+		<Unit filename="../Gamecore/math/SMF_Transforms.h" />
+		<Unit filename="../Gamecore/math/SMF_Vector.h" />
+		<Unit filename="../Gamecore/math/all.h" />
+		<Unit filename="../Gamecore/structures/SMF_BTree.h" />
+		<Unit filename="../Gamecore/structures/SMF_HashTableFast.h" />
+		<Unit filename="../Gamecore/structures/SMF_List.h" />
+		<Unit filename="../Gamecore/structures/all.h" />
+		<Unit filename="../Gamecore/sys/SMF_HalfFloat.hpp" />
+		<Unit filename="../Gamecore/sys/SMF_System.h" />
+		<Unit filename="../Gamecore/sys/all.h" />
+		<Unit filename="../Gamecore/util/SMF_ArgsCmdLine.h" />
+		<Unit filename="../Gamecore/util/SMF_Debug.h" />
+		<Unit filename="../Gamecore/util/SMF_HashUtils.h" />
+		<Unit filename="../Gamecore/util/SMF_Heap.h" />
+		<Unit filename="../Gamecore/util/SMF_HeapBlockAloc.h" />
+		<Unit filename="../Gamecore/util/SMF_PlaneList.h" />
+		<Unit filename="../Gamecore/util/SMF_Random.h" />
+		<Unit filename="../Gamecore/util/SMF_RandomLCG.h" />
+		<Unit filename="../Gamecore/util/SMF_StringUtils.h" />
+		<Unit filename="../Gamecore/util/SMF_TestLib.h" />
+		<Unit filename="../Gamecore/util/SMF_UtilStructs.h" />
+		<Unit filename="../Source/exceptions/SMF_Error.cpp" />
+		<Unit filename="../Source/exceptions/SMF_Exception.cpp" />
+		<Unit filename="../Source/exceptions/SMF_LoadException.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DAABBox.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DCircle.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DCircleSector.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DCircleSegment.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DConics.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DEllipse.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DLine.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DLineSegment.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DParabola.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DPoint.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DPolygon.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DRay.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DTests.cpp" />
+		<Unit filename="../Source/geometry/SMF_2DTriangle.cpp" />
+		<Unit filename="../Source/geometry/SMF_AABBox.cpp" />
+		<Unit filename="../Source/geometry/SMF_Circle.cpp" />
+		<Unit filename="../Source/geometry/SMF_DrawVert.cpp" />
+		<Unit filename="../Source/geometry/SMF_Geodefs.cpp" />
+		<Unit filename="../Source/geometry/SMF_Line.cpp" />
+		<Unit filename="../Source/geometry/SMF_LineSegment.cpp" />
+		<Unit filename="../Source/geometry/SMF_OBBox.cpp" />
+		<Unit filename="../Source/geometry/SMF_Plane.cpp" />
+		<Unit filename="../Source/geometry/SMF_Polygon.cpp" />
+		<Unit filename="../Source/geometry/SMF_Polyhedron.cpp" />
+		<Unit filename="../Source/geometry/SMF_Ray.cpp" />
+		<Unit filename="../Source/geometry/SMF_Sphere.cpp" />
+		<Unit filename="../Source/geometry/SMF_Triangle.cpp" />
+		<Unit filename="../Source/geometry/SMF_TriangleMesh.cpp" />
+		<Unit filename="../Source/math/SMF_Complex.cpp" />
+		<Unit filename="../Source/math/SMF_EulerAngles.cpp" />
+		<Unit filename="../Source/math/SMF_JointTransform.cpp" />
+		<Unit filename="../Source/math/SMF_Lcp.cpp" />
+		<Unit filename="../Source/math/SMF_Math.cpp" />
+		<Unit filename="../Source/math/SMF_Matriz.cpp" />
+		<Unit filename="../Source/math/SMF_Ode.cpp" />
+		<Unit filename="../Source/math/SMF_Pluecker.cpp" />
+		<Unit filename="../Source/math/SMF_Polynomial.cpp" />
+		<Unit filename="../Source/math/SMF_Quat.cpp" />
+		<Unit filename="../Source/math/SMF_Regression.cpp" />
+		<Unit filename="../Source/math/SMF_Rotation.cpp" />
+		<Unit filename="../Source/math/SMF_Simd.cpp" />
+		<Unit filename="../Source/math/SMF_SimdTestMatriz.cpp" />
+		<Unit filename="../Source/math/SMF_SimdTestPlane.cpp" />
+		<Unit filename="../Source/math/SMF_SimdTestQuat.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_3DNow.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_Generic.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_MMXMingw.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_SSE2.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_SSE3MinGw.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_SSE41.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_SSE42.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_SSEAVX.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_SSEComon.cpp" />
+		<Unit filename="../Source/math/SMF_Simd_SSEMinGw.cpp" />
+		<Unit filename="../Source/math/SMF_Transform.cpp" />
+		<Unit filename="../Source/math/SMF_Vector.cpp" />
+		<Unit filename="../Source/math/TriangleMesh_IntersectRay_AVX.inl" />
+		<Unit filename="../Source/math/TriangleMesh_IntersectRay_SSE.inl" />
+		<Unit filename="../Source/structures/SMF_HashTableFast.cpp" />
+		<Unit filename="../Source/sys/win32/SMF_FpuMingw.cpp" />
+		<Unit filename="../Source/sys/win32/SMF_WinCpuMingw.cpp" />
+		<Unit filename="../Source/sys/win32/SMF_WinDazMingw.cpp" />
+		<Unit filename="../Source/util/SMF_ArgsCmdLine.cpp" />
+		<Unit filename="../Source/util/SMF_Debug.cpp" />
+		<Unit filename="../Source/util/SMF_HashUtils.cpp" />
+		<Unit filename="../Source/util/SMF_Heap.cpp" />
+		<Unit filename="../Source/util/SMF_RandomLCG.cpp" />
+		<Unit filename="../Source/util/SMF_StringUtils.cpp" />
+		<Unit filename="../Source/util/SMF_Testlib.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

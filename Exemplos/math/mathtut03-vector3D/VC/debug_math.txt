@@ -1,0 +1,48 @@
+[127:SGF::MATH::CSIMD::initProcessor] sgfInternal using MMX & SSE & SSE2 & SSE3 for SIMD processing
+[127:SGF::MATH::CSIMD::initProcessor] enabled Flush-To-Zero mode
+[127:SGF::MATH::CSIMD::initProcessor] enabled Denormals-Are-Zero mode
+
+[127:SGF::MATH::CSIMD::Test3D_f] using %s for SIMD processing: MMX & SSE & SSE2 & SSE3
+[127:SGF::MATH::TestVector3DSum] Testing Vector3D Sum()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_Sum 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 20527
+[127:SGF::MATH::PrintClocks]    simd->Vector3D_Sum  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  1038, 94% melhor
+[127:SGF::MATH::TestVector3DSumOf] Testing Vector3D SumOf()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_SumOf 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 1589
+[127:SGF::MATH::PrintClocks]    simd->Vector3D_SumOf  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  1424, 10% melhor
+[127:SGF::MATH::TestVector3DDiff] Testing Vector3D Diff()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_Diff 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 894
+[127:SGF::MATH::PrintClocks]    simd->Vector3D_Diff  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  506, 43% melhor
+[127:SGF::MATH::TestVector3DDiffOf] Testing Vector3D DiffOf()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_DiffOf 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 1171
+[127:SGF::MATH::PrintClocks]    simd->Vector3DD_DiffOf  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  1092, 6% melhor
+[127:SGF::MATH::TestVector3DScale] Testing Vector3D Scale()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_Scale 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 794
+[127:SGF::MATH::PrintClocks]    simd->Vector3D_Scale  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  583, 26% melhor
+[127:SGF::MATH::TestVector3DScaleOf] Testing Vector3D ScaleOf()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_ScaleOf 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 811
+[127:SGF::MATH::PrintClocks]    simd->Vector3D_ScaleOf  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  612, 24% melhor
+[127:SGF::MATH::TestVector3DDot] Testing Vector3D Dot()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_Dot 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 811
+[127:SGF::MATH::PrintClocks]    simd->Vector3D_Dot  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  1090, -34% melhor
+[127:SGF::MATH::TestCVector3DLengthSq] Testing Vector3D LengthSq()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_LengthSq 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = 1120
+[127:SGF::MATH::PrintClocks]    simd->Vector3D_LengthSq  ok
+[127:SGF::MATH::PrintClocks] count = 1 , clocks =  3579815, -319526% melhor
+[127:SGF::MATH::TestCVector3DLength] Testing Vector3D Length()...
+[127:SGF::MATH::PrintClocks] generic->Vector3D_Length 
+[127:SGF::MATH::PrintClocks] count =  1, clocks = -1974214442
