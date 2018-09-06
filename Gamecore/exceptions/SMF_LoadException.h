@@ -31,46 +31,48 @@
 
 using namespace std;
 namespace SMF {
-/**
- * \class CLoadException
- *
- * \ingroup SMF_Exceptions
- * 
- * \brief Excessão de carregamento 
- *
- * Ocorre sempre que uma estrutura está sendo criada e ocorre um erro, ex: carregamento de arquivos, configurações, etc
- *
- * 
- * \author (last to touch it) $Autor: Rasputtim $
- *
- * \version 1.0 $Revision: 1.0 $
- *
- * Contact: Rasputtim@hotmail.com
- *
- * Created on: 04 de Janeiro de 2012
-  */
+	namespace Exception {
+		/**
+		 * \class CLoadException
+		 *
+		 * \ingroup SMF_Exceptions
+		 *
+		 * \brief Excessão de carregamento
+		 *
+		 * Ocorre sempre que uma estrutura está sendo criada e ocorre um erro, ex: carregamento de arquivos, configurações, etc
+		 *
+		 *
+		 * \author (last to touch it) $Autor: Rasputtim $
+		 *
+		 * \version 1.0 $Revision: 1.0 $
+		 *
+		 * Contact: Rasputtim@hotmail.com
+		 *
+		 * Created on: 04 de Janeiro de 2012
+		  */
 
-class  SMF_API CLoadException: public Exception::CBase {
-public:
+		class  SMF_API CLoadException : public Exception::CBase {
+		public:
 
-	CLoadException( const string reason );
-	CLoadException(const string & file, int line, const string & reason);
-    CLoadException(const string & file, int line, const Exception::CBase & nested, const string & reason);
-    CLoadException(const CLoadException & copy);
-	virtual void throwSelf() const {
-        throw *this;
-    }
+			CLoadException(const string reason);
+			CLoadException(const string & file, int line, const string & reason);
+			CLoadException(const string & file, int line, const Exception::CBase & nested, const string & reason);
+			CLoadException(const CLoadException & copy);
+			virtual void throwSelf() const {
+				throw *this;
+			}
 
-	
 
-	virtual ~CLoadException() throw();
-     virtual const string getReason() const;  //temporariamente aqui até implementar catch do exception base
-protected:
-        string reason;
-		virtual Exception::CBase * copy() const;
-		
-		
 
-};
+			virtual ~CLoadException() throw();
+			virtual const string getReason() const;  //temporariamente aqui até implementar catch do exception base
+		protected:
+			string reason;
+			virtual Exception::CBase * copy() const;
+
+
+
+		};
+	} //end exception
 } //end SMF
 #endif

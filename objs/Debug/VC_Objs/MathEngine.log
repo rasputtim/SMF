@@ -1,0 +1,77 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(367,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+  SMF_LoadException.cpp
+  SMF_error.cpp
+  SMF_2DAABBox.cpp
+  SMF_2DCircle.cpp
+  SMF_2DCircleSector.cpp
+  SMF_2DCircleSegment.cpp
+  SMF_2DConics.cpp
+  SMF_2DEllipse.cpp
+  SMF_2DLine.cpp
+  SMF_2DLineSegment.cpp
+  SMF_2DParabola.cpp
+  SMF_2DPoint.cpp
+  SMF_2DPolygon.cpp
+  SMF_2DRay.cpp
+  SMF_2DTests.cpp
+  SMF_2DTriangle.cpp
+  SMF_AABBox.cpp
+  SMF_Circle.cpp
+  SMF_DrawVert.cpp
+  SMF_Line.cpp
+  Generating Code...
+  Compiling...
+  SMF_LineSegment.cpp
+  SMF_OBBox.cpp
+  SMF_Plane.cpp
+  SMF_Polygon.cpp
+  SMF_Polyhedron.cpp
+  SMF_Ray.cpp
+  SMF_Sphere.cpp
+  SMF_Triangle.cpp
+  SMF_TriangleMesh.cpp
+  SMF_Complex.cpp
+  SMF_EulerAngles.cpp
+  SMF_JointTransform.cpp
+  SMF_Lcp.cpp
+  SMF_Math.cpp
+  SMF_Matriz.cpp
+  SMF_Ode.cpp
+  SMF_Pluecker.cpp
+  SMF_Polynomial.cpp
+  SMF_Quat.cpp
+  SMF_Regression.cpp
+  Generating Code...
+  Compiling...
+  SMF_Rotation.cpp
+  SMF_Simd.cpp
+  SMF_SimdTestMatriz.cpp
+  SMF_SimdTestPlane.cpp
+  SMF_SimdTestQuat.cpp
+  SMF_Simd_3DNow.cpp
+  SMF_Simd_Generic.cpp
+  SMF_Simd_MMX.cpp
+  SMF_Simd_SSE.cpp
+  SMF_Simd_SSE2.cpp
+  SMF_Simd_SSE3.cpp
+  SMF_Simd_SSE41.cpp
+  SMF_Simd_SSE42.cpp
+  SMF_Simd_SSEAVX.cpp
+  SMF_Simd_SSEComon.cpp
+  SMF_Transform.cpp
+  SMF_Vector.cpp
+  SMF_HashTableFast.cpp
+  SMF_System.cpp
+  SMF_Fpu.cpp
+  Generating Code...
+  Compiling...
+  SMF_WinCpu.cpp
+  SMF_WinShared.cpp
+  SMF_ArgsCmdLine.cpp
+  SMF_Debug.cpp
+  SMF_Heap.cpp
+  SMF_RandomLCG.cpp
+  SMF_StringUtils.cpp
+  SMF_Testlib.cpp
+  Generating Code...
+  MathEngine.vcxproj -> E:\Biblioteca\Projetos\SMF\VC\..\build\win\Debug\SMF.lib

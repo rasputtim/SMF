@@ -23,33 +23,33 @@
 using namespace std;
 
 namespace SMF {
+	namespace Exception {
 
 
+		CLoadException::CLoadException(const string & file, int line, const string & reason) :
+			CBase(file, line),
+			reason(reason) {
+		}
 
-CLoadException::CLoadException(const string & file, int line, const string & reason):
-Exception::CBase(file, line),
-reason(reason){
-}
-    
-CLoadException::CLoadException(const string & file, int line, const Exception::CBase & nested, const string & reason):
-Exception::CBase(file, line, nested),
-reason(reason){
-}
+		CLoadException::CLoadException(const string & file, int line, const Exception::CBase & nested, const string & reason) :
+			CBase(file, line, nested),
+			reason(reason) {
+		}
 
-CLoadException::~CLoadException() throw (){
-}
+		CLoadException::~CLoadException() throw () {
+		}
 
-CLoadException::CLoadException(const CLoadException & copy):
-Exception::CBase(copy),
-reason(copy.reason){
-}
+		CLoadException::CLoadException(const CLoadException & copy) :
+			CBase(copy),
+			reason(copy.reason) {
+		}
 
-Exception::CBase * CLoadException::copy() const {
-    return new CLoadException(*this);
-}
-    
-const string CLoadException::getReason() const {
-    return reason;
-}
+		Exception::CBase * CLoadException::copy() const {
+			return new CLoadException(*this);
+		}
 
+		const string CLoadException::getReason() const {
+			return reason;
+		}
+	} //end exception
 } //end SMF

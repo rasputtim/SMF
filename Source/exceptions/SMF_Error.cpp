@@ -23,32 +23,33 @@
 
 
 namespace SMF {
-CGeneralError::CGeneralError():
-Exception::CBase("", -1),
-reason("unspecified"),
-where("?"),
-line(0){
-}
+	namespace Exception {
+		CGeneralError::CGeneralError() :
+			CBase("", -1),
+			reason("unspecified"),
+		where("?"),
+			line(0) {
+		}
 
-CGeneralError::CGeneralError(const string & reason, const string & where, int line):
-Exception::CBase("", line),
-reason(reason),
-where(where),
-line(line){
-	
-}
-        
-Exception::CBase * CGeneralError::copy() const {
-    return new CGeneralError(reason, where, line);
-}
-        
-const string CGeneralError::getFullReason() const {
-    ::std::ostringstream out;
-    out << where << ":" << line << " " << reason;
-    return out.str();
-}
-	
-CGeneralError::~CGeneralError() throw() {
-}
+		CGeneralError::CGeneralError(const string & reason, const string & where, int line) :
+			CBase("", line),
+			reason(reason),
+		where(where),
+			line(line) {
 
+		}
+
+		Exception::CBase * CGeneralError::copy() const {
+			return new CGeneralError(reason, where, line);
+		}
+
+		const string CGeneralError::getFullReason() const {
+			::std::ostringstream out;
+			out << where << ":" << line << " " << reason;
+			return out.str();
+		}
+
+		CGeneralError::~CGeneralError() throw() {
+		}
+	}//end exception
 } //end SMF

@@ -27,45 +27,47 @@
 
 using namespace std;
 namespace SMF {
-/**
- * \class CGeneralError
- *
- * \ingroup SMF_Exceptions
- * 
- * \brief Excessão de Erro Genérico 
- *
- * \author (last to touch it) $Autor: Rasputtim $
- *
- * \version 1.0 $Revision: 1.0 $
- *
- * Contact: Rasputtim@hotmail.com
- *
- * Created on: 04 de Janeiro de 2012
-  */
+	namespace Exception {
+		/**
+		 * \class CGeneralError
+		 *
+		 * \ingroup SMF_Exceptions
+		 *
+		 * \brief Excessão de Erro Genérico
+		 *
+		 * \author (last to touch it) $Autor: Rasputtim $
+		 *
+		 * \version 1.0 $Revision: 1.0 $
+		 *
+		 * Contact: Rasputtim@hotmail.com
+		 *
+		 * Created on: 04 de Janeiro de 2012
+		  */
 
-class  SMF_API CGeneralError: public Exception::CBase {
-public:
-	CGeneralError();
-	CGeneralError(const string & reason, const string & where = "?", int line = 0);
+		class  SMF_API CGeneralError : public CBase {
+		public:
+			CGeneralError();
+			CGeneralError(const string & reason, const string & where = "?", int line = 0);
 
-	virtual ~CGeneralError() throw();
-    
-        virtual CBase * copy() const;
+			virtual ~CGeneralError() throw();
 
-        const string getFullReason() const;
+			virtual CBase * copy() const;
 
-        virtual void throwSelf() const {
-            throw *this;
-        }
+			const string getFullReason() const;
 
-	inline const string getReason() const{
-            return reason;
-	}
+			virtual void throwSelf() const {
+				throw *this;
+			}
 
-protected:
-        string reason;
-        string where;
-        int line;
-};
+			inline const string getReason() const {
+				return reason;
+			}
+
+		protected:
+			string reason;
+			string where;
+			int line;
+		};
+	} //end exception
 } //end SMF
 #endif
